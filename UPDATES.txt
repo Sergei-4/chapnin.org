@@ -1,0 +1,76 @@
+CHAPNIN.ORG FINAL BUILD - August 2026
+=====================================
+
+CHANGES MADE:
+
+1. HOMEPAGE (index.html)
+   ✅ Added book section with cover image + NEW BOOK 2026 badge
+   ✅ Featured Rowan Williams endorsement quote
+   ✅ Link to Amazon and direct purchase options
+
+2. MENU UPDATED EVERYWHERE
+   ✅ Renamed: About → Bio
+   ✅ New page: For You → Collaborate
+   ✅ Order: Bio | Writings | Talks | Exhibitions | Photos | Collaborate
+
+3. WRITINGS PAGE (writings/index.html)
+   ✅ Added filter tabs: Essays | Policy Papers | Interviews | Academic Articles
+   ✅ Corrected First Things interview: JANUARY 6, 2016
+   ✅ Added new Policy Paper: FAITH UNDER PRESSURE (August 25, 2026)
+   ✅ Added 4 Academic Articles:
+      - Postsecular Conflicts (2020, DOI)
+      - Babeș-Bolyai (2023, DOI)
+      - George Fox OPREE (2020, ISSN)
+      - Zenodo (2016, DOI)
+      - Образ Церкви (2013, Russian)
+      - Русское Православие (2023, Russian)
+
+4. COLLABORATE PAGE (formerly "For You")
+   ✅ Reordered sections:
+      1. Lecture/conversation (specify: EN or RU)
+      2. Exhibition space (2-3 days OR 3-6 months, latter preferred)
+      3. Icon calendar (separate print run, min 300 copies)
+      4. Exhibition catalogs (100 iconographers, 15 countries, unique)
+      5. Contemporary Christian culture (richly illustrated almanac)
+      6. Russian-language book (Church Resurrection, 2018)
+      7. Newsletter (Substack)
+   ✅ Contact form at bottom (for items 1-6)
+
+5. PHOTOS PAGE (photos/index.html)
+   ✅ Reordered filter tabs: Portraiture | Reportage | Landscape
+   ✅ Gallery now loads in this order
+
+6. SITEMAP UPDATED
+   ✅ /bio/ (was /about/)
+   ✅ /collaborate/ (was /for-you/)
+   ✅ All URLs verified
+
+FILES TO REPLACE:
+- index.html (NEW: book block)
+- bio/index.html (NO CHANGE - same content, just renamed folder)
+- writings/index.html (UPDATED: tabs + new articles)
+- collaborate/index.html (RENAMED from for-you, REORDERED + form)
+- photos/index.html (UPDATED: filter order)
+- sitemap.xml (UPDATED)
+
+FILES TO KEEP:
+- talks/index.html
+- exhibitions/index.html
+- books/religious-communities-under-pressure/index.html
+- robots.txt, llms.txt, CNAME, .gitignore, README.md
+
+IMAGES NEEDED IN /images/for-you/:
+- book-church-revival.jpg
+- almanac-cover-04.jpg (2018)
+- almanac-cover-05.jpg (2019)
+- almanac-cover-06.jpg (2020)
+- calendar-icons.jpg
+- exhibition-ammo-boxes.jpg
+- catalog-saints.jpg
+
+DEPLOYMENT:
+1. Replace files locally
+2. Commit: "Final update: book section, Collaborate page, Writings tabs, photo order"
+3. Push to GitHub
+4. GitHub Pages rebuilds in 1-3 minutes
+5. Site live at https://chapnin.org ✓

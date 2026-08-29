@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sergei Chapnin">
+  <meta name="copyright" content="© 2026 Sergei Chapnin">
+  <link rel="canonical" href="https://chapnin.org/photos/">
+  
+  <title>Photography | Sergei Chapnin</title>
+  <meta name="description" content="Photography by Sergei Chapnin. A visual archive of churches, religious communities, and cultural life from Russia and beyond. Landscape, portraiture, and reportage.">
+  <meta name="keywords" content="photography, visual art, religious life, churches, cultural documentation, Russia, Orthodox Christianity">
+  
+  <meta property="og:site_name" content="Sergei Chapnin">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Photography | Sergei Chapnin">
+  <meta property="og:description" content="Visual documentation of religious and cultural life by Sergei Chapnin.">
+  <meta property="og:url" content="https://chapnin.org/photos/">
+  <meta property="og:image" content="https://chapnin.org/images/portrait.jpg">
+  <meta property="og:locale" content="en_US">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Photography">
+  <meta name="twitter:description" content="Visual archive by Sergei Chapnin">
+  
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <meta name="theme-color" content="#F5EFE7">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #F5EFE7; color: #2C2C2C; font-family: 'Lato', sans-serif; font-size: 16px; line-height: 1.7; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 10% 0 14%; }
+    .navbar { padding: 2rem 0; border-bottom: 1px solid #D9CFC5; margin-bottom: 3rem; }
+    .nav-content { display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: #2C2C2C; text-decoration: none; }
+    .nav-logo:hover { color: #8B0000; }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a { font-size: 14px; color: #2C2C2C; text-decoration: none; font-weight: 500; transition: color 0.2s; text-transform: uppercase; letter-spacing: 0.3px; }
+    .nav-links a:hover, .nav-links a.active { color: #8B0000; }
+    .page-title { font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 700; line-height: 1.2; margin-bottom: 2rem; color: #2C2C2C; border-left: 4px solid #8B0000; padding-left: 1.5rem; }
+    
+    .filters { display: flex; gap: 1rem; margin-bottom: 3rem; flex-wrap: wrap; }
+    .filter-btn { background: transparent; border: 1px solid #D9CFC5; padding: 0.6rem 1.2rem; font-size: 13px; text-transform: uppercase; letter-spacing: 0.3px; cursor: pointer; transition: all 0.2s; font-weight: 600; color: #2C2C2C; }
+    .filter-btn.active, .filter-btn:hover { background: #8B0000; color: white; border-color: #8B0000; }
+    
+    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 4rem; }
+    .photo-item { position: relative; overflow: hidden; aspect-ratio: 3 / 2; background: #D9CFC5; }
+    .photo-item img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; transition: transform 0.3s; }
+    .photo-item:hover img { transform: scale(1.05); }
+    .photo-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.2s; cursor: pointer; }
+    .photo-item:hover .photo-overlay { opacity: 1; }
+    .photo-overlay-icon { color: white; font-size: 32px; }
+    
+    /* LIGHTBOX */
+    .lightbox { display: none; position: fixed; z-index: 999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); }
+    .lightbox.active { display: flex; }
+    .lightbox-content { position: relative; margin: auto; width: 90%; max-width: 1000px; height: 90%; }
+    .lightbox-img { width: 100%; height: 100%; object-fit: contain; }
+    .lightbox-nav { position: absolute; top: 50%; width: 100%; display: flex; justify-content: space-between; padding: 0 1rem; transform: translateY(-50%); }
+    .lightbox-btn { background: transparent; color: white; border: none; font-size: 32px; cursor: pointer; transition: color 0.2s; }
+    .lightbox-btn:hover { color: #D4A574; }
+    .lightbox-close { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; background: none; border: none; }
+    .lightbox-close:hover { color: #D4A574; }
+    
+    .footer-divider { border-top: 1px solid #D9CFC5; margin-top: 4rem; padding-top: 2rem; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; }
+    .footer-copyright { font-size: 14px; color: #8B7355; }
+    .footer-links { display: flex; gap: 2rem; list-style: none; }
+    .footer-links a { font-size: 14px; color: #8B7355; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: #8B0000; }
+    
+    @media (max-width: 800px) {
+      .container { padding: 0 6% 0 10%; }
+      .page-title { font-size: 36px; }
+      .photo-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .nav-links { gap: 1.5rem; }
+      .nav-links a { font-size: 12px; }
+      .footer-content { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 500px) {
+      .container { padding: 0 5%; }
+      .page-title { font-size: 28px; }
+      .photo-grid { grid-template-columns: 1fr; }
+      .filters { flex-direction: column; }
+      .filter-btn { width: 100%; }
+      .nav-links { flex-direction: column; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="container">
+    <div class="nav-content">
+      <a href="/" class="nav-logo">Sergei Chapnin</a>
+      <ul class="nav-links">
+        <li><a href="/bio/">Bio</a></li>
+        <li><a href="/writings/">Writings</a></li>
+        <li><a href="/talks/">Talks</a></li>
+        <li><a href="/exhibitions/">Exhibitions</a></li>
+        <li><a href="/photos/" class="active">Photos</a></li>
+        <li><a href="/collaborate/">Collaborate</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h1 class="page-title">Photographs</h1>
+
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">All Photos</button>
+    <button class="filter-btn" data-filter="landscape">Landscape</button>
+    <button class="filter-btn" data-filter="portraiture">Portraiture</button>
+    <button class="filter-btn" data-filter="reportage">Reportage</button>
+  </div>
+
+  <div class="photo-grid" id="photoGrid"></div>
+
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <img class="lightbox-img" id="lightboxImg" src="" alt="">
+      <div class="lightbox-nav">
+        <button class="lightbox-btn" id="prevBtn">❮</button>
+        <button class="lightbox-btn" id="nextBtn">❯</button>
+      </div>
+      <button class="lightbox-close" id="closeBtn">✕</button>
+    </div>
+  </div>
+
+  <div class="footer-divider">
+    <div class="footer-content">
+      <div class="footer-copyright">© 2026 Sergei Chapnin</div>
+      <ul class="footer-links">
+        <li><a href="https://www.facebook.com/chapnin" target="_blank">Facebook</a></li>
+        <li><a href="https://sobornost.substack.com/" target="_blank">Substack</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  const photos = [
+    ...Array.from({length: 10}, (_, i) => ({category: 'landscape', src: `/images/photos/landscape-${String(i+1).padStart(2, '0')}.jpg`})),
+    ...Array.from({length: 10}, (_, i) => ({category: 'portraiture', src: `/images/photos/portraiture-${String(i+1).padStart(2, '0')}.jpg`})),
+    ...Array.from({length: 10}, (_, i) => ({category: 'reportage', src: `/images/photos/reportage-${String(i+1).padStart(2, '0')}.jpg`}))
+  ];
+
+  let currentFilter = 'all';
+  let currentPhotoIndex = 0;
+
+  const photoGrid = document.getElementById('photoGrid');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const closeBtn = document.getElementById('closeBtn');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const filterBtns = document.querySelectorAll('.filter-btn');
+
+  function renderPhotos() {
+    photoGrid.innerHTML = '';
+    const filtered = currentFilter === 'all' ? photos : photos.filter(p => p.category === currentFilter);
+    filtered.forEach((photo, index) => {
+      const item = document.createElement('div');
+      item.className = 'photo-item';
+      item.innerHTML = `<img src="${photo.src}" alt="${photo.category}" loading="lazy"><div class="photo-overlay"><div class="photo-overlay-icon">🔍</div></div>`;
+      item.onclick = () => openLightbox(filtered, index);
+      photoGrid.appendChild(item);
+    });
+  }
+
+  function openLightbox(items, index) {
+    currentPhotoIndex = index;
+    lightboxImg.src = items[index].src;
+    lightbox.classList.add('active');
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+  }
+
+  function prevPhoto() {
+    const filtered = currentFilter === 'all' ? photos : photos.filter(p => p.category === currentFilter);
+    currentPhotoIndex = (currentPhotoIndex - 1 + filtered.length) % filtered.length;
+    lightboxImg.src = filtered[currentPhotoIndex].src;
+  }
+
+  function nextPhoto() {
+    const filtered = currentFilter === 'all' ? photos : photos.filter(p => p.category === currentFilter);
+    currentPhotoIndex = (currentPhotoIndex + 1) % filtered.length;
+    lightboxImg.src = filtered[currentPhotoIndex].src;
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      currentFilter = e.target.dataset.filter;
+      currentPhotoIndex = 0;
+      renderPhotos();
+    });
+  });
+
+  closeBtn.addEventListener('click', closeLightbox);
+  prevBtn.addEventListener('click', prevPhoto);
+  nextBtn.addEventListener('click', nextPhoto);
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'ArrowLeft') prevPhoto();
+    if (e.key === 'ArrowRight') nextPhoto();
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  renderPhotos();
+</script>
+
+</body>
+</html>

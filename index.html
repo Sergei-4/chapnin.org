@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- META & CHARSET -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sergei Chapnin">
+  <meta name="copyright" content="© 2026 Sergei Chapnin">
+  <link rel="canonical" href="https://chapnin.org/">
+  
+  <!-- SEO -->
+  <title>Sergei Chapnin | Religious Scholar & Journalist</title>
+  <meta name="description" content="Religious scholar, journalist, and editor analyzing the Russian Orthodox Church and post-Soviet authoritarianism. Director of Communications at OCSC Fordham. Chief Editor of The Gifts.">
+  <meta name="keywords" content="Russian Orthodox Church, religious studies, theology, journalist, Fordham University, Orthodox Christianity, church and state, religious persecution, Moscow Patriarchate">
+  
+  <!-- OPEN GRAPH (SOCIAL MEDIA) -->
+  <meta property="og:site_name" content="Sergei Chapnin">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sergei Chapnin | Religious Scholar & Journalist">
+  <meta property="og:description" content="Critical analysis of the Russian Orthodox Church and post-Soviet religious life.">
+  <meta property="og:url" content="https://chapnin.org/">
+  <meta property="og:image" content="https://chapnin.org/images/portrait.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sergei Chapnin | Religious Scholar & Journalist">
+  <meta name="twitter:description" content="Religious scholar analyzing the Russian Orthodox Church and post-Soviet religious life.">
+  <meta name="twitter:image" content="https://chapnin.org/images/portrait.jpg">
+  
+  <!-- FAVICON & THEME -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <meta name="theme-color" content="#F5EFE7">
+  
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- STRUCTURED DATA (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sergei Chapnin",
+    "url": "https://chapnin.org",
+    "image": "https://chapnin.org/images/portrait.jpg",
+    "description": "Religious scholar, journalist, and editor analyzing the Russian Orthodox Church",
+    "jobTitle": "Director of Communications",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "Orthodox Christian Studies Center, Fordham University",
+      "url": "https://fordham.edu"
+    },
+    "sameAs": [
+      "https://www.facebook.com/chapnin",
+      "https://sobornost.substack.com/"
+    ],
+    "expertise": [
+      "Russian Orthodox Church",
+      "Religious Persecution",
+      "Orthodox Theology",
+      "Church-State Relations",
+      "Contemporary Christian Culture"
+    ]
+  }
+  </script>
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #F5EFE7;
+      color: #2C2C2C;
+      font-family: 'Lato', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 10% 0 14%; }
+
+    /* NAVIGATION */
+    .navbar {
+      padding: 2rem 0;
+      border-bottom: 1px solid #D9CFC5;
+      margin-bottom: 3rem;
+    }
+
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #2C2C2C;
+      text-decoration: none;
+    }
+
+    .nav-logo:hover { color: #8B0000; }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      color: #2C2C2C;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #8B0000;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+
+    .hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #2C2C2C;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-text p {
+      font-size: 17px;
+      line-height: 1.9;
+      color: #3A3A3A;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-text a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .hero-text a:hover {
+      text-decoration: underline;
+    }
+
+    .hero-image {
+      text-align: center;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 2px;
+    }
+
+    /* FEATURED BOOK */
+    .featured-section {
+      background: rgba(212, 165, 116, 0.1);
+      padding: 3rem;
+      margin: 4rem 0;
+      border-left: 4px solid #D4A574;
+    }
+
+    .featured-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #2C2C2C;
+    }
+
+    .featured-section p {
+      font-size: 15px;
+      line-height: 1.9;
+      color: #3A3A3A;
+      margin-bottom: 1rem;
+    }
+
+    .featured-section a {
+      color: #8B0000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .featured-section a:hover {
+      text-decoration: underline;
+    }
+
+    /* SECTIONS GRID */
+    .sections-nav {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+      margin: 4rem 0;
+    }
+
+    .section-card {
+      padding: 2rem;
+      border: 1px solid #D9CFC5;
+      text-decoration: none;
+      color: #2C2C2C;
+      transition: all 0.2s;
+    }
+
+    .section-card:hover {
+      border-color: #8B0000;
+      box-shadow: 0 2px 8px rgba(139, 0, 0, 0.1);
+    }
+
+    .section-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+      color: #2C2C2C;
+    }
+
+    .section-card p {
+      font-size: 14px;
+      color: #8B7355;
+      line-height: 1.7;
+    }
+
+    /* CONTACT */
+    .contact-section {
+      margin: 4rem 0;
+      padding: 3rem;
+      border: 1px solid #D9CFC5;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .contact-section p {
+      font-size: 15px;
+      line-height: 1.9;
+      color: #3A3A3A;
+      margin-bottom: 2rem;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+      padding: 0.8rem;
+      width: 100%;
+      max-width: 500px;
+      margin-bottom: 1rem;
+      border: 1px solid #D9CFC5;
+      font-family: 'Lato', sans-serif;
+      font-size: 14px;
+    }
+
+    .contact-section button {
+      background: #8B0000;
+      color: white;
+      padding: 0.8rem 2rem;
+      border: none;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .contact-section button:hover {
+      background: #600000;
+    }
+
+    /* FOOTER */
+    .footer-divider {
+      border-top: 1px solid #D9CFC5;
+      margin-top: 4rem;
+      padding-top: 2rem;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .footer-copyright {
+      font-size: 14px;
+      color: #8B7355;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+      color: #8B7355;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #8B0000;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 800px) {
+      .container { padding: 0 6% 0 10%; }
+      .hero { grid-template-columns: 1fr; gap: 2rem; }
+      .hero-text h1 { font-size: 36px; }
+      .sections-nav { grid-template-columns: 1fr; }
+      .nav-links { gap: 1.5rem; }
+      .nav-links a { font-size: 12px; }
+      .footer-content { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 500px) {
+      .container { padding: 0 5%; }
+      .hero-text h1 { font-size: 28px; }
+      .featured-section { padding: 1.5rem; }
+      .sections-nav { gap: 1.5rem; }
+      .nav-links { flex-direction: column; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<div class="navbar">
+  <div class="container">
+    <div class="nav-content">
+      <a href="/" class="nav-logo">Sergei Chapnin</a>
+      <ul class="nav-links">
+        <li><a href="/bio/">Bio</a></li>
+        <li><a href="/writings/">Writings</a></li>
+        <li><a href="/talks/">Talks</a></li>
+        <li><a href="/exhibitions/">Exhibitions</a></li>
+        <li><a href="/photos/">Photos</a></li>
+        <li><a href="/collaborate/">Collaborate</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Sergei Chapnin</h1>
+      <p>Religious scholar, journalist, and curator engaged in critical analysis of the Russian Orthodox Church and Orthodox Christianity in the post-Soviet world. Director of Communications at the Orthodox Christian Studies Center, Fordham University. Chief Editor of <em>The Gifts</em>, an almanac of contemporary Christian culture.</p>
+      <p><a href="/about/">Read full biography →</a></p>
+    </div>
+    <div class="hero-image">
+      <img src="/images/portrait.jpg" alt="Sergei Chapnin" width="400" height="500">
+    </div>
+  </div>
+
+  <!-- FEATURED BOOK -->
+  <div class="featured-section">
+    <h2>Featured: <em>Religious Communities Under Pressure</em></h2>
+    <p><strong>Documenting Religious Persecution in Russia 2022–2026</strong></p>
+    <p>Published June 13, 2026. Foreword by Dr. Rowan Williams. An examination of the persecution of religious communities in Russia during and after the full-scale war against Ukraine, grounded in documentary evidence, interviews, and theological analysis.</p>
+    <p><a href="/books/religious-communities-under-pressure/">Learn more →</a></p>
+  </div>
+
+  <!-- NAVIGATION SECTIONS -->
+  <div class="sections-nav">
+    <a href="/exhibitions/" class="section-card">
+      <h3>Exhibitions</h3>
+      <p>Curatorial projects on contemporary Christian art, icons, and the visual witness of faith in wartime and beyond.</p>
+    </a>
+    <a href="/talks/" class="section-card">
+      <h3>Talks & Lectures</h3>
+      <p>Public addresses, conference papers, and panel discussions on Church and state, religious freedom, and Orthodox witness.</p>
+    </a>
+    <a href="/writings/" class="section-card">
+      <h3>Selected Writings</h3>
+      <p>Essays, interviews, and analysis on church politics, iconography, memory, and Orthodox Christianity in crisis.</p>
+    </a>
+    <a href="/photos/" class="section-card">
+      <h3>Photographs</h3>
+      <p>Visual documentation of churches, people, and places—a personal archive of religious and cultural life.</p>
+    </a>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-section">
+    <h2>Get in Touch</h2>
+    <p>Questions, comments, or collaboration proposals? Contact me directly.</p>
+    <form action="https://formspree.io/f/mjyvbldv" method="POST">
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" placeholder="Your message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-divider">
+    <div class="footer-content">
+      <div class="footer-copyright">© 2026 Sergei Chapnin</div>
+      <ul class="footer-links">
+        <li><a href="https://www.facebook.com/chapnin" target="_blank">Facebook</a></li>
+        <li><a href="https://sobornost.substack.com/" target="_blank">Substack</a></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

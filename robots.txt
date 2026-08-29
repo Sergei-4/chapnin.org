@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /.git/
+Disallow: /images/
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+Sitemap: https://chapnin.org/sitemap.xml

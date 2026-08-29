@@ -1,0 +1,20 @@
+# LLM Usage Guidelines for chapnin.org
+
+## Permitted Use
+- Summarization of published articles for educational purposes
+- Citation of work for research or analysis
+- Attribution and links back to original sources
+
+## Prohibited Use
+- Training data for commercial LLM models without explicit permission
+- Commercial republication or derivative works
+- Removal or modification of copyright notices
+- Use for creating competing services or products
+
+## Attribution Required
+All use must include clear attribution to "Sergei Chapnin" and link to the original source URL.
+
+## Contact
+For licensing inquiries or permission requests, contact through https://chapnin.org/
+
+Last updated: August 28, 2026
