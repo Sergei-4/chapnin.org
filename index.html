@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D5K3GDSNQ0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-D5K3GDSNQ0');
+  </script>
+  <meta name="robots" content="index, follow">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- META & CHARSET -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +43,8 @@
   <meta name="twitter:image" content="https://chapnin.org/images/portrait.jpg">
   
   <!-- FAVICON & THEME -->
-  <link rel="icon" type="image/png" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <meta name="theme-color" content="#F5EFE7">
   
   <!-- FONTS -->
@@ -53,6 +66,7 @@
       "url": "https://fordham.edu"
     },
     "sameAs": [
+      "https://fordham.academia.edu/SergeiChapnin",
       "https://www.facebook.com/chapnin",
       "https://sobornost.substack.com/"
     ],
@@ -378,6 +392,7 @@
       padding: 3rem;
       border: 1px solid #D9CFC5;
       text-align: center;
+      scroll-margin-top: 2rem;
     }
 
     .contact-section h2 {
@@ -580,7 +595,7 @@
   </div>
 
   <!-- CONTACT -->
-  <div class="contact-section">
+  <div class="contact-section" id="contact">
     <h2>Get in Touch</h2>
     <p>Questions, comments, or collaboration proposals? Contact me directly.</p>
     <form action="https://formspree.io/f/mjyvbldv" method="POST">
