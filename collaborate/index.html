@@ -66,7 +66,6 @@
     .item:last-child { border-bottom: none; }
 
     .item-content { }
-    .item-number { font-size: 12px; color: #8B7355; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 0.6rem; }
     .item-intro { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: #2C2C2C; margin-bottom: 1rem; line-height: 1.3; }
     .item-intro .if { color: #8B0000; } /* "Если" in red */
     .item-text { font-size: 15px; line-height: 1.9; color: #3A3A3A; margin-bottom: 1.2rem; }
@@ -76,9 +75,9 @@
     .item-image { text-align: center; }
     .item-image img { max-width: 100%; height: auto; border: 1px solid #D9CFC5; }
     /* ALTERNATING LAYOUT: even items get image on the left */
-    .item:nth-child(even) { grid-template-columns: 300px 1fr; }
-    .item:nth-child(even) .item-content { order: 2; }
-    .item:nth-child(even) .item-image { order: 1; }
+    .item:nth-child(odd) { grid-template-columns: 300px 1fr; }
+    .item:nth-child(odd) .item-content { order: 2; }
+    .item:nth-child(odd) .item-image { order: 1; }
 
     /* FOOTER */
     .footer-divider { border-top: 1px solid #D9CFC5; margin-top: 4rem; padding-top: 2rem; padding-bottom: 2rem; }
@@ -93,9 +92,9 @@
       .container { padding: 0 6% 0 10%; }
       .page-title { font-size: 36px; }
       .item { grid-template-columns: 1fr; gap: 2rem; }
-      .item:nth-child(even) { grid-template-columns: 1fr; }
-      .item:nth-child(even) .item-content { order: 0; }
-      .item:nth-child(even) .item-image { order: 0; }
+      .item:nth-child(odd) { grid-template-columns: 1fr; }
+      .item:nth-child(odd) .item-content { order: 0; }
+      .item:nth-child(odd) .item-image { order: 0; }
       .item-image { max-width: 280px; margin: 0 auto; }
       .nav-links { gap: 1.5rem; }
       .nav-links a { font-size: 12px; }
@@ -165,19 +164,17 @@
     <!-- Item 1: Lectures & Conversations -->
     <div class="item">
       <div class="item-content">
-        <div class="item-number">01</div>
         <div class="item-intro"><span class="if">If</span> you want a lecture or conversation</div>
         <div class="item-text">I speak on the Russian Orthodox Church, religious persecution, church and state, theology and ethics, and contemporary Christian culture. Recent hosts include Houston University, Valparaiso University, Berkeley University, and parishes of the GOA and OCA. Lectures and conversations can be given <strong>in English or Russian, as you prefer</strong>. <a href="#contact" class="item-link">Invite me to speak →</a></div>
       </div>
       <div class="item-image">
-        <img src="/images/portrait.jpg" alt="Sergei Chapnin" width="280" height="350">
+        <img src="/images/collaborate/portrait-lecture.jpg" alt="Sergei Chapnin lecturing" width="280" height="420">
       </div>
     </div>
 
     <!-- Item 2: Exhibitions -->
     <div class="item">
       <div class="item-content">
-        <div class="item-number">02</div>
         <div class="item-intro"><span class="if">If</span> you have exhibition space</div>
         <div class="item-text">I can bring curated exhibitions on contemporary iconography to your venue. Featured projects include <em>Icons on Ammo Boxes</em> (collaborating with Sofia Atlantova and Oleksandr Klymienko) and <em>Saints of the Undivided Church</em>. Exhibitions can be arranged either as <strong>short shows of 2–3 days or as longer installations of 3–6 months</strong> — the longer format is preferable. <a href="#contact" class="item-link">Discuss an exhibition →</a></div>
       </div>
@@ -189,7 +186,6 @@
     <!-- Item 3: Calendar of icons -->
     <div class="item">
       <div class="item-content">
-        <div class="item-number">03</div>
         <div class="item-intro"><span class="if">If</span> you love icons</div>
         <div class="item-text">This is not about individual pieces but about producing <strong>a dedicated calendar of contemporary icons, in a print run of at least 300 copies</strong>. Each month presents the work of a living iconographer working in the Orthodox tradition — ideal for a parish, institution, or cultural organization. I keep a large archive of contemporary icons in high resolution, so a calendar can be built around almost any theme: icons of the Mother of God, the saints of ancient Ireland, or — if you want to stand with Orthodox Christians in Ukraine — icons from the <em>Icons on Ammo Boxes</em> project. On request, each calendar can also be given its own unique calligraphy. <a href="#contact" class="item-link">Commission a calendar →</a></div>
       </div>
@@ -201,7 +197,6 @@
     <!-- Item 4: Exhibition catalog -->
     <div class="item">
       <div class="item-content">
-        <div class="item-number">04</div>
         <div class="item-intro"><span class="if">If</span> you collect exhibition catalogs</div>
         <div class="item-text">The catalog from the international exhibition <em>Saints of the Undivided Church</em> documents <strong>a unique collection without parallel, representing 100 iconographers from 15 countries</strong> — a scholarly and visual record of contemporary icon painting across cultures and Christian traditions. Limited copies. <a href="#contact" class="item-link">Request a copy →</a></div>
       </div>
@@ -213,7 +208,6 @@
     <!-- Item 5: Gifts Almanac -->
     <div class="item">
       <div class="item-content">
-        <div class="item-number">05</div>
         <div class="item-intro"><span class="if">If</span> you follow contemporary Christian culture</div>
         <div class="item-text"><em>The Gifts</em> (Дары) is a <strong>richly illustrated almanac</strong> of contemporary Christian culture, iconography, and theology, of interest <strong>even to those who do not read Russian</strong>. I serve as Chief Editor; each volume gathers a year of theological reflection, visual culture, and scholarly essays. Copies available. <a href="#contact" class="item-link">Contact for a copy →</a></div>
       </div>
@@ -229,7 +223,6 @@
     <!-- Item 6: Russian Book -->
     <div class="item">
       <div class="item-content">
-        <div class="item-number">06</div>
         <div class="item-intro"><span class="if">If</span> you read Russian</div>
         <div class="item-text">My book <em>Church Resurrection: A Balance Sheet</em> (Церковное возрождение. Итоги), <strong>published in 2018</strong>, explores the trajectory of the Russian Orthodox Church from the 1990s to the present. Limited copies available. <a href="#contact" class="item-link">Contact for purchase →</a></div>
       </div>
@@ -241,7 +234,6 @@
     <!-- Item 7: Substack -->
     <div class="item">
       <div class="item-content">
-        <div class="item-number">07</div>
         <div class="item-intro"><span class="if">If</span> you want to stay connected</div>
         <div class="item-text">Subscribe to my Substack for essays, reflections, and analysis on the Russian Orthodox Church, religious freedom, and contemporary Christianity. Regular updates on my writing, exhibitions, and public work. <a href="https://sobornost.substack.com/" target="_blank" class="item-link">Subscribe on Substack →</a></div>
       </div>
