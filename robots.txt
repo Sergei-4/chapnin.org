@@ -2,6 +2,19 @@ User-agent: *
 Allow: /
 Disallow: /.git/
 Disallow: /images/
+Allow: /images/og/
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
 
 User-agent: GPTBot
 Disallow: /
