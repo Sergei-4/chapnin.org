@@ -76,8 +76,10 @@
     .nav-links a { font-size: 14px; color: #2C2C2C; text-decoration: none; font-weight: 500; transition: color 0.2s; text-transform: uppercase; letter-spacing: 0.3px; }
     .nav-links a:hover, .nav-links a.active { color: #8B0000; }
 
-    .book-hero { display: grid; grid-template-columns: 300px 1fr; gap: 4rem; align-items: start; margin: 3rem 0 2.5rem; }
+    .book-hero { display: grid; grid-template-columns: 260px 1fr; gap: 3.5rem; align-items: start; margin: 1.6rem 0 1.4rem; }
+    .book-cover { text-align: center; }
     .book-cover img { max-width: 100%; height: auto; border: 1px solid #D9CFC5; box-shadow: 0 6px 24px rgba(44,44,44,0.14); }
+    .hero-buy { display: block; margin: 1.4rem 0 0.7rem; }
     .book-title { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 700; line-height: 1.15; margin-bottom: 0.7rem; color: #2C2C2C; }
     .book-subtitle { font-size: 18px; color: #8B7355; font-weight: 600; margin-bottom: 0.8rem; }
     .book-byline { font-size: 15px; color: #3A3A3A; margin-bottom: 1.4rem; }
@@ -87,7 +89,7 @@
     .quick-facts { font-size: 14px; color: #8B7355; margin-top: 1.1rem; }
     .quick-facts .star { color: #8B0000; }
 
-    .anchor-nav { position: sticky; top: 0; background: rgba(245,239,231,0.96); backdrop-filter: blur(4px); border-top: 1px solid #D9CFC5; border-bottom: 1px solid #D9CFC5; padding: 0.85rem 0; margin: 0 0 3rem; z-index: 20; }
+    .anchor-nav { position: sticky; top: 0; background: rgba(245,239,231,0.96); backdrop-filter: blur(4px); border-top: 1px solid #D9CFC5; border-bottom: 1px solid #D9CFC5; padding: 0.85rem 0; margin: 0 0 2.5rem; z-index: 20; }
     .anchor-nav ul { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; justify-content: center; }
     .anchor-nav a { font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px; color: #8B7355; text-decoration: none; font-weight: 700; transition: color 0.2s; }
     .anchor-nav a:hover { color: #8B0000; }
@@ -129,6 +131,11 @@
 
     .details-strip { font-size: 14px; line-height: 2; color: #3A3A3A; border-top: 1px solid #D9CFC5; border-bottom: 1px solid #D9CFC5; padding: 1.4rem 0; margin-bottom: 2rem; }
     .details-strip strong { color: #2C2C2C; }
+    .events { max-width: 78ch; }
+    .event { display: flex; gap: 1.2rem; padding: 0.55rem 0; border-bottom: 1px solid #EADFD2; }
+    .event:last-child { border-bottom: none; }
+    .event-date { font-weight: 700; color: #8B0000; min-width: 10rem; flex: none; }
+    .event-where { color: #3A3A3A; }
     .cta-final { margin: 2rem 0 1rem; }
 
     .footer-divider { border-top: 1px solid #D9CFC5; margin-top: 4rem; padding-top: 2rem; padding-bottom: 2rem; }
@@ -175,15 +182,15 @@
 
   <div class="book-hero">
     <div class="book-cover">
-      <img src="/images/book-cover.jpg" alt="Religious Communities Under Pressure" width="300" height="482">
+      <img src="/images/book-cover.jpg" alt="Religious Communities Under Pressure" width="260" height="418">
+      <a href="https://www.amazon.com/dp/B0H5G277LW" target="_blank" class="buy-btn hero-buy">Buy on Amazon</a>
+      <div class="quick-facts">Paperback $17.09 &nbsp;·&nbsp; Kindle $9.99<br><span class="star">★</span> 4.5 (9 ratings) &nbsp;·&nbsp; 163 pages</div>
     </div>
     <div class="book-details">
       <h1 class="book-title">Religious Communities Under Pressure</h1>
       <div class="book-subtitle">Documenting Religious Persecution in Russia 2022–2026</div>
       <div class="book-byline">by Sergei V. Chapnin &nbsp;·&nbsp; Foreword by Rowan Williams</div>
       <p class="book-hook">The most systematic campaign of religious persecution in twenty-first-century Europe — documented from inside the Church that carried it out.</p>
-      <a href="https://www.amazon.com/dp/B0H5G277LW" target="_blank" class="buy-btn">Buy on Amazon</a>
-      <div class="quick-facts">Paperback $17.09 &nbsp;·&nbsp; Kindle $9.99 &nbsp;·&nbsp; <span class="star">★</span> 4.5 (9 ratings) &nbsp;·&nbsp; 163 pages</div>
     </div>
   </div>
 
@@ -191,8 +198,9 @@
     <ul>
       <li><a href="#press">In the Press</a></li>
       <li><a href="#book">The Book</a></li>
-      <li><a href="#praise">Praise</a></li>
+      <li><a href="#endorsements">Endorsements</a></li>
       <li><a href="#readers">Readers</a></li>
+      <li><a href="#events">Events</a></li>
       <li><a href="#contents">Contents</a></li>
       <li><a href="https://www.amazon.com/dp/B0H5G277LW" target="_blank">Buy on Amazon</a></li>
     </ul>
@@ -217,8 +225,8 @@
     </div>
   </section>
 
-  <section class="section" id="praise">
-    <div class="section-label">Praise</div>
+  <section class="section" id="endorsements">
+    <div class="section-label">Endorsements</div>
     <div class="endorsement">
       <div class="endorsement-quote">"Courageous, comprehensively documented, written out of indignant loyalty to a Church whose public spokespersons seem set on destroying its own credibility — a necessary and timely book that should be studied by all who want to understand the draining, disgraceful conflict that continues to overshadow Eastern Europe."</div>
       <div class="endorsement-author">Dr. Rowan Williams, former Archbishop of Canterbury — from the Foreword</div>
@@ -251,6 +259,14 @@
       <div class="stars">★★★★★</div>
       <div class="review-quote">"Not simply a critique of the Russian Orthodox Church, nor merely another book about the war. It is a carefully documented record of what happened to religious believers whose conscience prevented them from remaining silent."</div>
       <div class="review-author">Fr. Volodymyr Zablotskyy, Orthodox priest</div>
+    </div>
+  </section>
+
+  <section class="section" id="events">
+    <div class="section-label">Presentations</div>
+    <div class="events">
+      <div class="event"><span class="event-date">September 15, 2026</span><span class="event-where">George Washington University, Washington, D.C.</span></div>
+      <div class="event"><span class="event-date">2026</span><span class="event-where">RUARE 2026 &mdash; Rome, Italy</span></div>
     </div>
   </section>
 
