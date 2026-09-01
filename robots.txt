@@ -1,20 +1,9 @@
+# All images and photographs on this site are © Sergei Chapnin. All rights reserved.
+# Reuse by permission only — get in touch via https://chapnin.org/collaborate/
+
 User-agent: *
 Allow: /
 Disallow: /.git/
-Disallow: /images/
-Allow: /images/og/
-
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: LinkedInBot
-Allow: /
-
-User-agent: TelegramBot
-Allow: /
 
 User-agent: GPTBot
 Disallow: /
