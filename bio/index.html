@@ -192,6 +192,13 @@
       font-weight: 600;
     }
 
+    .bio-tabs { display: flex; gap: 1.8rem; border-bottom: 1px solid #D9CFC5; margin-bottom: 1.8rem; flex-wrap: wrap; }
+    .bio-tab { background: none; border: none; font-family: 'Lato', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #8B7355; cursor: pointer; padding: 0 0 0.8rem; margin-bottom: -1px; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s; }
+    .bio-tab:hover { color: #8B0000; }
+    .bio-tab.active { color: #8B0000; border-bottom-color: #8B0000; }
+    .bio-panel { display: none; }
+    .bio-panel.active { display: block; }
+    .bio-panel.personal p:first-of-type { margin-top: 0; }
     .footer-divider {
       border-top: 1px solid #D9CFC5;
       margin-top: 4rem;
@@ -272,21 +279,61 @@
     <div class="about-image">
       <img src="/images/portrait.jpg" alt="Sergei Chapnin" width="300" height="400">
     </div>
-    
+
     <div class="about-content">
-      <p>Sergei Chapnin is a journalist, religious scholar, and editor engaged in critical analysis of the Russian Orthodox Church and post-Soviet authoritarianism. He serves as Director of Communications at the <a href="http://www.fordham.edu/orthodoxy" target="_blank">Orthodox Christian Studies Center, Fordham University</a>, and as Chief Editor of <em>The Gifts</em> (<em>Дары</em>), an almanac of contemporary Christian culture. He is also an editor of <a href="https://publicorthodoxy.org/" target="_blank">Public Orthodoxy</a>, a platform for theological and political analysis in the Orthodox Christian tradition.</p>
+      <div class="bio-tabs">
+        <button class="bio-tab" data-target="bio-brief">In brief</button>
+        <button class="bio-tab active" data-target="bio-professional">Professional</button>
+        <button class="bio-tab" data-target="bio-personal">Personal</button>
+      </div>
 
-      <p>Chapnin's work sits at the intersection of theology, history, political science, religious studies, and cultural analysis. His primary focus is the Russian Orthodox Church, the Orthodox churches across the post-Soviet space, and churches of the Russian tradition in diaspora. He examines their ecclesiology, their entanglement with state power, and the theological and ethical questions this raises for Orthodox Christians today.</p>
+      <div class="bio-panel" id="bio-brief">
+        <p>Sergei Chapnin is a Russian Orthodox journalist and scholar who has written on the Russian Orthodox Church in the post-Soviet period since 1990. He edited the <em>Journal of the Moscow Patriarchate</em> and taught theology at St Tikhon's Orthodox University in Moscow. Since 2022 he has been Director of Communications at the <a href="http://www.fordham.edu/orthodoxy" target="_blank">Orthodox Christian Studies Center, Fordham University</a>. He is also a curator of exhibitions of contemporary Christian art.</p>
+      </div>
 
-      <p>From the 1990s through the early 2000s, Chapnin worked as a journalist covering Russian religious life for <em>Kommersant</em> and <em>Nezavisimaya Gazeta</em>, among Russia's leading independent newspapers. In 2001, at the invitation of Patriarch Alexei II, he joined the Moscow Patriarchate, where he served as Executive Editor of <em>The Church Herald</em>, Executive Editor of <em>The Journal of the Moscow Patriarchate</em>, and Deputy Chief Editor of the Moscow Patriarchate Publishing House (2009–2015). In 2010–2013, he served as Secretary of the Church, State, and Society Commission of the Inter-Conciliar Board of the Russian Orthodox Church. During this period, he was also a senior lecturer at Saint Tikhon Orthodox Humanitarian University, Faculty of Theology.</p>
+      <div class="bio-panel active" id="bio-professional">
+        <p>Sergei Chapnin is a journalist, religious scholar, and editor engaged in critical analysis of the Russian Orthodox Church and post-Soviet authoritarianism. He serves as Director of Communications at the <a href="http://www.fordham.edu/orthodoxy" target="_blank">Orthodox Christian Studies Center, Fordham University</a>, and as Chief Editor of <em>The Gifts</em> (<em>Дары</em>), an almanac of contemporary Christian culture. He is also an editor of <a href="https://publicorthodoxy.org/" target="_blank">Public Orthodoxy</a>, a platform for theological and political analysis in the Orthodox Christian tradition.</p>
 
-      <p>In December 2015, following a lecture at the Carnegie Moscow Center where he forecast that the war in Ukraine would be given religious justification, Chapnin was dismissed from all positions by Patriarch Kirill. Since then he has written and spoken internationally on the Moscow Patriarchate's role in Russian state power and the theological crisis this has produced. His scholarship and journalism have appeared in <em>First Things</em>, <em>The New York Times</em>, <em>The Wall Street Journal</em>, <em>Bloomberg</em>, <em>NPR</em>, <em>CBS</em>, <em>The Moscow Times</em>, and other outlets. In 2022, he was appointed to the faculty of Fordham University.</p>
+        <p>Chapnin's work sits at the intersection of theology, history, political science, religious studies, and cultural analysis. His primary focus is the Russian Orthodox Church, the Orthodox churches across the post-Soviet space, and churches of the Russian tradition in diaspora. He examines their ecclesiology, their entanglement with state power, and the theological and ethical questions this raises for Orthodox Christians today.</p>
 
-      <p>Chapnin is also a photographer and curator of exhibitions on contemporary Christian art. His photographic work documents churches, monastic communities, places of pilgrimage, and human encounters within religious spaces. His curatorial projects have been presented in Europe, Russia, and the United States, bringing together contemporary iconographers, artists, and theologians in critical dialogue about faith, tradition, beauty, and the witness of the Church in our time.</p>
+        <p>From the 1990s through the early 2000s, Chapnin worked as a journalist covering Russian religious life for <em>Kommersant</em> and <em>Nezavisimaya Gazeta</em>, among Russia's leading independent newspapers. In 2001, at the invitation of Patriarch Alexei II, he joined the Moscow Patriarchate, where he served as Executive Editor of <em>The Church Herald</em>, Executive Editor of <em>The Journal of the Moscow Patriarchate</em>, and Deputy Chief Editor of the Moscow Patriarchate Publishing House (2009&ndash;2015). In 2010&ndash;2013, he served as Secretary of the Church, State, and Society Commission of the Inter-Conciliar Board of the Russian Orthodox Church. During this period, he was also a senior lecturer at Saint Tikhon Orthodox Humanitarian University, Faculty of Theology.</p>
+
+        <p>In December 2015, following a lecture at the Carnegie Moscow Center where he forecast that the war in Ukraine would be given religious justification, Chapnin was dismissed from all positions by Patriarch Kirill. Since then he has written and spoken internationally on the Moscow Patriarchate's role in Russian state power and the theological crisis this has produced. His scholarship and journalism have appeared in <em>First Things</em>, <em>The New York Times</em>, <em>The Wall Street Journal</em>, <em>Bloomberg</em>, <em>NPR</em>, <em>CBS</em>, <em>The Moscow Times</em>, and other outlets. In 2022, he was appointed to the faculty of Fordham University.</p>
+
+        <p>Chapnin is also a photographer and curator of exhibitions on contemporary Christian art. His photographic work documents churches, monastic communities, places of pilgrimage, and human encounters within religious spaces. His curatorial projects have been presented in Europe, Russia, and the United States, bringing together contemporary iconographers, artists, and theologians in critical dialogue about faith, tradition, beauty, and the witness of the Church in our time.</p>
+      </div>
+
+      <div class="bio-panel personal" id="bio-personal">
+        <p>I was born in 1968 on the Arbat, in the very heart of Moscow, a city I have never quite left. I came to the Church late, and by my own decision, baptized in the autumn of 1989, while the Soviet system that had spent seventy years trying to erase it was itself beginning to end.</p>
+
+        <p>I studied journalism at Moscow University in the late 1980s and was conscripted into the army, with a real chance of being sent to Afghanistan that, by good fortune, never came. Afterward I began writing for the samizdat press, half-legal by then, and then for the news agency Postfactum and the newspaper <em>Kommersant</em>. Independent journalism was my first love; it always mattered to me more than any official position.</p>
+
+        <p>But alongside the profession stood the parish community. With a brotherhood of young people, most of us only just baptized, I helped restore a church near Klin, seventy-five kilometers from Moscow, abandoned and all but destroyed in the Soviet years. It was the first church in Russia dedicated to Patriarch Tikhon, and we took his name for the brotherhood. I could not have guessed that Tikhon's blessing would carry me, more than thirty years later, to America, the country where he himself had once served the Church before Russia called him home. Our brotherhood soon became part of a large and vibrant lay movement of the early 1990s, one the bishops would move to suppress only a few years later.</p>
+
+        <p>In the autumn of 1990, at twenty-two, I stood at the funeral of Father Alexander Men in Novaya Derevnya. I have never forgotten what I understood there: the price paid by those who preach the Gospel without fear. Decades later I was drawn back to Semkhoz, where Men had lived and was killed, and to a long friendship with his nephew, Father Viktor Grigorenko, who died in 2022.</p>
+
+        <p>That November, two months after Men's murder, an errand carried me to the small monastery of Father Sophrony Sakharov in Essex, England. The old man was ninety-four, and he embraced me like a father. For three years I lived between Moscow and Essex, and the monastery became my second home. There I first understood that the Church I loved was wider than any nation: Orthodoxy could be at home in England, and holiness could speak in more than one tongue. What Father Sophrony opened has stayed beneath everything I have done since. He gave me a way of prayer, private and liturgical; twentieth-century Orthodox theology; a spiritual fatherhood native to Mount Athos and still unknown in Russia at the time. From him I learned to see the Church first as a communion of persons, held together by love and by prayer before it is held together by anything else.</p>
+
+        <p>In 1998 I walked through waist-deep snow toward Ganina Yama, outside Ekaterinburg, drawn into the recovery of the relics of the Royal Family. I was wary then of the politics of their canonization, and I am still. But something reached me on that road. Such holiness, I understood, is lived not by mind and heart but by every cell of a tired, wet, sweating body. What I revered was the family's transformation before death, not the monarchy others wanted to build upon it.</p>
+
+        <p>Through the 1990s I stayed in independent journalism. Its brightest chapter was <em>NG-Religii</em>, the religion supplement I edited for <em>Nezavisimaya Gazeta</em>, without question the most vivid religious-journalism project of those years. In 1998 I founded <em>Sobornost</em>, the first religious internet journal in Russia. We wrote about everything, and we criticized the episcopate, plainly but in good faith. It did not stop the Patriarchate's own officials from inviting me, in 2001, to come and work for the Church.</p>
+
+        <p>Independent journalism was dearer to me than any official post, and I hesitated when the invitation came. What decided it was the personal blessing of Patriarch Alexy II, with whom I had a warm relationship. I stayed fifteen years, editing <em>Tserkovny Vestnik</em> and then the <em>Journal of the Moscow Patriarchate</em>, and teaching a course of my own, the theology of communication, at St Tikhon's Orthodox University. I tried to smuggle real life back onto official pages, to show that a Church actually lives behind the strict facade. In 2004 I founded the Orthodox media festival <em>Vera i Slovo</em> ("Faith and Word"), which brought church and secular journalists together as equals and came to be counted among the brightest events in post-Soviet religious journalism.</p>
+
+        <p>I had known Metropolitan Kirill since the mid-1990s, and I watched the last stage of his rise up close. By 2012 I could no longer keep from criticizing where it led, as he consciously traded faith for ideology and freedom for an unconditional, personal loyalty to himself. For me it ended in the winter of 2015, in a scandal I never planned, after I said aloud that Russian Orthodoxy was being remade into a state ideology, and would soon give war and violence its public blessing. What I could not accept was the bargain being struck: the Church's freedom, her calling to be a sign of the Kingdom rather than a servant of empire, bartered for the security of the state.</p>
+
+        <p>Still, the work I have loved most was editorial after all, though of the independent kind: the almanac <em>Dary (The Gifts)</em>, where we gathered the best of what contemporary Christian culture was making. Around it grew exhibitions, conferences, and other projects in the same spirit, made with friends from Russia, Ukraine, Belarus, Italy, and France. Their culmination was <em>Saints of the Undivided Church</em>, an exhibition that travelled from country to country, before Covid, to a response none of us had expected, and the Laboratory of Church Arts and Architecture we built with Italian colleagues. These stay closest to me.</p>
+
+        <p>Beauty, for me, is where sincere prayer meets a visual language. I love the contemporary icon that refuses to copy the past and will not hide an absence of inspiration or gift behind "the canon"; an icon in bold search that never loses its hold on the liturgical tradition. I would say the same of church architecture. I am proud of my friendships with some of the leading iconographers, designers, and architects working today.</p>
+
+        <p>For the past two years, unexpectedly and against every plan I had, I have been working on religious persecution in Russia. This is the very thing Sophrony Sakharov fled a hundred years ago, the thing that seemed gone for good. It is not gone. The same story returns, and the world would rather not hear it. Many find it comfortable to think of Russia as a Christian country. Russia has become something else. So it has to be said, if only to stand by the few Christian communities that still hold on there.</p>
+
+        <p>And this is the work I mean to keep doing: to say, and to go on saying, that Russian Orthodoxy is alive, and beautiful, even now, when the revival I once served has ended once more in catastrophe. I write about a Church I know from the inside, in its depth and in its wrong turns, not against her but out of love, and with a joy that no power can confiscate.</p>
+      </div>
 
       <div class="cta-section">
         <h3>Interested in collaboration or discussion?</h3>
-        <p><a href="/#contact">Get in touch →</a></p>
+        <p><a href="/#contact">Get in touch &rarr;</a></p>
       </div>
     </div>
   </div>
@@ -302,6 +349,17 @@
   </div>
 
 </div>
+
+<script>
+  document.querySelectorAll('.bio-tab').forEach(function(tab){
+    tab.addEventListener('click', function(){
+      document.querySelectorAll('.bio-tab').forEach(function(x){ x.classList.remove('active'); });
+      document.querySelectorAll('.bio-panel').forEach(function(x){ x.classList.remove('active'); });
+      tab.classList.add('active');
+      document.getElementById(tab.getAttribute('data-target')).classList.add('active');
+    });
+  });
+</script>
 
 </body>
 </html>
