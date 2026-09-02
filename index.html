@@ -354,8 +354,8 @@
     /* SECTIONS GRID */
     .sections-nav {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 3rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
       margin: 4rem 0;
     }
 
@@ -485,12 +485,45 @@
       color: #8B0000;
     }
 
+    /* BUTTONS */
+    .btn { display: inline-block; padding: 0.8rem 1.5rem; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; text-decoration: none; transition: all 0.2s; }
+    .btn-primary { background: #8B0000; color: #fff; }
+    .btn-primary:hover { background: #600000; }
+    .btn-outline { background: transparent; color: #8B0000; border: 1px solid #8B0000; padding: calc(0.8rem - 1px) calc(1.5rem - 1px); }
+    .btn-outline:hover { background: #8B0000; color: #fff; }
+
+    /* HERO ADDITIONS */
+    .hero-lead { font-family: 'Playfair Display', serif; font-size: 21px; font-style: italic; line-height: 1.45; color: #2C2C2C; margin-bottom: 1.1rem; }
+    .hero-role { font-size: 14px; color: #8B7355; line-height: 1.7; margin-bottom: 1rem; }
+    .hero-trust { font-size: 12px; text-transform: uppercase; letter-spacing: 0.7px; color: #6B5A45; font-weight: 700; margin-bottom: 1.5rem; }
+    .hero-trust em { font-style: italic; color: #8B0000; }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    /* FEATURED BOOK ACTIONS */
+    .featured-press { font-size: 13px; color: #6B5A45; margin: 1.2rem 0 0; }
+    .featured-press em { color: #8B0000; }
+    .featured-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-top: 1.2rem; }
+
+    /* PHOTO STRIP */
+    .photo-strip { display: block; margin: 4rem 0; text-decoration: none; }
+    .photo-strip-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: 1rem; }
+    .photo-strip-head h3 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #2C2C2C; border-left: 4px solid #8B0000; padding-left: 1rem; }
+    .photo-strip-head span { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #8B0000; white-space: nowrap; }
+    .photo-strip-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .photo-strip-grid img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; transition: filter 0.25s; }
+    .photo-strip:hover .photo-strip-grid img { filter: brightness(0.9); }
+
+    /* SECTION CARD ACCENT */
+    .section-card h3::after { content: " \2192"; color: #8B0000; opacity: 0; transition: opacity 0.2s; }
+    .section-card:hover h3::after { opacity: 1; }
+
     /* RESPONSIVE */
     @media (max-width: 800px) {
       .container { padding: 0 6% 0 10%; }
       .hero { grid-template-columns: 1fr; gap: 2rem; }
       .hero-text h1 { font-size: 36px; }
       .sections-nav { grid-template-columns: 1fr; }
+      .photo-strip-grid { grid-template-columns: repeat(2, 1fr); }
       .nav-links { gap: 1.5rem; }
       .nav-links a { font-size: 12px; }
       .footer-content { flex-direction: column; align-items: flex-start; }
@@ -520,6 +553,7 @@
       <a href="/" class="nav-logo">Sergei Chapnin</a>
       <ul class="nav-links">
         <li><a href="/bio/">Bio</a></li>
+        <li><a href="/books/religious-communities-under-pressure/">Book</a></li>
         <li><a href="/writings/">Writings</a></li>
         <li><a href="/talks/">Talks</a></li>
         <li><a href="/exhibitions/">Exhibitions</a></li>
@@ -536,8 +570,14 @@
   <div class="hero">
     <div class="hero-text">
       <h1>Sergei Chapnin</h1>
-      <p>Religious scholar, journalist, and curator engaged in critical analysis of the Russian Orthodox Church and Orthodox Christianity in the post-Soviet world. Director of Communications at the Orthodox Christian Studies Center, Fordham University. Chief Editor of <em>The Gifts</em>, an almanac of contemporary Christian culture.</p>
-      <p><a href="/bio/">Read full biography →</a></p>
+      <p class="hero-lead">A journalist and scholar of the Russian Orthodox Church, its entanglement with state power, and the believers persecuted for refusing the war.</p>
+      <p class="hero-role">Director of Communications, Orthodox Christian Studies Center, Fordham University &nbsp;&middot;&nbsp; Editor at <em>Public Orthodoxy</em> &nbsp;&middot;&nbsp; Chief Editor of <em>The Gifts</em></p>
+      <div class="hero-trust">Featured in <em>The Wall Street Journal</em> &nbsp;&middot;&nbsp; <em>First Things</em></div>
+      <div class="hero-cta">
+        <a href="/books/religious-communities-under-pressure/" class="btn btn-primary">Read the book</a>
+        <a href="/bio/" class="btn btn-outline">Biography</a>
+        <a href="#contact" class="btn btn-outline">Get in touch</a>
+      </div>
     </div>
     <div class="hero-image">
       <img src="/images/portrait-personal.jpg" alt="Sergei Chapnin" width="400" height="500">
@@ -558,7 +598,11 @@
         <blockquote class="featured-quote">"A vital and courageous work. Chapnin brings together meticulous documentation with theological insight to illuminate the religious crisis at the heart of contemporary Russia."
           <cite>— Dr. Rowan Williams, former Archbishop of Canterbury</cite>
         </blockquote>
-        <p><a href="/books/religious-communities-under-pressure/">Learn more →</a></p>
+        <p class="featured-press">Cited by George Weigel in <em>The Wall Street Journal</em>, and named to his <em>First Things</em> Summer Reading List.</p>
+        <div class="featured-actions">
+          <a href="https://www.amazon.com/dp/B0H5G277LW" target="_blank" class="btn btn-primary" onclick="gtag('event','click_buy_amazon',{location:'home'})">Buy on Amazon</a>
+          <a href="/books/religious-communities-under-pressure/" class="btn btn-outline">Learn more</a>
+        </div>
       </div>
     </div>
   </div>
@@ -575,6 +619,20 @@
     </div>
   </div>
 
+  <!-- PHOTOGRAPHY STRIP -->
+  <a class="photo-strip" href="/photos/">
+    <div class="photo-strip-head">
+      <h3>Photographs</h3>
+      <span>View the gallery &rarr;</span>
+    </div>
+    <div class="photo-strip-grid">
+      <img src="/images/photos/landscape-01.jpg" alt="Photograph by Sergei Chapnin" loading="lazy">
+      <img src="/images/photos/landscape-02.jpg" alt="Photograph by Sergei Chapnin" loading="lazy">
+      <img src="/images/photos/reportage-01.jpg" alt="Photograph by Sergei Chapnin" loading="lazy">
+      <img src="/images/photos/portraiture-01.jpg" alt="Photograph by Sergei Chapnin" loading="lazy">
+    </div>
+  </a>
+
   <!-- NAVIGATION SECTIONS -->
   <div class="sections-nav">
     <a href="/exhibitions/" class="section-card">
@@ -588,10 +646,6 @@
     <a href="/writings/" class="section-card">
       <h3>Selected Writings</h3>
       <p>Essays, interviews, and analysis on church politics, iconography, memory, and Orthodox Christianity in crisis.</p>
-    </a>
-    <a href="/photos/" class="section-card">
-      <h3>Photographs</h3>
-      <p>Visual documentation of churches, people, and places—a personal archive of religious and cultural life.</p>
     </a>
   </div>
 
