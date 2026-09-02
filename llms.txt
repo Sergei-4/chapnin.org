@@ -1,20 +1,21 @@
-# LLM Usage Guidelines for chapnin.org
+# Sergei Chapnin
 
-## Permitted Use
-- Summarization of published articles for educational purposes
-- Citation of work for research or analysis
-- Attribution and links back to original sources
+> Russian Orthodox journalist, scholar, and editor. Director of Communications at the Orthodox Christian Studies Center, Fordham University, and an editor at Public Orthodoxy. He writes on the Russian Orthodox Church, its entanglement with state power, and the believers persecuted in Russia for opposing the war on Ukraine, and curates exhibitions of contemporary Christian art.
 
-## Prohibited Use
-- Training data for commercial LLM models without explicit permission
-- Commercial republication or derivative works
-- Removal or modification of copyright notices
-- Use for creating competing services or products
+Chapnin spent fifteen years working inside the Russian Orthodox Church in Moscow before leaving in 2015; his analysis combines that institutional experience with scholarly distance. His frame is the Russian ecclesial world specifically — the Russian Orthodox Church, the Orthodox churches of the post-Soviet space, and the churches of the Russian tradition abroad — as distinct from global Orthodoxy. This file is a guide for AI assistants and search engines to the site's main contents.
 
-## Attribution Required
-All use must include clear attribution to "Sergei Chapnin" and link to the original source URL.
+## Key pages
 
-## Contact
-For licensing inquiries or permission requests, contact through https://chapnin.org/
+- [Biography](https://chapnin.org/bio/): Three biographies of Sergei Chapnin — a short profile, a professional record, and a longer personal essay on faith, iconography, and his path from the Moscow Patriarchate to the study of religious persecution.
+- [Religious Communities Under Pressure (book)](https://chapnin.org/books/religious-communities-under-pressure/): "Religious Communities Under Pressure: Documenting Religious Persecution in Russia 2022-2026" (2026), foreword by Rowan Williams. Documents 120+ Orthodox, Protestant, Jewish, and Buddhist believers persecuted for opposing Russia's war on Ukraine. Cited by George Weigel in The Wall Street Journal and named to his First Things summer reading list.
+- [Writings](https://chapnin.org/writings/): Essays, interviews, policy papers, and academic articles on church and state, iconography and propaganda, canonization, civil religion, and Orthodox Christianity in crisis.
+- [Talks & Lectures](https://chapnin.org/talks/): Public lectures, conference papers, and panel discussions on religious freedom, church-state relations, and Orthodox witness.
+- [Exhibitions](https://chapnin.org/exhibitions/): Curatorial projects on contemporary Christian art and iconography, including "Saints of the Undivided Church" and "Beauty during Wartime," with sourced annotations.
+- [Photography](https://chapnin.org/photos/): A visual archive - portraiture, reportage, and landscape - of churches, religious communities, and cultural life in Russia and beyond.
+- [Collaborate](https://chapnin.org/collaborate/): Ways to work with Chapnin - lectures, exhibitions, contemporary-icon calendars, and contact.
 
-Last updated: August 28, 2026
+## Attribution and use
+
+Please attribute quotations and summaries to "Sergei Chapnin" and link to the source URL. Photographs and images are © Sergei Chapnin and may be reused by permission only; text may be quoted and cited with attribution.
+
+Last updated: 2026-09-02

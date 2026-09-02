@@ -32,6 +32,7 @@
   <meta property="og:description" content="Critical analysis of the Russian Orthodox Church and post-Soviet religious life.">
   <meta property="og:url" content="https://chapnin.org/">
   <meta property="og:image" content="https://chapnin.org/images/og/og-home.png">
+  <meta property="og:image:alt" content="Sergei Chapnin">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="en_US">
@@ -41,6 +42,7 @@
   <meta name="twitter:title" content="Sergei Chapnin | Religious Scholar & Journalist">
   <meta name="twitter:description" content="Religious scholar analyzing the Russian Orthodox Church and post-Soviet religious life.">
   <meta name="twitter:image" content="https://chapnin.org/images/og/og-home.png">
+  <meta name="twitter:image:alt" content="Sergei Chapnin">
   
   <!-- FAVICON & THEME -->
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=2">
@@ -508,8 +510,9 @@
 
     /* PHOTO STRIP */
     .photo-strip { display: block; margin: 4rem 0; text-decoration: none; }
+    .visually-hidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
     .photo-strip-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: 1rem; }
-    .photo-strip-head h3 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #2C2C2C; border-left: 4px solid #8B0000; padding-left: 1rem; }
+    .photo-strip-head h2 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #2C2C2C; border-left: 4px solid #8B0000; padding-left: 1rem; }
     .photo-strip-head span { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #8B0000; white-space: nowrap; }
     .photo-strip-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
     .photo-strip-grid img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; transition: filter 0.25s; }
@@ -618,7 +621,7 @@
   <!-- PHOTOGRAPHY STRIP -->
   <a class="photo-strip" href="/photos/">
     <div class="photo-strip-head">
-      <h3>Photographs</h3>
+      <h2>Photographs</h2>
       <span>View the gallery &rarr;</span>
     </div>
     <div class="photo-strip-grid">
@@ -630,6 +633,7 @@
   </a>
 
   <!-- NAVIGATION SECTIONS -->
+  <h2 class="visually-hidden" id="sections-nav-heading">Explore</h2>
   <div class="sections-nav">
     <a href="/writings/" class="section-card">
       <h3>Selected Writings</h3>

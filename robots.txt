@@ -1,14 +1,12 @@
-# All images and photographs on this site are © Sergei Chapnin. All rights reserved.
-# Reuse by permission only — get in touch via https://chapnin.org/collaborate/
+# chapnin.org
+# Text and analysis on this site may be summarized and cited by search
+# engines and AI assistants, with attribution and a link to the source.
+# All photographs and images are © Sergei Chapnin. Reuse of images by
+# permission only — get in touch via https://chapnin.org/collaborate/
+# See /llms.txt for a guide to the site's contents.
 
 User-agent: *
 Allow: /
 Disallow: /.git/
-
-User-agent: GPTBot
-Disallow: /
-
-User-agent: ChatGPT-User
-Disallow: /
 
 Sitemap: https://chapnin.org/sitemap.xml
