@@ -277,7 +277,7 @@
 
   <div class="about-container">
     <div class="about-image">
-      <img src="/images/portrait.jpg" alt="Sergei Chapnin" width="300" height="400">
+      <img id="bio-portrait" src="/images/portrait.jpg" alt="Sergei Chapnin" width="300" height="400">
     </div>
 
     <div class="about-content">
@@ -361,6 +361,8 @@
       document.querySelectorAll('.bio-panel').forEach(function(x){ x.classList.remove('active'); });
       tab.classList.add('active');
       document.getElementById(tab.getAttribute('data-target')).classList.add('active');
+      var p = document.getElementById('bio-portrait');
+      if (p) { p.src = (tab.getAttribute('data-target') === 'bio-personal') ? '/images/portrait-personal.jpg' : '/images/portrait.jpg'; }
     });
   });
 </script>
