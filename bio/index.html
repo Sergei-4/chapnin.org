@@ -50,7 +50,7 @@
   <meta name="theme-color" content="#F5EFE7">
   
   <!-- FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,700&family=Lato:wght@400;600&display=swap" rel="stylesheet">
   
   <!-- STRUCTURED DATA -->
   <script type="application/ld+json">
@@ -264,6 +264,10 @@
       .page-title { font-size: 28px; }
       .about-image { display: none; }
     }
+  
+    /* logo mark — Ч (Playfair Italic Bold), name left untouched */
+    .nav-logo { display: inline-flex; align-items: center; gap: 0.5rem; }
+    .nav-mark { width: 30px; height: 30px; flex: none; border-radius: 8px; background: #8B0000; color: #F5EFE7; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 700; font-size: 20px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; }
   </style>
 </head>
 <body>
@@ -271,7 +275,7 @@
 <div class="navbar">
   <div class="container">
     <div class="nav-content">
-      <a href="/" class="nav-logo">Sergei Chapnin</a>
+      <a href="/" class="nav-logo"><span class="nav-mark">Ч</span>Sergei Chapnin</a>
       <ul class="nav-links">
         <li><a href="/bio/" class="active">Bio</a></li>
         <li><a href="/books/religious-communities-under-pressure/">Book</a></li>
