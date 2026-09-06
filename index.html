@@ -668,7 +668,7 @@
       <p><em>Sobornost</em> — my Substack. New essays and updates on the Russian Orthodox Church, religious persecution, and the politics of faith. Free, and never often.</p>
     </div>
     <div class="subscribe-form">
-      <iframe src="https://sobornost.substack.com/embed" width="100%" height="150" style="border:none;" frameborder="0" scrolling="no" title="Subscribe to Sobornost"></iframe>
+      <iframe id="substack-embed" src="https://sobornost.substack.com/embed" width="100%" height="150" style="border:none;" frameborder="0" scrolling="no" title="Subscribe to Sobornost"></iframe>
     </div>
   </div>
 
@@ -728,5 +728,22 @@
 
 </div>
 
+
+<script>
+  // Substack subscribe form lives in a cross-origin iframe, so the actual button
+  // click can't be read directly. Fire one GA event when a visitor clicks into
+  // the widget (email field or Subscribe button) — a reliable "intent" signal.
+  (function () {
+    var fired = false;
+    window.addEventListener('blur', function () {
+      if (fired) return;
+      var el = document.activeElement;
+      if (el && el.id === 'substack-embed' && typeof gtag === 'function') {
+        gtag('event', 'subscribe_intent', { location: 'home', method: 'substack' });
+        fired = true;
+      }
+    });
+  })();
+</script>
 </body>
 </html>
