@@ -55,13 +55,13 @@
     .nav-links { flex: 1; display: flex; flex-wrap: wrap; justify-content: center; column-gap: 1.4rem; row-gap: 0.4rem; list-style: none; }
     .nav-links a { font-size: 14px; color: #2C2C2C; text-decoration: none; font-weight: 500; transition: color 0.2s; text-transform: uppercase; letter-spacing: 0.3px; }
     .nav-links a:hover, .nav-links a.active { color: #8B0000; }
-    .page-title { font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 700; line-height: 1.2; margin-bottom: 3rem; color: #2C2C2C; border-left: 4px solid #8B0000; padding-left: 1.5rem; }
-    .writings-list { max-width: 90ch; }
-    .writing-item { margin-bottom: 2.2rem; padding-bottom: 2rem; border-bottom: 1px solid #D9CFC5; }
+    .page-title { font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 700; line-height: 1.2; margin-bottom: 2rem; color: #2C2C2C; border-left: 4px solid #8B0000; padding-left: 1.2rem; }
+    .writings-list { max-width: 760px; }
+    .writing-item { display: grid; grid-template-columns: 7rem 1fr; column-gap: 1.1rem; padding: 0.7rem 0; border-bottom: 1px solid #EFE7DB; margin: 0; }
     .writing-item:last-child { border-bottom: none; }
-    .writing-date { font-size: 13px; color: #8B0000; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 0.6rem; }
-    .writing-tag { display: inline-block; background: #8B0000; color: white; padding: 0.3rem 0.8rem; font-size: 11px; border-radius: 20px; margin-bottom: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; margin-right: 0.4rem; }
-    .writing-type-tag { display: inline-block; background: transparent; color: #8B7355; border: 1px solid #D4A574; padding: 0.3rem 0.8rem; font-size: 11px; border-radius: 20px; margin-bottom: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; }
+    .writing-date { grid-column: 1; order: 0; font-size: 12.5px; color: #8B7355; font-weight: 600; font-variant-numeric: tabular-nums; margin: 0; padding-top: 3px; }
+    .writing-tag { grid-column: 2; order: 1; justify-self: start; display: inline-block; background: transparent; color: #8B0000; padding: 0; font-size: 10.5px; margin: 0 0 0.1rem 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; }
+    .writing-type-tag { grid-column: 2; order: 4; justify-self: start; display: inline-block; background: transparent; color: #6B5A45; border: 1px solid #D9CFC5; padding: 0.05rem 0.45rem; font-size: 10px; border-radius: 3px; margin: 0.35rem 0 0 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
     .writings-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid #D9CFC5; }
     .filter-group { display: flex; flex-wrap: wrap; gap: 0.4rem; }
     .filter-btn { background: transparent; border: 1px solid #D9CFC5; color: #3A3A3A; padding: 0.4rem 0.9rem; font-family: 'Lato', sans-serif; font-size: 13px; font-weight: 600; border-radius: 20px; cursor: pointer; transition: all 0.2s; }
@@ -70,10 +70,10 @@
     .sort-group { display: flex; align-items: center; gap: 0.5rem; margin-left: auto; }
     .sort-group label { font-size: 13px; color: #8B7355; font-weight: 600; }
     .sort-group select { font-family: 'Lato', sans-serif; font-size: 13px; padding: 0.4rem 0.6rem; border: 1px solid #D9CFC5; border-radius: 6px; background: white; color: #2C2C2C; cursor: pointer; }
-    .writing-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #2C2C2C; margin-bottom: 0.6rem; line-height: 1.3; }
-    .writing-source { font-size: 14px; color: #D4A574; font-weight: 600; margin-bottom: 0.6rem; }
+    .writing-title { grid-column: 2; order: 2; font-family: 'Playfair Display', serif; font-size: 15.5px; font-weight: 600; color: #2C2C2C; margin: 0 0 0.15rem 0; line-height: 1.35; }
+    .writing-source { grid-column: 2; order: 3; font-size: 12.5px; color: #8A7A66; font-weight: 600; margin: 0; }
     .writing-description { font-size: 14px; line-height: 1.7; color: #3A3A3A; margin-bottom: 0.8rem; }
-    .writing-link { color: #8B0000; text-decoration: none; font-weight: 600; font-size: 14px; }
+    .writing-link { grid-column: 2; order: 5; color: #8B0000; text-decoration: none; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.4px; margin-top: 0.3rem; }
     .writing-link:hover { text-decoration: underline; }
     .footer-divider { border-top: 1px solid #D9CFC5; margin-top: 4rem; padding-top: 2rem; padding-bottom: 2rem; }
     .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; }
@@ -81,7 +81,8 @@
     .footer-links { display: flex; gap: 2rem; list-style: none; }
     .footer-links a { font-size: 14px; color: #8B7355; text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: #8B0000; }
-    @media (max-width: 800px) { .container { padding: 0 6% 0 10%; } .page-title { font-size: 36px; } .writing-title { font-size: 18px; } .nav-links { column-gap: 1.2rem; } .nav-links a { font-size: 12px; } .footer-content { flex-direction: column; align-items: flex-start; } }
+    @media (max-width: 800px) { .container { padding: 0 6% 0 10%; } .page-title { font-size: 28px; } .nav-links { column-gap: 1.2rem; } .nav-links a { font-size: 12px; } .footer-content { flex-direction: column; align-items: flex-start; } }
+    @media (max-width: 560px) { .writing-item { grid-template-columns: 1fr; row-gap: 0.1rem; } .writing-date { padding-top: 0; } }
     
     /* logo mark — Ч (Playfair Italic Bold), name left untouched */
     .nav-logo { display: inline-flex; align-items: center; gap: 0.5rem; }
