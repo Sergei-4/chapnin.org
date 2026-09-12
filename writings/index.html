@@ -88,6 +88,25 @@
     .nav-logo { display: inline-flex; align-items: center; gap: 0.5rem; }
     .nav-mark { width: 30px; height: 30px; flex: none; border-radius: 8px; background: #8B0000; color: #F5EFE7; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 700; font-size: 20px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; }
     .nav-chr { display: block; transform: translate(0, 1px); }
+      /* Interviews section */
+    .iv-section { max-width: 760px; margin-top: 3.5rem; }
+    .iv-heading { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: #2C2C2C; border-left: 4px solid #8B0000; padding-left: 1rem; margin: 0 0 0.5rem 0; }
+    .iv-note { font-size: 13.5px; color: #8B7355; margin: 0 0 1.6rem 0; line-height: 1.55; max-width: 62ch; }
+    .iv-yr { font-size: 12px; text-transform: uppercase; letter-spacing: 1.2px; color: #8B0000; font-weight: 700; margin: 1.6rem 0 0.3rem; padding-bottom: 0.35rem; border-bottom: 1px solid #E2D8C9; }
+    .iv-yr:first-of-type { margin-top: 0; }
+    .iv-item { display: grid; grid-template-columns: 7rem 1fr; column-gap: 1.1rem; padding: 0.6rem 0; border-bottom: 1px solid #EFE7DB; }
+    .iv-item:last-child { border-bottom: none; }
+    .iv-date { grid-column: 1; font-size: 12.5px; color: #8B7355; font-weight: 600; font-variant-numeric: tabular-nums; padding-top: 3px; }
+    .iv-main { grid-column: 2; }
+    .iv-title { font-family: 'Playfair Display', serif; font-size: 15.5px; font-weight: 600; color: #2C2C2C; line-height: 1.35; margin: 0 0 0.2rem 0; }
+    .iv-title a { color: inherit; text-decoration: none; }
+    .iv-title a:hover { color: #8B0000; }
+    .iv-source { font-size: 12.5px; color: #8A7A66; line-height: 1.45; }
+    .iv-lang { display: inline-block; font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: #8B0000; border: 1px solid #E3C9C9; border-radius: 3px; padding: 0.02rem 0.4rem; margin-left: 0.4rem; font-weight: 700; vertical-align: 1.5px; white-space: nowrap; }
+    .iv-link { color: #8B0000; text-decoration: none; font-weight: 600; }
+    .iv-link:hover { text-decoration: underline; }
+    .iv-dead { color: #A89A85; font-style: italic; }
+    @media (max-width: 560px) { .iv-item { grid-template-columns: 1fr; row-gap: 0.1rem; } .iv-date { padding-top: 0; } }
   </style>
   <script type="application/ld+json">
 {
@@ -267,7 +286,6 @@
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="essay">Essays</button>
       <button class="filter-btn" data-filter="policy">Policy Papers</button>
-      <button class="filter-btn" data-filter="interview">Interviews</button>
       <button class="filter-btn" data-filter="academic">Academic Articles</button>
     </div>
     <div class="sort-group">
@@ -352,15 +370,6 @@
       <div class="writing-link"><a href="https://publicorthodoxy.org/author/sergei-chapnin/" target="_blank" class="writing-link">Read online →</a></div>
     </div>
 
-    <div class="writing-item" data-type="interview" data-year="2023.99">
-      <div class="writing-date">2023</div>
-      <span class="writing-tag">Sacred Art & Tradition</span>
-      <span class="writing-type-tag">Interview</span>
-      <div class="writing-title">Beyond Copies</div>
-      <div class="writing-source">Christian History Magazine</div>
-      <div class="writing-link"><a href="https://christianhistoryinstitute.org/magazine/article/ch-146-interview-beyond-copies" target="_blank" class="writing-link">Read online →</a></div>
-    </div>
-
     <div class="writing-item" data-type="essay" data-year="2023.0728">
       <div class="writing-date">28 July 2023</div>
       <span class="writing-tag">Church & Politics</span>
@@ -395,15 +404,6 @@
       <div class="writing-title">A Church of Empire: Why the Russian Church Chose to Bless Empire</div>
       <div class="writing-source">First Things</div>
       <div class="writing-link"><a href="https://firstthings.com/a-church-of-empire/" target="_blank" class="writing-link">Read online →</a></div>
-    </div>
-
-    <div class="writing-item" data-type="interview" data-year="2016.0106">
-      <div class="writing-date">6 January 2016</div>
-      <span class="writing-tag">Church & Politics</span>
-      <span class="writing-type-tag">Interview</span>
-      <div class="writing-title">Orthodoxy Without Christ</div>
-      <div class="writing-source">First Things (Interview)</div>
-      <div class="writing-link"><a href="https://firstthings.com/orthodoxy-without-christ-an-interview-with-sergei-chapnin/" target="_blank" class="writing-link">Read online →</a></div>
     </div>
 
     <div class="writing-item" data-type="academic" data-year="2020.02">
@@ -476,6 +476,113 @@
       <div class="writing-title">The Ukrainian Church's Quest for Ecclesiastical Autonomy</div>
       <div class="writing-source">PONARS Eurasia</div>
       <div class="writing-link"><a href="https://www.ponarseurasia.org/the-ukrainian-church-s-quest-for-ecclesiastical-autonomy/" target="_blank" class="writing-link">Read online →</a></div>
+    </div>
+  </div>
+
+  <div class="iv-section">
+    <h2 class="iv-heading">Interviews</h2>
+    <p class="iv-note">Conversations and interviews, 2012–2025. The publication language is noted where it is not English.</p>
+
+    <div class="iv-yr">2025</div>
+    <div class="iv-item">
+      <div class="iv-date">17 Nov 2025</div>
+      <div class="iv-main">
+        <div class="iv-title">«Церковь придется переучредить и провести люстрацию»<span class="iv-lang">Russian</span></div>
+        <div class="iv-source">Швейцария для всех (forall.swiss) · X форум «СловоНово», Тиват · <a href="https://forall.swiss/sergej-chapnin-cerkov-pridetsja-pereuchredit-i-provesti-ljustraciju/" target="_blank" class="iv-link">Read online →</a></div>
+      </div>
+    </div>
+
+    <div class="iv-yr">2023</div>
+    <div class="iv-item">
+      <div class="iv-date">2023</div>
+      <div class="iv-main">
+        <div class="iv-title">Beyond Copies</div>
+        <div class="iv-source">Christian History Magazine · <a href="https://christianhistoryinstitute.org/magazine/article/ch-146-interview-beyond-copies" target="_blank" class="iv-link">Read online →</a></div>
+      </div>
+    </div>
+
+    <div class="iv-yr">2022</div>
+    <div class="iv-item">
+      <div class="iv-date">5 Dec 2022</div>
+      <div class="iv-main">
+        <div class="iv-title">«"Церковь падёт вместе с режимом". Как РПЦ поддерживает Путина и оправдывает войну»<span class="iv-lang">Russian</span></div>
+        <div class="iv-source">Радио Свобода · <a href="https://www.svoboda.org/a/kak-rpts-podderzhivaet-putina-i-opravdyvaet-voynu/32153915.html" target="_blank" class="iv-link">Read online →</a></div>
+      </div>
+    </div>
+
+    <div class="iv-yr">2021</div>
+    <div class="iv-item">
+      <div class="iv-date">21 Jan 2021</div>
+      <div class="iv-main">
+        <div class="iv-title">«Patriarchat Moskiewski dawno już stracił swój niezależny głos»<span class="iv-lang">Polish</span></div>
+        <div class="iv-source">KAI (Katolicka Agencja Informacyjna); full text: misyjne.pl · <a href="https://misyjne.pl/misja/s-czapnin-patriarchat-moskiewski-dawno-juz-stracil-swoj-niezalezny-glos-rozmowa/" target="_blank" class="iv-link">Read online →</a></div>
+      </div>
+    </div>
+
+    <div class="iv-yr">2019</div>
+    <div class="iv-item">
+      <div class="iv-date">14 Jun 2019</div>
+      <div class="iv-main">
+        <div class="iv-title">«От поддержки государства Церковь должна перейти к поддержке гражданского общества»<span class="iv-lang">Russian</span></div>
+        <div class="iv-source">Znak.com · <span class="iv-dead">publication closed — no live link</span></div>
+      </div>
+    </div>
+
+    <div class="iv-yr">2016</div>
+    <div class="iv-item">
+      <div class="iv-date">25 Mar 2016</div>
+      <div class="iv-main">
+        <div class="iv-title">«Церковь не умеет работать с гражданским обществом»<span class="iv-lang">Russian</span></div>
+        <div class="iv-source">Центр «Сова» · беседовала Светлана Солодовник · <a href="https://www.sova-center.ru/religion/publications/2016/03/d34121/" target="_blank" class="iv-link">Read online →</a></div>
+      </div>
+    </div>
+    <div class="iv-item">
+      <div class="iv-date">6 Jan 2016</div>
+      <div class="iv-main">
+        <div class="iv-title">Orthodoxy Without Christ</div>
+        <div class="iv-source">First Things · translation of a Rosbalt interview · <a href="https://firstthings.com/orthodoxy-without-christ-an-interview-with-sergei-chapnin/" target="_blank" class="iv-link">Read online →</a></div>
+      </div>
+    </div>
+
+    <div class="iv-yr">2015</div>
+    <div class="iv-item">
+      <div class="iv-date">22 Dec 2015</div>
+      <div class="iv-main">
+        <div class="iv-title">«В России прямо на наших глазах умирает журналистика. И светская, и церковная»<span class="iv-lang">Russian</span></div>
+        <div class="iv-source">Colta.ru · беседовала Анна Голубева · <a href="https://www.colta.ru/articles/media/9668-v-rossii-pryamo-na-nashih-glazah-umiraet-zhurnalistika-i-svetskaya-i-tserkovnaya" target="_blank" class="iv-link">Read online →</a></div>
+      </div>
+    </div>
+    <div class="iv-item">
+      <div class="iv-date">22 Dec 2015</div>
+      <div class="iv-main">
+        <div class="iv-title">«Запрос на "священную войну" на Украине в РПЦ уже есть»<span class="iv-lang">Russian</span></div>
+        <div class="iv-source">Slon.ru · беседовал Александр Черных · reprint at RISU · <a href="https://risu.ua/sergey-chapnin-zapros-na-svyashchennuyu-voynu-na-ukraine-v-rpc-uzhe-est_n77466" target="_blank" class="iv-link">Read online →</a></div>
+      </div>
+    </div>
+
+    <div class="iv-yr">2013</div>
+    <div class="iv-item">
+      <div class="iv-date">16 Nov 2013</div>
+      <div class="iv-main">
+        <div class="iv-title">«Говорить свободно и честно о духовном содержании событий»<span class="iv-lang">Russian</span></div>
+        <div class="iv-source">«Дон Православный» · archive at chapnin.ru · <a href="http://www.chapnin.ru/interview/govorit_svobodno_i_chestno_265/" target="_blank" class="iv-link">Read online →</a></div>
+      </div>
+    </div>
+
+    <div class="iv-yr">2012</div>
+    <div class="iv-item">
+      <div class="iv-date">25 Sep 2012</div>
+      <div class="iv-main">
+        <div class="iv-title">«Мне дороже всего пример радостной жизни во Христе»<span class="iv-lang">Russian</span></div>
+        <div class="iv-source">Правмир · <a href="https://www.pravmir.ru/sergej-chapnin-mne-dorozhe-vsego-primer-radostnoj-zhizni-vo-xriste/" target="_blank" class="iv-link">Read online →</a></div>
+      </div>
+    </div>
+    <div class="iv-item">
+      <div class="iv-date">6 Mar 2012</div>
+      <div class="iv-main">
+        <div class="iv-title">«Два вопроса Владимиру Путину»<span class="iv-lang">Russian</span></div>
+        <div class="iv-source">Нескучный сад · <a href="https://www.nsad.ru/articles/sergej-chapnin-dva-voprosa-vladimiru-putinu" target="_blank" class="iv-link">Read online →</a></div>
+      </div>
     </div>
   </div>
 
