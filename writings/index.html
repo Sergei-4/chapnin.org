@@ -65,6 +65,7 @@
     .submenu-tab.active { color: #8B0000; border-bottom-color: #8B0000; }
     .pub-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.2rem; }
     .pub-count { font-size: 13px; color: #8B7355; font-weight: 600; }
+    .toolbar-controls { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
     .sort-group { display: flex; align-items: center; gap: 0.5rem; }
     .sort-group label { font-size: 13px; color: #8B7355; font-weight: 600; }
     .sort-group select { font-family: 'Lato', sans-serif; font-size: 13px; padding: 0.4rem 0.6rem; border: 1px solid #D9CFC5; border-radius: 6px; background: white; color: #2C2C2C; cursor: pointer; }
@@ -359,13 +360,23 @@
 
   <div class="pub-toolbar">
     <div class="pub-count" id="pub-count"></div>
-    <div class="sort-group">
-      <label for="sort-select">Sort</label>
-      <select id="sort-select">
-        <option value="newest">Newest first</option>
-        <option value="2026">2026 only</option>
-        <option value="oldest">Oldest first</option>
-      </select>
+    <div class="toolbar-controls">
+      <div class="sort-group">
+        <label for="lang-select">Language</label>
+        <select id="lang-select">
+          <option value="all">All languages</option>
+          <option value="en">English only</option>
+          <option value="other">Non-English only</option>
+        </select>
+      </div>
+      <div class="sort-group">
+        <label for="sort-select">Sort</label>
+        <select id="sort-select">
+          <option value="newest">Newest first</option>
+          <option value="2026">2026 only</option>
+          <option value="oldest">Oldest first</option>
+        </select>
+      </div>
     </div>
   </div>
 
@@ -694,10 +705,10 @@
       <div class="writing-link"><a href="https://www.pravmir.ru/sergej-chapnin-mne-dorozhe-vsego-primer-radostnoj-zhizni-vo-xriste/" target="_blank" class="writing-link">Read online →</a></div>
     </div>
 
-    <div class="writing-item" data-type="interview" data-year="2012.0306">
+    <div class="writing-item" data-type="essay" data-year="2012.0306">
       <div class="writing-date">6 March 2012</div>
       <span class="writing-tag">Church &amp; Society</span>
-      <span class="writing-type-tag">Interview</span>
+      <span class="writing-type-tag">Essay</span>
       <div class="writing-title">«Два вопроса Владимиру Путину»<span class="writing-lang">Russian</span></div>
       <div class="writing-source">Нескучный сад</div>
       <div class="writing-link"><a href="/interviews/nsad-2012-dva-voprosa/" class="writing-link">Full text (archival copy) →</a></div>
@@ -749,15 +760,22 @@
     var items = Array.prototype.slice.call(list.querySelectorAll('.writing-item'));
     var filterGroup = document.getElementById('filter-group');
     var sortSelect = document.getElementById('sort-select');
+    var langSelect = document.getElementById('lang-select');
     var countEl = document.getElementById('pub-count');
     var currentFilter = 'all';
+
+    function isEnglish(el){ return !el.querySelector('.writing-lang'); }
 
     function yearOf(el){ return parseFloat(el.getAttribute('data-year')); }
 
     function apply() {
       var mode = sortSelect.value;
+      var lang = langSelect.value;
       var visible = items.filter(function (el) {
-        return currentFilter === 'all' || el.getAttribute('data-type') === currentFilter;
+        if (!(currentFilter === 'all' || el.getAttribute('data-type') === currentFilter)) return false;
+        if (lang === 'en' && !isEnglish(el)) return false;
+        if (lang === 'other' && isEnglish(el)) return false;
+        return true;
       });
       if (mode === '2026') {
         visible = visible.filter(function (el) { return Math.floor(yearOf(el)) === 2026; });
@@ -781,6 +799,7 @@
       apply();
     });
     sortSelect.addEventListener('change', apply);
+    langSelect.addEventListener('change', apply);
     apply();
   })();
 </script>
