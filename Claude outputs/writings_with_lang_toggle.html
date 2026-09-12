@@ -366,7 +366,7 @@
         <select id="lang-select">
           <option value="all">All languages</option>
           <option value="en">English only</option>
-          <option value="ru">Russian only</option>
+          <option value="other">Non-English only</option>
         </select>
       </div>
       <div class="sort-group">
@@ -765,7 +765,6 @@
     var currentFilter = 'all';
 
     function isEnglish(el){ return !el.querySelector('.writing-lang'); }
-    function isRussian(el){ var c=el.querySelector('.writing-lang'); return c && c.textContent.trim() === 'Russian'; }
 
     function yearOf(el){ return parseFloat(el.getAttribute('data-year')); }
 
@@ -775,7 +774,7 @@
       var visible = items.filter(function (el) {
         if (!(currentFilter === 'all' || el.getAttribute('data-type') === currentFilter)) return false;
         if (lang === 'en' && !isEnglish(el)) return false;
-        if (lang === 'ru' && !isRussian(el)) return false;
+        if (lang === 'other' && isEnglish(el)) return false;
         return true;
       });
       if (mode === '2026') {
