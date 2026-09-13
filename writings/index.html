@@ -1281,7 +1281,13 @@
       items.forEach(function (el) { el.style.display = 'none'; });
       visible.forEach(function (el) { el.style.display = ''; list.appendChild(el); });
       var n = visible.length;
-      countEl.textContent = n + (n === 1 ? ' publication' : ' publications');
+      var langset = {};
+      visible.forEach(function (el) {
+        (el.getAttribute('data-langs') || '').split(' ').forEach(function (c) { if (c) langset[c] = 1; });
+      });
+      var lc = Object.keys(langset).length;
+      countEl.textContent = n + (n === 1 ? ' publication' : ' publications')
+        + ' · ' + lc + (lc === 1 ? ' language' : ' languages');
     }
 
     filterGroup.addEventListener('click', function (e) {
