@@ -80,6 +80,11 @@
     .writing-source { grid-column: 2; order: 3; font-size: 12.5px; color: #8A7A66; font-weight: 600; margin: 0; }
     .writing-type-tag { grid-column: 2; order: 4; justify-self: start; display: inline-block; background: transparent; color: #6B5A45; border: 1px solid #D9CFC5; padding: 0.05rem 0.45rem; font-size: 10px; border-radius: 3px; margin: 0.35rem 0 0 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
     .writing-link { grid-column: 2; order: 5; color: #8B0000; text-decoration: none; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.4px; margin-top: 0.3rem; }
+    .writing-langs { grid-column: 2; order: 5; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; margin-top: 0.4rem; }
+    .writing-langs .pill { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; color: #8B0000; border: 1px solid #E3C9C9; border-radius: 3px; padding: 0.06rem 0.5rem; text-decoration: none; white-space: nowrap; transition: background 0.15s, color 0.15s, border-color 0.15s; }
+    .writing-langs .pill:hover { background: #8B0000; color: #fff; border-color: #8B0000; }
+    .writing-langs .pill.orig::before { content: ""; display: inline-block; width: 4px; height: 4px; border-radius: 50%; background: #8B0000; margin-right: 0.35rem; vertical-align: middle; }
+    .writing-langs .pill.orig:hover::before { background: #fff; }
     .writing-link:hover { text-decoration: underline; }
 
     .footer-divider { border-top: 1px solid #D9CFC5; margin-top: 4rem; padding-top: 2rem; padding-bottom: 2rem; }
@@ -109,7 +114,7 @@
   },
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 70,
+    "numberOfItems": 69,
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -314,7 +319,7 @@
       {
         "@type": "ListItem",
         "position": 41,
-        "name": "«&quot;Церковь падёт вместе с режимом&quot;. Как РПЦ поддерживает Путина и оправдывает войну»"
+        "name": "«\"Церковь падёт вместе с режимом\". Как РПЦ поддерживает Путина и оправдывает войну»"
       },
       {
         "@type": "ListItem",
@@ -384,81 +389,76 @@
       {
         "@type": "ListItem",
         "position": 55,
-        "name": "Церковь нуждается в критике"
-      },
-      {
-        "@type": "ListItem",
-        "position": 56,
         "name": "L’Église orthodoxe russe occulte la société"
       },
       {
         "@type": "ListItem",
-        "position": 57,
+        "position": 56,
         "name": "The Russian Church: Profiting by Silence"
       },
       {
         "@type": "ListItem",
-        "position": 58,
+        "position": 57,
         "name": "«Церковь не умеет работать с гражданским обществом»"
       },
       {
         "@type": "ListItem",
-        "position": 59,
+        "position": 58,
         "name": "Orthodoxy Without Christ"
       },
       {
         "@type": "ListItem",
-        "position": 60,
+        "position": 59,
         "name": "The Demolition of the Church Legacy of Russian Emigration: How It Is Done"
       },
       {
         "@type": "ListItem",
-        "position": 61,
+        "position": 60,
         "name": "«В России прямо на наших глазах умирает журналистика. И светская, и церковная»"
       },
       {
         "@type": "ListItem",
-        "position": 62,
-        "name": "«Запрос на &quot;священную войну&quot; на Украине в РПЦ уже есть»"
+        "position": 61,
+        "name": "«Запрос на \"священную войну\" на Украине в РПЦ уже есть»"
       },
       {
         "@type": "ListItem",
-        "position": 63,
+        "position": 62,
         "name": "A Church of Empire: Why the Russian Church Chose to Bless Empire"
       },
       {
         "@type": "ListItem",
-        "position": 64,
+        "position": 63,
         "name": "«Говорить свободно и честно о духовном содержании событий»"
       },
       {
         "@type": "ListItem",
-        "position": 65,
+        "position": 64,
         "name": "Образ Церкви и образ веры в зеркале религиозных практик"
       },
       {
         "@type": "ListItem",
-        "position": 66,
+        "position": 65,
         "name": "«Мне дороже всего пример радостной жизни во Христе»"
       },
       {
         "@type": "ListItem",
-        "position": 67,
+        "position": 66,
         "name": "«Два вопроса Владимиру Путину»"
       },
       {
         "@type": "ListItem",
-        "position": 68,
+        "position": 67,
         "name": "Советское и постсоветское в современной церковной культуре: образ пастыря, свидетельство, служение"
       },
       {
         "@type": "ListItem",
-        "position": 69,
+        "position": 68,
         "name": "Разговор с человеком. Диалог в электронной коммуникации"
       },
       {
         "@type": "ListItem",
-        "position": 70,
+        "position": 69,
         "name": "«Журнал Московской Патриархии» — новый формат"
       }
     ]
@@ -549,634 +549,625 @@
   </div>
 
   <div class="writings-list" id="writings-list">
-    <div class="writing-item" data-type="policy" data-year="2026.0825">
+    <div class="writing-item" data-type="policy" data-year="2026.0825" data-langs="en">
       <div class="writing-date">25 August 2026</div>
       <span class="writing-tag">Traditional Values</span>
       <span class="writing-type-tag">Policy Paper</span>
-      <div class="writing-title">Faith Under Pressure: Religious Repression and the Myth of &#x27;Traditional Values&#x27; in Putin&#x27;s Russia</div>
+      <div class="writing-title" data-orig="en" data-title-en="Faith Under Pressure: Religious Repression and the Myth of &#x27;Traditional Values&#x27; in Putin&#x27;s Russia">Faith Under Pressure: Religious Repression and the Myth of &#x27;Traditional Values&#x27; in Putin&#x27;s Russia</div>
       <div class="writing-source">Free Russia Foundation</div>
-      <div class="writing-link"><a href="https://thinktank.4freerussia.org/civil-society/faith-under-pressure/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://thinktank.4freerussia.org/civil-society/faith-under-pressure/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2026.0511">
+    <div class="writing-item" data-type="essay" data-year="2026.0511" data-langs="en">
       <div class="writing-date">11 May 2026</div>
       <span class="writing-tag">Canonization &amp; Sainthood</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Canonization and the &#x27;Act of Betrayal&#x27;: Fr. Seraphim Rose and the ROCOR Synod</div>
+      <div class="writing-title" data-orig="en" data-title-en="Canonization and the &#x27;Act of Betrayal&#x27;: Fr. Seraphim Rose and the ROCOR Synod">Canonization and the &#x27;Act of Betrayal&#x27;: Fr. Seraphim Rose and the ROCOR Synod</div>
       <div class="writing-source">Public Orthodoxy</div>
-      <div class="writing-link"><a href="https://publicorthodoxy.org/2026/05/11/canonization-and-the-act-of-betrayal/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://publicorthodoxy.org/2026/05/11/canonization-and-the-act-of-betrayal/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2026.0507">
+    <div class="writing-item" data-type="essay" data-year="2026.0507" data-langs="en">
       <div class="writing-date">7 May 2026</div>
       <span class="writing-tag">Canonization &amp; Sainthood</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">What Are We Canonizing? On the ROCOR Synod&#x27;s Decision to Open the Path to Father Seraphim Rose&#x27;s Glorification</div>
+      <div class="writing-title" data-orig="en" data-title-en="What Are We Canonizing? On the ROCOR Synod&#x27;s Decision to Open the Path to Father Seraphim Rose&#x27;s Glorification">What Are We Canonizing? On the ROCOR Synod&#x27;s Decision to Open the Path to Father Seraphim Rose&#x27;s Glorification</div>
       <div class="writing-source">The Wheel</div>
-      <div class="writing-link"><a href="https://wheeljournal.com/what-are-we-canonizing-on-the-rocor-synods-decision-to-open-the-path-to-father-seraphim-roses-glorification/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://wheeljournal.com/what-are-we-canonizing-on-the-rocor-synods-decision-to-open-the-path-to-father-seraphim-roses-glorification/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2026.042">
+    <div class="writing-item" data-type="essay" data-year="2026.042" data-langs="en">
       <div class="writing-date">20 April 2026</div>
       <span class="writing-tag">Iconography &amp; Propaganda</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">The Right Icon in the Right Place: How Putin and Patriarch Kirill Use an Icon to Promote Their War</div>
+      <div class="writing-title" data-orig="en" data-title-en="The Right Icon in the Right Place: How Putin and Patriarch Kirill Use an Icon to Promote Their War">The Right Icon in the Right Place: How Putin and Patriarch Kirill Use an Icon to Promote Their War</div>
       <div class="writing-source">Public Orthodoxy</div>
-      <div class="writing-link"><a href="https://publicorthodoxy.org/2026/04/20/the-right-icon-in-the-right-place/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://publicorthodoxy.org/2026/04/20/the-right-icon-in-the-right-place/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2026.0113">
+    <div class="writing-item" data-type="essay" data-year="2026.0113" data-langs="en">
       <div class="writing-date">13 January 2026</div>
       <span class="writing-tag">Church & Repression</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">One Year in Putin’s Dungeon</div>
+      <div class="writing-title" data-orig="en" data-title-en="One Year in Putin’s Dungeon">One Year in Putin’s Dungeon</div>
       <div class="writing-source">Public Orthodoxy</div>
-      <div class="writing-link"><a href="https://publicorthodoxy.org/2026/01/13/one-year-in-putins-dungeon/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://publicorthodoxy.org/2026/01/13/one-year-in-putins-dungeon/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2025.1222">
+    <div class="writing-item" data-type="essay" data-year="2025.1222" data-langs="en">
       <div class="writing-date">22 December 2025</div>
       <span class="writing-tag">Church & Repression</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Mercy “in a Bubble”: Patriarch Kirill and the Prisoners He Refuses to See</div>
+      <div class="writing-title" data-orig="en" data-title-en="Mercy “in a Bubble”: Patriarch Kirill and the Prisoners He Refuses to See">Mercy “in a Bubble”: Patriarch Kirill and the Prisoners He Refuses to See</div>
       <div class="writing-source">Public Orthodoxy</div>
-      <div class="writing-link"><a href="https://publicorthodoxy.org/2025/12/22/mercyin-a-bubble/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://publicorthodoxy.org/2025/12/22/mercyin-a-bubble/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2025.1220">
+    <div class="writing-item" data-type="essay" data-year="2025.1220" data-langs="ru">
       <div class="writing-date">20 December 2025</div>
       <span class="writing-tag">Church & Repression</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Милосердие «в домике»: патриарх Кирилл и узники, которых он не замечает<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Милосердие «в домике»: патриарх Кирилл и узники, которых он не замечает">Милосердие «в домике»: патриарх Кирилл и узники, которых он не замечает</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://ru.themoscowtimes.com/2025/12/20/miloserdie-v-domike-patriarh-kirill-i-uzniki-kotorih-on-ne-zamechaet-a183369" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://ru.themoscowtimes.com/2025/12/20/miloserdie-v-domike-patriarh-kirill-i-uzniki-kotorih-on-ne-zamechaet-a183369" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2025.1202">
+    <div class="writing-item" data-type="essay" data-year="2025.1202" data-langs="ru">
       <div class="writing-date">2 December 2025</div>
       <span class="writing-tag">Ecumenism</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Возвращение в Никею: католики и православные объединились — пока ненадолго<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Возвращение в Никею: католики и православные объединились — пока ненадолго">Возвращение в Никею: католики и православные объединились — пока ненадолго</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://ru.themoscowtimes.com/2025/12/02/vozvraschenie-v-nikeyu-katoliki-i-pravoslavnie-a181537" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://ru.themoscowtimes.com/2025/12/02/vozvraschenie-v-nikeyu-katoliki-i-pravoslavnie-a181537" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="interview" data-year="2025.1117">
+    <div class="writing-item" data-type="interview" data-year="2025.1117" data-langs="ru">
       <div class="writing-date">17 November 2025</div>
       <span class="writing-tag">Church &amp; Witness</span>
       <span class="writing-type-tag">Interview</span>
-      <div class="writing-title">«Церковь придется переучредить и провести люстрацию»<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="«Церковь придется переучредить и провести люстрацию»">«Церковь придется переучредить и провести люстрацию»</div>
       <div class="writing-source">Швейцария для всех (forall.swiss) · X форум «СловоНово», Тиват</div>
-      <div class="writing-link"><a href="https://forall.swiss/sergej-chapnin-cerkov-pridetsja-pereuchredit-i-provesti-ljustraciju/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://forall.swiss/sergej-chapnin-cerkov-pridetsja-pereuchredit-i-provesti-ljustraciju/" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2025.1031">
+    <div class="writing-item" data-type="essay" data-year="2025.1031" data-langs="en">
       <div class="writing-date">31 October 2025</div>
       <span class="writing-tag">Church & Repression</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Punishment After Compassion</div>
+      <div class="writing-title" data-orig="en" data-title-en="Punishment After Compassion">Punishment After Compassion</div>
       <div class="writing-source">Public Orthodoxy</div>
-      <div class="writing-link"><a href="https://publicorthodoxy.org/2025/10/31/punishment-after-compassion/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://publicorthodoxy.org/2025/10/31/punishment-after-compassion/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2025.1020">
+    <div class="writing-item" data-type="essay" data-year="2025.1020" data-langs="en">
       <div class="writing-date">20 October 2025</div>
       <span class="writing-tag">Church & Empire</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Death in War for Empire as a “Path to Christ”</div>
+      <div class="writing-title" data-orig="en" data-title-en="Death in War for Empire as a “Path to Christ”">Death in War for Empire as a “Path to Christ”</div>
       <div class="writing-source">Public Orthodoxy</div>
-      <div class="writing-link"><a href="https://publicorthodoxy.org/2025/10/20/death-in-war-as-path-to-christ/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://publicorthodoxy.org/2025/10/20/death-in-war-as-path-to-christ/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2025.1016">
+    <div class="writing-item" data-type="essay" data-year="2025.1016" data-langs="ru">
       <div class="writing-date">16 October 2025</div>
       <span class="writing-tag">Church & Empire</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Смерть в войне за империю как «путь ко Христу»<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Смерть в войне за империю как «путь ко Христу»">Смерть в войне за империю как «путь ко Христу»</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://ru.themoscowtimes.com/2025/10/16/smert-v-voine-za-imperiyu-kak-put-ko-hristu-a177366" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://ru.themoscowtimes.com/2025/10/16/smert-v-voine-za-imperiyu-kak-put-ko-hristu-a177366" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2025.1002">
+    <div class="writing-item" data-type="essay" data-year="2025.1002" data-langs="en">
       <div class="writing-date">2 October 2025</div>
       <span class="writing-tag">Church &amp; Politics</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">How Putin&#x27;s Spiritual Adviser Uses Charlie Kirk to Court U.S. Conservatives</div>
+      <div class="writing-title" data-orig="en" data-title-en="How Putin&#x27;s Spiritual Adviser Uses Charlie Kirk to Court U.S. Conservatives">How Putin&#x27;s Spiritual Adviser Uses Charlie Kirk to Court U.S. Conservatives</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://www.themoscowtimes.com/2025/10/02/how-putins-spiritual-adviser-uses-charlie-kirk-to-court-us-conservatives-a90701" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://www.themoscowtimes.com/2025/10/02/how-putins-spiritual-adviser-uses-charlie-kirk-to-court-us-conservatives-a90701" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2025.0911">
+    <div class="writing-item" data-type="essay" data-year="2025.0911" data-langs="en">
       <div class="writing-date">11 September 2025</div>
       <span class="writing-tag">Propaganda &amp; Memory</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Orthodox Faith with Soviet Aesthetics: What a Rare Moscow Parade Says About Power in Russia</div>
+      <div class="writing-title" data-orig="en" data-title-en="Orthodox Faith with Soviet Aesthetics: What a Rare Moscow Parade Says About Power in Russia">Orthodox Faith with Soviet Aesthetics: What a Rare Moscow Parade Says About Power in Russia</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://www.themoscowtimes.com/2025/09/11/orthodox-faith-with-soviet-aesthetics-what-a-rare-moscow-parade-says-about-power-in-russia-a90504" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://www.themoscowtimes.com/2025/09/11/orthodox-faith-with-soviet-aesthetics-what-a-rare-moscow-parade-says-about-power-in-russia-a90504" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2025.0902">
+    <div class="writing-item" data-type="essay" data-year="2025.0902" data-langs="en">
       <div class="writing-date">2 September 2025</div>
       <span class="writing-tag">Church &amp; Empire</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Alaska: Orthodoxy Caught Up in Geopolitics</div>
+      <div class="writing-title" data-orig="en" data-title-en="Alaska: Orthodoxy Caught Up in Geopolitics">Alaska: Orthodoxy Caught Up in Geopolitics</div>
       <div class="writing-source">Russia.Post</div>
-      <div class="writing-link"><a href="https://russiapost.info/articles/orthodox_alaska" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://russiapost.info/articles/orthodox_alaska" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2025.0706">
+    <div class="writing-item" data-type="essay" data-year="2025.0706" data-langs="ru">
       <div class="writing-date">6 July 2025</div>
       <span class="writing-tag">Religious Persecution</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Молчание церквей, или Почему христианский мир не замечает гонений на верующих России<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Молчание церквей, или Почему христианский мир не замечает гонений на верующих России">Молчание церквей, или Почему христианский мир не замечает гонений на верующих России</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://ru.themoscowtimes.com/2025/07/06/molchanie-tserkvei-ilipochemu-hristianskii-mir-ne-zamechaet-gonenii-na-veruyuschih-rossii-a168036" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://ru.themoscowtimes.com/2025/07/06/molchanie-tserkvei-ilipochemu-hristianskii-mir-ne-zamechaet-gonenii-na-veruyuschih-rossii-a168036" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2025.0627">
+    <div class="writing-item" data-type="essay" data-year="2025.0627" data-langs="en">
       <div class="writing-date">27 June 2025</div>
       <span class="writing-tag">Church &amp; Politics</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Another Attempt to Break the Silence: Why Orthodox Christians in America Must Stand with the Persecuted in Russia</div>
+      <div class="writing-title" data-orig="en" data-title-en="Another Attempt to Break the Silence: Why Orthodox Christians in America Must Stand with the Persecuted in Russia">Another Attempt to Break the Silence: Why Orthodox Christians in America Must Stand with the Persecuted in Russia</div>
       <div class="writing-source">Public Orthodoxy</div>
-      <div class="writing-link"><a href="https://publicorthodoxy.org/2025/06/27/another-attempt-to-break-the-silence/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://publicorthodoxy.org/2025/06/27/another-attempt-to-break-the-silence/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="letter" data-year="2025.0601">
+    <div class="writing-item" data-type="letter" data-year="2025.0601" data-langs="en">
       <div class="writing-date">1 June 2025</div>
       <span class="writing-tag">Church & Witness</span>
       <span class="writing-type-tag">Open Letter</span>
-      <div class="writing-title">An Open Letter to the Participants of the All-American Council 2025</div>
+      <div class="writing-title" data-orig="en" data-title-en="An Open Letter to the Participants of the All-American Council 2025">An Open Letter to the Participants of the All-American Council 2025</div>
       <div class="writing-source">sobornost.cc</div>
-      <div class="writing-link"><a href="https://sobornost.cc" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://sobornost.cc" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2025.0318">
+    <div class="writing-item" data-type="essay" data-year="2025.0318" data-langs="ru">
       <div class="writing-date">18 March 2025</div>
       <span class="writing-tag">Church & Power</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">От Афона до Кремля: аскетический подвиг и медийный образ православного старца Илия<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="От Афона до Кремля: аскетический подвиг и медийный образ православного старца Илия">От Афона до Кремля: аскетический подвиг и медийный образ православного старца Илия</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://ru.themoscowtimes.com/2025/03/18/ot-afona-do-kremlya-asketicheskii-podvig-i-mediinii-obraz-pravoslavnogo-startsa-iliya-a158299" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://ru.themoscowtimes.com/2025/03/18/ot-afona-do-kremlya-asketicheskii-podvig-i-mediinii-obraz-pravoslavnogo-startsa-iliya-a158299" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2025.0213">
+    <div class="writing-item" data-type="essay" data-year="2025.0213" data-langs="ru">
       <div class="writing-date">13 February 2025</div>
       <span class="writing-tag">Church & Politics</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Ляпнуть что-то про патриотизм, или Неожиданный спор патриарха со священником<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Ляпнуть что-то про патриотизм, или Неожиданный спор патриарха со священником">Ляпнуть что-то про патриотизм, или Неожиданный спор патриарха со священником</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://ru.themoscowtimes.com/2025/02/13/lyapnut-chto-to-pro-patriotizm-ili-neozhidannii-spor-patriarha-so-svyaschennikom-a155156" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://ru.themoscowtimes.com/2025/02/13/lyapnut-chto-to-pro-patriotizm-ili-neozhidannii-spor-patriarha-so-svyaschennikom-a155156" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="letter" data-year="2024.1225">
+    <div class="writing-item" data-type="letter" data-year="2024.1225" data-langs="ru">
       <div class="writing-date">25 December 2024</div>
       <span class="writing-tag">Church & Witness</span>
       <span class="writing-type-tag">Open Letter</span>
-      <div class="writing-title">Рождественское обращение к друзьям<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Рождественское обращение к друзьям">Рождественское обращение к друзьям</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://ru.themoscowtimes.com/2024/12/25/rozhdestvenskoe-obraschenie-k-druzyam-a151406" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://ru.themoscowtimes.com/2024/12/25/rozhdestvenskoe-obraschenie-k-druzyam-a151406" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2024.0628">
+    <div class="writing-item" data-type="essay" data-year="2024.0628" data-langs="ru">
       <div class="writing-date">28 June 2024</div>
       <span class="writing-tag">Church & War</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Целого митрополита обменяли на украинских военнопленных<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Целого митрополита обменяли на украинских военнопленных">Целого митрополита обменяли на украинских военнопленных</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://ru.themoscowtimes.com/2024/06/28/tselogo-mitropolita-obmenyali-na-ukrainskih-voennoplennih-a135337" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://ru.themoscowtimes.com/2024/06/28/tselogo-mitropolita-obmenyali-na-ukrainskih-voennoplennih-a135337" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2024.0426">
+    <div class="writing-item" data-type="essay" data-year="2024.0426" data-langs="ru">
       <div class="writing-date">26 April 2024</div>
       <span class="writing-tag">Church & Repression</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Репрессии патриарха Кирилла и церковное сопротивление<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Репрессии патриарха Кирилла и церковное сопротивление">Репрессии патриарха Кирилла и церковное сопротивление</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://ru.themoscowtimes.com/2024/04/26/repressii-patriarha-kirilla-i-tserkovnoe-soprotivlenie-a129254" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://ru.themoscowtimes.com/2024/04/26/repressii-patriarha-kirilla-i-tserkovnoe-soprotivlenie-a129254" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2024.0126">
+    <div class="writing-item" data-type="essay" data-year="2024.0126" data-langs="ru">
       <div class="writing-date">26 January 2024</div>
       <span class="writing-tag">Church & Repression</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">«Один бог, один народ, один фюрер». Как и почему РПЦ копирует репрессивный аппарат государства<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="«Один бог, один народ, один фюрер». Как и почему РПЦ копирует репрессивный аппарат государства">«Один бог, один народ, один фюрер». Как и почему РПЦ копирует репрессивный аппарат государства</div>
       <div class="writing-source">The Insider</div>
-      <div class="writing-link"><a href="https://theins.ru/opinions/sergei-chapnin/268550" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://theins.ru/opinions/sergei-chapnin/268550" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2024.0108">
+    <div class="writing-item" data-type="essay" data-year="2024.0108" data-langs="ru">
       <div class="writing-date">8 January 2024</div>
       <span class="writing-tag">Church & Repression</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Зачистка Церкви продолжается: патриарху Кириллу не нужны свободные и живые люди<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Зачистка Церкви продолжается: патриарху Кириллу не нужны свободные и живые люди">Зачистка Церкви продолжается: патриарху Кириллу не нужны свободные и живые люди</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://ru.themoscowtimes.com/2024/01/08/zachistka-tserkvi-prodolzhaetsya-patriarhu-kirillu-ne-nuzhni-svobodnie-i-zhivie-lyudi-a117794" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://ru.themoscowtimes.com/2024/01/08/zachistka-tserkvi-prodolzhaetsya-patriarhu-kirillu-ne-nuzhni-svobodnie-i-zhivie-lyudi-a117794" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2024.0">
+    <div class="writing-item" data-type="essay" data-year="2024.0" data-langs="en">
       <div class="writing-date">2024</div>
       <span class="writing-tag">Church &amp; Politics</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">The Illusion of Unity: Patriarch Kirill&#x27;s Ideological Ultimatum to the Church</div>
+      <div class="writing-title" data-orig="en" data-title-en="The Illusion of Unity: Patriarch Kirill&#x27;s Ideological Ultimatum to the Church">The Illusion of Unity: Patriarch Kirill&#x27;s Ideological Ultimatum to the Church</div>
       <div class="writing-source">Public Orthodoxy</div>
-      <div class="writing-link"><a href="https://publicorthodoxy.org/author/sergei-chapnin/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://publicorthodoxy.org/author/sergei-chapnin/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="interview" data-year="2023.50">
+    <div class="writing-item" data-type="interview" data-year="2023.50" data-langs="en">
       <div class="writing-date">2023</div>
       <span class="writing-tag">Sacred Art &amp; Tradition</span>
       <span class="writing-type-tag">Interview</span>
-      <div class="writing-title">Beyond Copies</div>
+      <div class="writing-title" data-orig="en" data-title-en="Beyond Copies">Beyond Copies</div>
       <div class="writing-source">Christian History Magazine</div>
-      <div class="writing-link"><a href="https://christianhistoryinstitute.org/magazine/article/ch-146-interview-beyond-copies" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://christianhistoryinstitute.org/magazine/article/ch-146-interview-beyond-copies" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2023.1013">
+    <div class="writing-item" data-type="essay" data-year="2023.1013" data-langs="ru">
       <div class="writing-date">13 October 2023</div>
       <span class="writing-tag">Church & Politics</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Митрополит Тихон в Крыму: ссылка или новые возможности?<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Митрополит Тихон в Крыму: ссылка или новые возможности?">Митрополит Тихон в Крыму: ссылка или новые возможности?</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://ru.themoscowtimes.com/2023/10/13/mitropolit-tihon-v-krimu-ssilka-ili-novie-vozmozhnosti-a109948" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://ru.themoscowtimes.com/2023/10/13/mitropolit-tihon-v-krimu-ssilka-ili-novie-vozmozhnosti-a109948" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2023.0728">
+    <div class="writing-item" data-type="essay" data-year="2023.0728" data-langs="en">
       <div class="writing-date">28 July 2023</div>
       <span class="writing-tag">Church &amp; Politics</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Bishops&#x27; Conference—The Major Outcome: Resentment against the Ecumenical Patriarchate</div>
+      <div class="writing-title" data-orig="en" data-title-en="Bishops&#x27; Conference—The Major Outcome: Resentment against the Ecumenical Patriarchate">Bishops&#x27; Conference—The Major Outcome: Resentment against the Ecumenical Patriarchate</div>
       <div class="writing-source">Public Orthodoxy</div>
-      <div class="writing-link"><a href="https://publicorthodoxy.org/2023/07/28/bishops-conference-resentment-ep/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://publicorthodoxy.org/2023/07/28/bishops-conference-resentment-ep/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2023.0710">
+    <div class="writing-item" data-type="essay" data-year="2023.0710" data-langs="ru">
       <div class="writing-date">10 July 2023</div>
       <span class="writing-tag">Church & War</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Что делают оптинские монахи на фронте, или С бородой, в подряснике и в каске<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Что делают оптинские монахи на фронте, или С бородой, в подряснике и в каске">Что делают оптинские монахи на фронте, или С бородой, в подряснике и в каске</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://ru.themoscowtimes.com/2023/07/10/chto-delayut-optinskie-monahi-na-fronte-ili-s-borodoi-v-podryasnike-i-v-kaske-a48370" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://ru.themoscowtimes.com/2023/07/10/chto-delayut-optinskie-monahi-na-fronte-ili-s-borodoi-v-podryasnike-i-v-kaske-a48370" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2023.0617">
+    <div class="writing-item" data-type="essay" data-year="2023.0617" data-langs="ru">
       <div class="writing-date">17 June 2023</div>
       <span class="writing-tag">Church & Repression</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Идеологические чудеса церковной Фемиды<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Идеологические чудеса церковной Фемиды">Идеологические чудеса церковной Фемиды</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://ru.themoscowtimes.com/2023/06/17/ideologicheskie-chudesa-tserkovnoi-femidi-a46407" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://ru.themoscowtimes.com/2023/06/17/ideologicheskie-chudesa-tserkovnoi-femidi-a46407" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2023.0601">
+    <div class="writing-item" data-type="essay" data-year="2023.0601" data-langs="ru">
       <div class="writing-date">1 June 2023</div>
       <span class="writing-tag">Church & State</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Ставленники спецслужб в РПЦ: митрополит Леонид (Горбачев) и кадровые перестановки<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Ставленники спецслужб в РПЦ: митрополит Леонид (Горбачев) и кадровые перестановки">Ставленники спецслужб в РПЦ: митрополит Леонид (Горбачев) и кадровые перестановки</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://ru.themoscowtimes.com/2023/06/01/stavlenniki-spetssluzhb-v-rpts-mitropolit-leonid-gorbachev-i-kadrovie-perestanovki-a44822" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://ru.themoscowtimes.com/2023/06/01/stavlenniki-spetssluzhb-v-rpts-mitropolit-leonid-gorbachev-i-kadrovie-perestanovki-a44822" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2023.0512">
+    <div class="writing-item" data-type="essay" data-year="2023.0512" data-langs="en">
       <div class="writing-date">12 May 2023</div>
       <span class="writing-tag">Propaganda &amp; Media</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">An Act of Lighthearted Betrayal: How Moscow&#x27;s Official Church Media Represents the War</div>
+      <div class="writing-title" data-orig="en" data-title-en="An Act of Lighthearted Betrayal: How Moscow&#x27;s Official Church Media Represents the War">An Act of Lighthearted Betrayal: How Moscow&#x27;s Official Church Media Represents the War</div>
       <div class="writing-source">Public Orthodoxy</div>
-      <div class="writing-link"><a href="https://publicorthodoxy.org/2023/05/12/act-of-lighthearted-betrayal/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://publicorthodoxy.org/2023/05/12/act-of-lighthearted-betrayal/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2023.0207">
+    <div class="writing-item" data-type="essay" data-year="2023.0207" data-langs="ru">
       <div class="writing-date">7 February 2023</div>
       <span class="writing-tag">Church & Witness</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Почему вы забыли о правде Божией?<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Почему вы забыли о правде Божией?">Почему вы забыли о правде Божией?</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://ru.themoscowtimes.com/2023/02/07/pochemu-vi-zabili-o-pravde-bozhiei-a33114" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://ru.themoscowtimes.com/2023/02/07/pochemu-vi-zabili-o-pravde-bozhiei-a33114" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="letter" data-year="2023.0206">
+    <div class="writing-item" data-type="letter" data-year="2023.0206" data-langs="en">
       <div class="writing-date">6 February 2023</div>
       <span class="writing-tag">Church &amp; Witness</span>
       <span class="writing-type-tag">Open Letter</span>
-      <div class="writing-title">Why Have You Forgotten the Truth of God? An Open Letter to Russian Orthodox Bishops</div>
+      <div class="writing-title" data-orig="en" data-title-en="Why Have You Forgotten the Truth of God? An Open Letter to Russian Orthodox Bishops">Why Have You Forgotten the Truth of God? An Open Letter to Russian Orthodox Bishops</div>
       <div class="writing-source">Public Orthodoxy</div>
-      <div class="writing-link"><a href="https://publicorthodoxy.org/2023/02/06/open-letter-russian-bishops/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://publicorthodoxy.org/2023/02/06/open-letter-russian-bishops/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2023.0106">
+    <div class="writing-item" data-type="essay" data-year="2023.0106" data-langs="en">
       <div class="writing-date">6 January 2023</div>
       <span class="writing-tag">Church & Politics</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Kremlin Notes in the Patriarch’s Christmas Appeal</div>
+      <div class="writing-title" data-orig="en" data-title-en="Kremlin Notes in the Patriarch’s Christmas Appeal">Kremlin Notes in the Patriarch’s Christmas Appeal</div>
       <div class="writing-source">Public Orthodoxy</div>
-      <div class="writing-link"><a href="https://publicorthodoxy.org/2023/01/06/kremlin-notes-in-the-patriarchs-christmas-appeal/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://publicorthodoxy.org/2023/01/06/kremlin-notes-in-the-patriarchs-christmas-appeal/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2023.0106">
+    <div class="writing-item" data-type="essay" data-year="2023.0106" data-langs="ru">
       <div class="writing-date">6 January 2023</div>
       <span class="writing-tag">Church & Politics</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Кремлевские ноты в рождественском воззвании патриарха<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Кремлевские ноты в рождественском воззвании патриарха">Кремлевские ноты в рождественском воззвании патриарха</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://ru.themoscowtimes.com/2023/01/06/kremlevskie-noti-v-rozhdestvenskom-vozzvanii-patriarha-a30189" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://ru.themoscowtimes.com/2023/01/06/kremlevskie-noti-v-rozhdestvenskom-vozzvanii-patriarha-a30189" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="academic" data-year="2023.01">
+    <div class="writing-item" data-type="academic" data-year="2023.01" data-langs="en">
       <div class="writing-date">2023</div>
       <span class="writing-tag">Civil Religion</span>
       <span class="writing-type-tag">Academic Article</span>
-      <div class="writing-title">Post-Soviet Civil Religion as a Substitute for Orthodox Christianity</div>
+      <div class="writing-title" data-orig="en" data-title-en="Post-Soviet Civil Religion as a Substitute for Orthodox Christianity">Post-Soviet Civil Religion as a Substitute for Orthodox Christianity</div>
       <div class="writing-source">Studia Universitatis Babeș-Bolyai Theologia Catholica Latina · DOI 10.24193/THEOL.CATH.LATINA.2023.LXVIII.1.05</div>
-      <div class="writing-link"><a href="https://www.academia.edu/164834997/Post_Soviet_Civil_Religion_as_a_Substitute_for_Orthodox_Christianity" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://www.academia.edu/164834997/Post_Soviet_Civil_Religion_as_a_Substitute_for_Orthodox_Christianity" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="academic" data-year="2023.005">
+    <div class="writing-item" data-type="academic" data-year="2023.005" data-langs="ru">
       <div class="writing-date">2023</div>
       <span class="writing-tag">Church &amp; Violence</span>
       <span class="writing-type-tag">Academic Article</span>
-      <div class="writing-title">Русское Православие на пути оправдания насилия<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Русское Православие на пути оправдания насилия">Русское Православие на пути оправдания насилия</div>
       <div class="writing-source">Palladium · Free University Press, Riga · eISSN 2592-916X</div>
-      <div class="writing-link"><a href="https://www.academia.edu/111750815/Русское_Православие_на_пути_оправдания_насилия" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://www.academia.edu/111750815/Русское_Православие_на_пути_оправдания_насилия" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2022.1223">
+    <div class="writing-item" data-type="essay" data-year="2022.1223" data-langs="ru">
       <div class="writing-date">23 December 2022</div>
       <span class="writing-tag">Church & Politics</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Митрополит в дурной компании<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Митрополит в дурной компании">Митрополит в дурной компании</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://ru.themoscowtimes.com/2022/12/23/mitropolit-v-durnoi-kompanii-a29562" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://ru.themoscowtimes.com/2022/12/23/mitropolit-v-durnoi-kompanii-a29562" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="interview" data-year="2022.1205">
+    <div class="writing-item" data-type="interview" data-year="2022.1205" data-langs="ru">
       <div class="writing-date">5 December 2022</div>
       <span class="writing-tag">Church &amp; Politics</span>
       <span class="writing-type-tag">Interview</span>
-      <div class="writing-title">«&quot;Церковь падёт вместе с режимом&quot;. Как РПЦ поддерживает Путина и оправдывает войну»<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="«&amp;quot;Церковь падёт вместе с режимом&amp;quot;. Как РПЦ поддерживает Путина и оправдывает войну»">«&quot;Церковь падёт вместе с режимом&quot;. Как РПЦ поддерживает Путина и оправдывает войну»</div>
       <div class="writing-source">Радио Свобода</div>
-      <div class="writing-link"><a href="https://www.svoboda.org/a/kak-rpts-podderzhivaet-putina-i-opravdyvaet-voynu/32153915.html" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://www.svoboda.org/a/kak-rpts-podderzhivaet-putina-i-opravdyvaet-voynu/32153915.html" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2022.1111">
+    <div class="writing-item" data-type="essay" data-year="2022.1111" data-langs="ru">
       <div class="writing-date">11 November 2022</div>
       <span class="writing-tag">Theology of War</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Война и богословие «половины сердца»<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Война и богословие «половины сердца»">Война и богословие «половины сердца»</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://ru.themoscowtimes.com/2022/11/11/voina-i-bogoslovie-polovini-serdtsa-a26286" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://ru.themoscowtimes.com/2022/11/11/voina-i-bogoslovie-polovini-serdtsa-a26286" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2022.0620">
+    <div class="writing-item" data-type="essay" data-year="2022.0620" data-langs="ru">
       <div class="writing-date">20 June 2022</div>
       <span class="writing-tag">Church & Politics</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">«Украина, коррупция или Кремль»: в чем причина ссылки митрополита Илариона<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="«Украина, коррупция или Кремль»: в чем причина ссылки митрополита Илариона">«Украина, коррупция или Кремль»: в чем причина ссылки митрополита Илариона</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://ru.themoscowtimes.com/2022/06/20/ukraina-korruptsiya-ili-kreml-v-chyom-prichina-ssilki-mitropolita-ilariona-a21452" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://ru.themoscowtimes.com/2022/06/20/ukraina-korruptsiya-ili-kreml-v-chyom-prichina-ssilki-mitropolita-ilariona-a21452" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2022.0531">
+    <div class="writing-item" data-type="essay" data-year="2022.0531" data-langs="en">
       <div class="writing-date">31 May 2022</div>
       <span class="writing-tag">Ukraine & Autocephaly</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">The Orthodox Church in Ukraine: War and “Another Autocephaly”</div>
+      <div class="writing-title" data-orig="en" data-title-en="The Orthodox Church in Ukraine: War and “Another Autocephaly”">The Orthodox Church in Ukraine: War and “Another Autocephaly”</div>
       <div class="writing-source">Public Orthodoxy</div>
-      <div class="writing-link"><a href="https://publicorthodoxy.org/2022/05/31/the-orthodox-church-in-ukraine-war-and-another-autocephaly/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://publicorthodoxy.org/2022/05/31/the-orthodox-church-in-ukraine-war-and-another-autocephaly/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2022.0524">
+    <div class="writing-item" data-type="essay" data-year="2022.0524" data-langs="ru">
       <div class="writing-date">24 May 2022</div>
       <span class="writing-tag">Church & Politics</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Кирилл, но не Философ<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Кирилл, но не Философ">Кирилл, но не Философ</div>
       <div class="writing-source">The Moscow Times</div>
-      <div class="writing-link"><a href="https://ru.themoscowtimes.com/2022/05/24/kirill-no-ne-filosof-a20607" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://ru.themoscowtimes.com/2022/05/24/kirill-no-ne-filosof-a20607" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2022.0426">
+    <div class="writing-item" data-type="essay" data-year="2022.0426" data-langs="en">
       <div class="writing-date">26 April 2022</div>
       <span class="writing-tag">Ukraine & Autocephaly</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Open Appeal of the Priests of the UOC-MP to the Primates of Local Orthodox Churches</div>
+      <div class="writing-title" data-orig="en" data-title-en="Open Appeal of the Priests of the UOC-MP to the Primates of Local Orthodox Churches">Open Appeal of the Priests of the UOC-MP to the Primates of Local Orthodox Churches</div>
       <div class="writing-source">Public Orthodoxy</div>
-      <div class="writing-link"><a href="https://publicorthodoxy.org/2022/04/26/open-appeal-of-uoc-priests/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://publicorthodoxy.org/2022/04/26/open-appeal-of-uoc-priests/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="interview" data-year="2021.0121">
+    <div class="writing-item" data-type="interview" data-year="2021.0121" data-langs="pl">
       <div class="writing-date">21 January 2021</div>
       <span class="writing-tag">Church &amp; Politics</span>
       <span class="writing-type-tag">Interview</span>
-      <div class="writing-title">«Patriarchat Moskiewski dawno już stracił swój niezależny głos»<span class="writing-lang">Polish</span></div>
+      <div class="writing-title" data-orig="pl" data-title-pl="«Patriarchat Moskiewski dawno już stracił swój niezależny głos»">«Patriarchat Moskiewski dawno już stracił swój niezależny głos»</div>
       <div class="writing-source">KAI (Katolicka Agencja Informacyjna) · full text: misyjne.pl</div>
-      <div class="writing-link"><a href="https://misyjne.pl/misja/s-czapnin-patriarchat-moskiewski-dawno-juz-stracil-swoj-niezalezny-glos-rozmowa/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="pl" href="https://misyjne.pl/misja/s-czapnin-patriarchat-moskiewski-dawno-juz-stracil-swoj-niezalezny-glos-rozmowa/" target="_blank">Polski</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2020.0505">
+    <div class="writing-item" data-type="essay" data-year="2020.0505" data-langs="ru">
       <div class="writing-date">5 May 2020</div>
       <span class="writing-tag">Iconography & Propaganda</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Вооруженный иконостас: как РПЦ удивила Россию Путиным и Сталиным<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Вооруженный иконостас: как РПЦ удивила Россию Путиным и Сталиным">Вооруженный иконостас: как РПЦ удивила Россию Путиным и Сталиным</div>
       <div class="writing-source">Forbes</div>
-      <div class="writing-link"><a href="https://www.forbes.ru/obshchestvo/399735-vooruzhennyy-ikonostas-kak-rpc-udivila-rossiyu-putinym-i-stalinym" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://www.forbes.ru/obshchestvo/399735-vooruzhennyy-ikonostas-kak-rpc-udivila-rossiyu-putinym-i-stalinym" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="academic" data-year="2020.02">
+    <div class="writing-item" data-type="academic" data-year="2020.02" data-langs="en">
       <div class="writing-date">2020</div>
       <span class="writing-tag">Traditional Values</span>
       <span class="writing-type-tag">Academic Article</span>
-      <div class="writing-title">The Rhetoric of Traditional Values in Contemporary Russia</div>
+      <div class="writing-title" data-orig="en" data-title-en="The Rhetoric of Traditional Values in Contemporary Russia">The Rhetoric of Traditional Values in Contemporary Russia</div>
       <div class="writing-source">In <em>Postsecular Conflicts</em>, Innsbruck University Press · DOI 10.15203/3187-99-3</div>
-      <div class="writing-link"><a href="https://www.academia.edu/103582544/The_Rhetoric_of_Traditional_Values_in_Contemporary_Russia" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://www.academia.edu/103582544/The_Rhetoric_of_Traditional_Values_in_Contemporary_Russia" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="academic" data-year="2020.01">
+    <div class="writing-item" data-type="academic" data-year="2020.01" data-langs="en">
       <div class="writing-date">2020</div>
       <span class="writing-tag">Church &amp; Economy</span>
       <span class="writing-type-tag">Academic Article</span>
-      <div class="writing-title">Financial Situation of the Russian Orthodox Church and Its Clergy</div>
+      <div class="writing-title" data-orig="en" data-title-en="Financial Situation of the Russian Orthodox Church and Its Clergy">Financial Situation of the Russian Orthodox Church and Its Clergy</div>
       <div class="writing-source">Occasional Papers on Religion in Eastern Europe, George Fox University · Vol. 40, No. 8</div>
-      <div class="writing-link"><a href="https://digitalcommons.georgefox.edu/ree/vol40/iss8/5/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://digitalcommons.georgefox.edu/ree/vol40/iss8/5/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2019.1014">
+    <div class="writing-item" data-type="essay" data-year="2019.1014" data-langs="en">
       <div class="writing-date">14 October 2019</div>
       <span class="writing-tag">Church & Society</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Russian Orthodox Clergy Support Justice and Respect for the Law</div>
+      <div class="writing-title" data-orig="en" data-title-en="Russian Orthodox Clergy Support Justice and Respect for the Law">Russian Orthodox Clergy Support Justice and Respect for the Law</div>
       <div class="writing-source">Public Orthodoxy</div>
-      <div class="writing-link"><a href="https://publicorthodoxy.org/2019/10/14/russian-orthodox-clergy-support-justice/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://publicorthodoxy.org/2019/10/14/russian-orthodox-clergy-support-justice/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2019.0906">
+    <div class="writing-item" data-type="essay" data-year="2019.0906" data-langs="ru">
       <div class="writing-date">6 September 2019</div>
       <span class="writing-tag">Church Reform</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Деньги, кадры, послушание. Реформирование РПЦ: что предстоит поменять после эпохи патриарха Кирилла?<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Деньги, кадры, послушание. Реформирование РПЦ: что предстоит поменять после эпохи патриарха Кирилла?">Деньги, кадры, послушание. Реформирование РПЦ: что предстоит поменять после эпохи патриарха Кирилла?</div>
       <div class="writing-source">Новая газета</div>
-      <div class="writing-link"><a href="https://novayagazeta.ru/articles/2019/09/06/81865-dengi-kadry-poslushanie" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://novayagazeta.ru/articles/2019/09/06/81865-dengi-kadry-poslushanie" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="interview" data-year="2019.0614">
+    <div class="writing-item" data-type="interview" data-year="2019.0614" data-langs="ru">
       <div class="writing-date">14 June 2019</div>
       <span class="writing-tag">Church &amp; Society</span>
       <span class="writing-type-tag">Interview</span>
-      <div class="writing-title">«Возможны ли в РПЦ серьезные реформы?»<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="«Возможны ли в РПЦ серьезные реформы?»">«Возможны ли в РПЦ серьезные реформы?»</div>
       <div class="writing-source">Znak.com · беседовал Евгений Сеньшин</div>
-      <div class="writing-link"><a href="/interviews/znak-2019-reforms/" class="writing-link">Full text (archival copy) →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="/interviews/znak-2019-reforms/" title="архивная копия на сайте">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2018.0927">
+    <div class="writing-item" data-type="essay" data-year="2018.0927" data-langs="en">
       <div class="writing-date">27 September 2018</div>
       <span class="writing-tag">Church &amp; Politics</span>
       <span class="writing-type-tag">Commentary</span>
-      <div class="writing-title">The Ukrainian Church&#x27;s Quest for Ecclesiastical Autonomy</div>
+      <div class="writing-title" data-orig="en" data-title-en="The Ukrainian Church&#x27;s Quest for Ecclesiastical Autonomy">The Ukrainian Church&#x27;s Quest for Ecclesiastical Autonomy</div>
       <div class="writing-source">PONARS Eurasia</div>
-      <div class="writing-link"><a href="https://www.ponarseurasia.org/the-ukrainian-church-s-quest-for-ecclesiastical-autonomy/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://www.ponarseurasia.org/the-ukrainian-church-s-quest-for-ecclesiastical-autonomy/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2017.0804">
-      <div class="writing-date">4 August 2017</div>
-      <span class="writing-tag">Church & Society</span>
-      <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">Церковь нуждается в критике<span class="writing-lang">Russian</span></div>
-      <div class="writing-source">ИноСМИ · перевод из Le Monde</div>
-      <div class="writing-link"><a href="https://inosmi.ru/20170804/239981352.html" target="_blank" class="writing-link">Read online →</a></div>
-    </div>
-
-    <div class="writing-item" data-type="essay" data-year="2017.0803">
+    <div class="writing-item" data-type="essay" data-year="2017.0803" data-langs="fr ru">
       <div class="writing-date">3 August 2017</div>
-      <span class="writing-tag">Church & Society</span>
+      <span class="writing-tag">Church &amp; Society</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">L’Église orthodoxe russe occulte la société<span class="writing-lang">French</span></div>
-      <div class="writing-source">Le Monde</div>
-      <div class="writing-link"><a href="https://www.lemonde.fr/festival/article/2017/08/03/l-eglise-orthodoxe-russe-occulte-la-societe_5168090_4415198.html" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-title" data-orig="fr" data-title-fr="L’Église orthodoxe russe occulte la société" data-title-ru="Церковь нуждается в критике">L’Église orthodoxe russe occulte la société</div>
+      <div class="writing-source">Le Monde · ИноСМИ</div>
+      <div class="writing-langs"><a class="pill orig" data-lang="fr" href="https://www.lemonde.fr/festival/article/2017/08/03/l-eglise-orthodoxe-russe-occulte-la-societe_5168090_4415198.html" target="_blank">Français</a><a class="pill" data-lang="ru" href="https://inosmi.ru/20170804/239981352.html" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2017.0330">
+    <div class="writing-item" data-type="essay" data-year="2017.0330" data-langs="en">
       <div class="writing-date">30 March 2017</div>
       <span class="writing-tag">Church & Society</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">The Russian Church: Profiting by Silence</div>
+      <div class="writing-title" data-orig="en" data-title-en="The Russian Church: Profiting by Silence">The Russian Church: Profiting by Silence</div>
       <div class="writing-source">Public Orthodoxy</div>
-      <div class="writing-link"><a href="https://publicorthodoxy.org/2017/03/30/russian-church-protests-silence/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://publicorthodoxy.org/2017/03/30/russian-church-protests-silence/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="interview" data-year="2016.0325">
+    <div class="writing-item" data-type="interview" data-year="2016.0325" data-langs="ru">
       <div class="writing-date">25 March 2016</div>
       <span class="writing-tag">Church &amp; Society</span>
       <span class="writing-type-tag">Interview</span>
-      <div class="writing-title">«Церковь не умеет работать с гражданским обществом»<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="«Церковь не умеет работать с гражданским обществом»">«Церковь не умеет работать с гражданским обществом»</div>
       <div class="writing-source">Центр «Сова» · беседовала Светлана Солодовник</div>
-      <div class="writing-link"><a href="/interviews/sova-2016-grazhdanskoe-obshchestvo/" class="writing-link">Full text (archival copy) →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="/interviews/sova-2016-grazhdanskoe-obshchestvo/" title="архивная копия на сайте">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="interview" data-year="2016.0106">
+    <div class="writing-item" data-type="interview" data-year="2016.0106" data-langs="en">
       <div class="writing-date">6 January 2016</div>
       <span class="writing-tag">Church &amp; Politics</span>
       <span class="writing-type-tag">Interview</span>
-      <div class="writing-title">Orthodoxy Without Christ</div>
+      <div class="writing-title" data-orig="en" data-title-en="Orthodoxy Without Christ">Orthodoxy Without Christ</div>
       <div class="writing-source">First Things · translation of a Rosbalt interview</div>
-      <div class="writing-link"><a href="https://firstthings.com/orthodoxy-without-christ-an-interview-with-sergei-chapnin/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://firstthings.com/orthodoxy-without-christ-an-interview-with-sergei-chapnin/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2016.001">
+    <div class="writing-item" data-type="essay" data-year="2016.001" data-langs="en">
       <div class="writing-date">2016</div>
       <span class="writing-tag">Church &amp; Politics</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">The Demolition of the Church Legacy of Russian Emigration: How It Is Done</div>
+      <div class="writing-title" data-orig="en" data-title-en="The Demolition of the Church Legacy of Russian Emigration: How It Is Done">The Demolition of the Church Legacy of Russian Emigration: How It Is Done</div>
       <div class="writing-source">The Wheel</div>
-      <div class="writing-link"><a href="https://zenodo.org/records/3349637" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://zenodo.org/records/3349637" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="interview" data-year="2015.1222">
+    <div class="writing-item" data-type="interview" data-year="2015.1222" data-langs="ru">
       <div class="writing-date">22 December 2015</div>
       <span class="writing-tag">Media &amp; Journalism</span>
       <span class="writing-type-tag">Interview</span>
-      <div class="writing-title">«В России прямо на наших глазах умирает журналистика. И светская, и церковная»<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="«В России прямо на наших глазах умирает журналистика. И светская, и церковная»">«В России прямо на наших глазах умирает журналистика. И светская, и церковная»</div>
       <div class="writing-source">Colta.ru · беседовала Анна Голубева</div>
-      <div class="writing-link"><a href="/interviews/colta-2015-zhurnalistika/" class="writing-link">Full text (archival copy) →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="/interviews/colta-2015-zhurnalistika/" title="архивная копия на сайте">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="interview" data-year="2015.12219">
+    <div class="writing-item" data-type="interview" data-year="2015.12219" data-langs="ru">
       <div class="writing-date">22 December 2015</div>
       <span class="writing-tag">Church &amp; Politics</span>
       <span class="writing-type-tag">Interview</span>
-      <div class="writing-title">«Запрос на &quot;священную войну&quot; на Украине в РПЦ уже есть»<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="«Запрос на &amp;quot;священную войну&amp;quot; на Украине в РПЦ уже есть»">«Запрос на &quot;священную войну&quot; на Украине в РПЦ уже есть»</div>
       <div class="writing-source">Slon.ru · беседовал Александр Черных · reprint at RISU</div>
-      <div class="writing-link"><a href="/interviews/slon-2015-svyashchennaya-voyna/" class="writing-link">Full text (archival copy) →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="/interviews/slon-2015-svyashchennaya-voyna/" title="архивная копия на сайте">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2015.11">
+    <div class="writing-item" data-type="essay" data-year="2015.11" data-langs="en">
       <div class="writing-date">November 2015</div>
       <span class="writing-tag">Church &amp; Empire</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">A Church of Empire: Why the Russian Church Chose to Bless Empire</div>
+      <div class="writing-title" data-orig="en" data-title-en="A Church of Empire: Why the Russian Church Chose to Bless Empire">A Church of Empire: Why the Russian Church Chose to Bless Empire</div>
       <div class="writing-source">First Things</div>
-      <div class="writing-link"><a href="https://firstthings.com/a-church-of-empire/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="en" href="https://firstthings.com/a-church-of-empire/" target="_blank">English</a></div>
     </div>
 
-    <div class="writing-item" data-type="interview" data-year="2013.1116">
+    <div class="writing-item" data-type="interview" data-year="2013.1116" data-langs="ru">
       <div class="writing-date">16 November 2013</div>
       <span class="writing-tag">Media &amp; Journalism</span>
       <span class="writing-type-tag">Interview</span>
-      <div class="writing-title">«Говорить свободно и честно о духовном содержании событий»<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="«Говорить свободно и честно о духовном содержании событий»">«Говорить свободно и честно о духовном содержании событий»</div>
       <div class="writing-source">«Дон Православный» · беседовала Евгения Аверьянова</div>
-      <div class="writing-link"><a href="/interviews/don-2013-religioznaya-zhurnalistika/" class="writing-link">Full text (archival copy) →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="/interviews/don-2013-religioznaya-zhurnalistika/" title="архивная копия на сайте">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="academic" data-year="2013.0">
+    <div class="writing-item" data-type="academic" data-year="2013.0" data-langs="ru">
       <div class="writing-date">2013</div>
       <span class="writing-tag">Religious Practice</span>
       <span class="writing-type-tag">Academic Article</span>
-      <div class="writing-title">Образ Церкви и образ веры в зеркале религиозных практик<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Образ Церкви и образ веры в зеркале религиозных практик">Образ Церкви и образ веры в зеркале религиозных практик</div>
       <div class="writing-source">История — Electronic Scientific and Educational Journal</div>
-      <div class="writing-link"><a href="https://www.academia.edu/6195705/Образ_Церкви_и_образ_веры_в_зеркале_религиозных_практик" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://www.academia.edu/6195705/Образ_Церкви_и_образ_веры_в_зеркале_религиозных_практик" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="interview" data-year="2012.0925">
+    <div class="writing-item" data-type="interview" data-year="2012.0925" data-langs="ru">
       <div class="writing-date">25 September 2012</div>
       <span class="writing-tag">Church &amp; Society</span>
       <span class="writing-type-tag">Interview</span>
-      <div class="writing-title">«Мне дороже всего пример радостной жизни во Христе»<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="«Мне дороже всего пример радостной жизни во Христе»">«Мне дороже всего пример радостной жизни во Христе»</div>
       <div class="writing-source">Правмир</div>
-      <div class="writing-link"><a href="https://www.pravmir.ru/sergej-chapnin-mne-dorozhe-vsego-primer-radostnoj-zhizni-vo-xriste/" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://www.pravmir.ru/sergej-chapnin-mne-dorozhe-vsego-primer-radostnoj-zhizni-vo-xriste/" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="essay" data-year="2012.0306">
+    <div class="writing-item" data-type="essay" data-year="2012.0306" data-langs="ru">
       <div class="writing-date">6 March 2012</div>
       <span class="writing-tag">Church &amp; Society</span>
       <span class="writing-type-tag">Essay</span>
-      <div class="writing-title">«Два вопроса Владимиру Путину»<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="«Два вопроса Владимиру Путину»">«Два вопроса Владимиру Путину»</div>
       <div class="writing-source">Нескучный сад</div>
-      <div class="writing-link"><a href="/interviews/nsad-2012-dva-voprosa/" class="writing-link">Full text (archival copy) →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="/interviews/nsad-2012-dva-voprosa/" title="архивная копия на сайте">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="academic" data-year="2011.0927">
+    <div class="writing-item" data-type="academic" data-year="2011.0927" data-langs="ru">
       <div class="writing-date">27 September 2011</div>
       <span class="writing-tag">Church & Culture</span>
       <span class="writing-type-tag">Academic Article</span>
-      <div class="writing-title">Советское и постсоветское в современной церковной культуре: образ пастыря, свидетельство, служение<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Советское и постсоветское в современной церковной культуре: образ пастыря, свидетельство, служение">Советское и постсоветское в современной церковной культуре: образ пастыря, свидетельство, служение</div>
       <div class="writing-source">Богослов.ru · доклад на Меневских чтениях</div>
-      <div class="writing-link"><a href="https://bogoslov.ru/materials/article/sovetskoe-i-postsovetskoe-v-sovremennoi-tserkovnoi-kulture-obraz-pastirya-svidetelstvo-sluzhenie" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://bogoslov.ru/materials/article/sovetskoe-i-postsovetskoe-v-sovremennoi-tserkovnoi-kulture-obraz-pastirya-svidetelstvo-sluzhenie" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="academic" data-year="2010.1116">
+    <div class="writing-item" data-type="academic" data-year="2010.1116" data-langs="ru">
       <div class="writing-date">16 November 2010</div>
       <span class="writing-tag">Media & Journalism</span>
       <span class="writing-type-tag">Academic Article</span>
-      <div class="writing-title">Разговор с человеком. Диалог в электронной коммуникации<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="Разговор с человеком. Диалог в электронной коммуникации">Разговор с человеком. Диалог в электронной коммуникации</div>
       <div class="writing-source">Богослов.ru</div>
-      <div class="writing-link"><a href="https://bogoslov.ru/materials/article/razgovor-s-chelovekom-dialog-v-elektronnoi-kommunikatsii" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://bogoslov.ru/materials/article/razgovor-s-chelovekom-dialog-v-elektronnoi-kommunikatsii" target="_blank">Русский</a></div>
     </div>
 
-    <div class="writing-item" data-type="interview" data-year="2010.0210">
+    <div class="writing-item" data-type="interview" data-year="2010.0210" data-langs="ru">
       <div class="writing-date">10 February 2010</div>
       <span class="writing-tag">Media & Journalism</span>
       <span class="writing-type-tag">Interview</span>
-      <div class="writing-title">«Журнал Московской Патриархии» — новый формат<span class="writing-lang">Russian</span></div>
+      <div class="writing-title" data-orig="ru" data-title-ru="«Журнал Московской Патриархии» — новый формат">«Журнал Московской Патриархии» — новый формат</div>
       <div class="writing-source">Богослов.ru</div>
-      <div class="writing-link"><a href="https://bogoslov.ru/materials/article/00000000-0000-0000-0000-000000581416" target="_blank" class="writing-link">Read online →</a></div>
+      <div class="writing-langs"><a class="pill orig" data-lang="ru" href="https://bogoslov.ru/materials/article/00000000-0000-0000-0000-000000581416" target="_blank">Русский</a></div>
     </div>
   </div>
 
@@ -1202,8 +1193,15 @@
     var countEl = document.getElementById('pub-count');
     var currentFilter = 'all';
 
-    function isEnglish(el){ return !el.querySelector('.writing-lang'); }
-    function isRussian(el){ var c=el.querySelector('.writing-lang'); return c && c.textContent.trim() === 'Russian'; }
+    function hasLang(el, code){ return (' ' + (el.getAttribute('data-langs')||'') + ' ').indexOf(' ' + code + ' ') >= 0; }
+    function setTitle(el, lang){
+      var t = el.querySelector('.writing-title');
+      if (!t) return;
+      var pick = (lang === 'en' || lang === 'ru') && t.getAttribute('data-title-' + lang)
+               ? t.getAttribute('data-title-' + lang)
+               : t.getAttribute('data-title-' + (t.getAttribute('data-orig') || 'en'));
+      if (pick) t.textContent = pick;
+    }
 
     function yearOf(el){ return parseFloat(el.getAttribute('data-year')); }
 
@@ -1212,8 +1210,8 @@
       var lang = langSelect.value;
       var visible = items.filter(function (el) {
         if (!(currentFilter === 'all' || el.getAttribute('data-type') === currentFilter)) return false;
-        if (lang === 'en' && !isEnglish(el)) return false;
-        if (lang === 'ru' && !isRussian(el)) return false;
+        if (lang === 'en' && !hasLang(el, 'en')) return false;
+        if (lang === 'ru' && !hasLang(el, 'ru')) return false;
         return true;
       });
       if (mode === '2026') {
@@ -1223,6 +1221,7 @@
         var ya = yearOf(a), yb = yearOf(b);
         return mode === 'oldest' ? ya - yb : yb - ya;
       });
+      items.forEach(function (el) { setTitle(el, lang); });
       items.forEach(function (el) { el.style.display = 'none'; });
       visible.forEach(function (el) { el.style.display = ''; list.appendChild(el); });
       var n = visible.length;

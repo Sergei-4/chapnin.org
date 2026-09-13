@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  body{background:#F5EFE7;color:#2C2C2C;font-family:'Lato',sans-serif;margin:0;padding:2rem 6%;line-height:1.6}
+  h2{font-family:'Playfair Display',serif;font-size:20px;border-left:4px solid #8B0000;padding-left:.8rem;margin:2rem 0 1rem}
+  .note{font-size:13.5px;color:#8B7355;max-width:70ch;margin:.3rem 0 1rem}
+  .list{max-width:760px}
+  .item{display:grid;grid-template-columns:7rem 1fr;column-gap:1.1rem;padding:.7rem 0;border-bottom:1px solid #EFE7DB}
+  .date{font-size:12.5px;color:#8B7355;font-weight:600;padding-top:3px}
+  .main{min-width:0}
+  .tag{color:#8B0000;font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.6px}
+  .title{font-family:'Playfair Display',serif;font-size:15.5px;font-weight:600;margin:.05rem 0 .15rem;line-height:1.35}
+  .src{font-size:12.5px;color:#8A7A66;font-weight:600}
+  /* language pill-links */
+  .langs{margin-top:.4rem;display:flex;gap:.4rem;flex-wrap:wrap;align-items:center}
+  .langlab{font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:#8B7355;font-weight:700;margin-right:.1rem}
+  .pill{font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;font-weight:700;color:#8B0000;border:1px solid #E3C9C9;border-radius:3px;padding:.08rem .5rem;text-decoration:none}
+  .pill:hover{background:#8B0000;color:#fff;border-color:#8B0000}
+  .pill.orig{border-color:#8B0000}
+  /* inline variant */
+  .title .ipill{font-family:'Lato',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#8B0000;border:1px solid #E3C9C9;border-radius:3px;padding:.02rem .4rem;margin-left:.4rem;text-decoration:none;vertical-align:2px;white-space:nowrap}
+  .title .ipill:hover{background:#8B0000;color:#fff}
+  .old{color:#8B0000;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;text-decoration:none;margin-top:.3rem;display:inline-block}
+</style></head><body>
+
+<h2>Вариант A — языковые кнопки отдельной строкой (рекомендую)</h2>
+<p class="note">Один текст = одна строка. Внизу — по кнопке на язык, каждая ведёт на свою версию. Оригинал помечен точкой. Масштабируется на 2–3 и больше языков, чисто и на телефоне.</p>
+<div class="list">
+  <div class="item"><div class="date">3 Aug 2017</div><div class="main">
+    <div class="tag">Church &amp; Society</div>
+    <div class="title">The Russian Orthodox Church Occults Society</div>
+    <div class="src">Le Monde · The Insider · ИноСМИ</div>
+    <div class="langs"><span class="langlab">Читать:</span>
+      <a class="pill orig" href="#">Français ·</a><a class="pill" href="#">Русский</a><a class="pill" href="#">English</a></div>
+  </div></div>
+  <div class="item"><div class="date">1 Jun 2025</div><div class="main">
+    <div class="tag">Church &amp; Witness</div>
+    <div class="title">An Open Letter to the Participants of the All-American Council 2025</div>
+    <div class="src">sobornost.cc</div>
+    <div class="langs"><span class="langlab">Читать:</span>
+      <a class="pill orig" href="#">English ·</a><a class="pill" href="#">Русский</a></div>
+  </div></div>
+  <div class="item"><div class="date">20 Apr 2026</div><div class="main">
+    <div class="tag">Iconography &amp; Propaganda</div>
+    <div class="title">The Right Icon in the Right Place</div>
+    <div class="src">Public Orthodoxy</div>
+    <div class="langs"><a class="pill orig" href="#">English</a></div>
+  </div></div>
+</div>
+
+<h2>Вариант B — маленькие кнопки сразу после названия</h2>
+<p class="note">Компактнее, но при длинных заголовках и 3 языках строка становится тесной, особенно на телефоне.</p>
+<div class="list">
+  <div class="item"><div class="date">3 Aug 2017</div><div class="main">
+    <div class="tag">Church &amp; Society</div>
+    <div class="title">The Russian Orthodox Church Occults Society<a class="ipill" href="#">FR</a><a class="ipill" href="#">RU</a><a class="ipill" href="#">EN</a></div>
+    <div class="src">Le Monde · The Insider · ИноСМИ</div>
+  </div></div>
+</div>
+
+<h2>Как сейчас (для сравнения)</h2>
+<div class="list">
+  <div class="item"><div class="date">3 Aug 2017</div><div class="main">
+    <div class="tag">Church &amp; Society</div>
+    <div class="title">L’Église orthodoxe russe occulte la société</div>
+    <div class="src">Le Monde</div>
+    <a class="old" href="#">Read online →</a>
+  </div></div>
+  <div class="item"><div class="date">4 Aug 2017</div><div class="main">
+    <div class="tag">Church &amp; Society</div>
+    <div class="title">Церковь нуждается в критике</div>
+    <div class="src">ИноСМИ · перевод из Le Monde</div>
+    <a class="old" href="#">Read online →</a>
+  </div></div>
+</div>
+
+</body></html>
