@@ -979,8 +979,19 @@
         <label for="lang-select">Language</label>
         <select id="lang-select">
           <option value="all">All languages</option>
-          <option value="en">English only</option>
-          <option value="ru">Russian only</option>
+          <option value="en">English</option>
+          <option value="ru">Russian</option>
+          <option value="bg">Bulgarian</option>
+          <option value="pl">Polish</option>
+          <option value="uk">Ukrainian</option>
+          <option value="el">Greek</option>
+          <option value="nl">Dutch</option>
+          <option value="it">Italian</option>
+          <option value="de">German</option>
+          <option value="fr">French</option>
+          <option value="sr">Serbian</option>
+          <option value="cs">Czech</option>
+          <option value="es">Spanish</option>
         </select>
       </div>
       <div class="sort-group">
@@ -2444,7 +2455,7 @@
     function setTitle(el, lang){
       var t = el.querySelector('.writing-title');
       if (!t) return;
-      var pick = (lang === 'en' || lang === 'ru') && t.getAttribute('data-title-' + lang)
+      var pick = (lang && lang !== 'all' && t.getAttribute('data-title-' + lang))
                ? t.getAttribute('data-title-' + lang)
                : t.getAttribute('data-title-' + (t.getAttribute('data-orig') || 'en'));
       if (pick) t.textContent = pick;
@@ -2457,8 +2468,7 @@
       var lang = langSelect.value;
       var visible = items.filter(function (el) {
         if (!(currentFilter === 'all' || el.getAttribute('data-type') === currentFilter)) return false;
-        if (lang === 'en' && !hasLang(el, 'en')) return false;
-        if (lang === 'ru' && !hasLang(el, 'ru')) return false;
+        if (lang !== 'all' && !hasLang(el, lang)) return false;
         return true;
       });
       if (mode === '2026') {
