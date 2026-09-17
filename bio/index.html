@@ -289,6 +289,10 @@
     .nav-logo { display: inline-flex; align-items: center; gap: 0.5rem; }
     .nav-mark { width: 30px; height: 30px; flex: none; border-radius: 8px; background: #8B0000; color: #F5EFE7; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 700; font-size: 20px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; }
     .nav-chr { display: block; transform: translate(0, 1px); }
+    .lang-switch { display: flex; gap: 0.5rem; margin-bottom: 1.4rem; }
+    .lang-switch .lang-pill { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; color: #8B0000; border: 1px solid #E3C9C9; border-radius: 3px; padding: 0.12rem 0.6rem; text-decoration: none; white-space: nowrap; transition: background 0.15s, color 0.15s, border-color 0.15s; }
+    .lang-switch .lang-pill:hover { background: #8B0000; color: #fff; border-color: #8B0000; }
+    .lang-switch .lang-pill.active { background: #8B0000; color: #fff; border-color: #8B0000; cursor: default; }
   </style>
 <style>
     /* mobile hamburger nav */
@@ -330,7 +334,10 @@
 
 <div class="container">
 
-  <div style="font-size:13px;letter-spacing:0.5px;margin-bottom:1.2rem;color:#8B7355;"><span style="color:#8B0000;font-weight:700;">EN</span> &nbsp;·&nbsp; <a href="/ru/bio/" style="color:#8B7355;text-decoration:none;">RU</a></div>
+  <div class="lang-switch">
+    <a class="lang-pill active" href="/bio/">English</a>
+    <a class="lang-pill" href="/ru/bio/">Русский</a>
+  </div>
 
   <h1 class="page-title">Biography</h1>
 
