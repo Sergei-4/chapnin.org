@@ -70,7 +70,7 @@
     ],
     "url": "https://chapnin.org/books/religious-communities-under-pressure/",
     "offers": { "@type": "Offer", "price": "17.09", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.amazon.com/dp/B0H5G277LW" },
-    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.6", "reviewCount": "11" }
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "13" }
   }
   </script>
   <script type="application/ld+json">
@@ -129,6 +129,12 @@
     .anchor-nav ul { display: flex; gap: 2rem; list-style: none; flex-wrap: wrap; justify-content: center; }
     .anchor-nav a { font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px; color: #8B7355; text-decoration: none; font-weight: 700; transition: color 0.2s; }
     .anchor-nav a:hover { color: #8B0000; }
+    .anchor-inner { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.7rem 1.4rem; }
+    .anchor-nav ul { flex: 1 1 auto; margin: 0; }
+    .anchor-buy { flex: none; }
+    .anchor-buy a { display: inline-block; background: #8B0000; color: #fff; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; padding: 0.5rem 1rem; border-radius: 2px; text-decoration: none; white-space: nowrap; transition: background 0.2s; }
+    .anchor-buy a:hover { background: #600000; color: #fff; }
+    @media (max-width: 800px) { .anchor-buy a { padding: 0.45rem 0.85rem; } }
 
     .section { margin: 3.4rem 0; scroll-margin-top: 96px; }
     .section-label { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: #2C2C2C; margin-bottom: 1.4rem; border-left: 4px solid #8B0000; padding-left: 1rem; }
@@ -248,7 +254,7 @@
     <div class="book-cover">
       <img src="/images/book-cover.jpg" alt="Religious Communities Under Pressure by Sergei Chapnin — book cover, dark red typography on a cream background" width="260" height="418">
       <a href="https://www.amazon.com/dp/B0H5G277LW" target="_blank" class="buy-btn hero-buy" onclick="gtag('event','buy_amazon',{location:'hero'})">Buy on Amazon</a>
-      <div class="quick-facts">Paperback $17.09 &nbsp;·&nbsp; Kindle $9.99<br><span class="star">★</span> 4.6 (11 ratings) &nbsp;·&nbsp; 163 pages</div>
+      <div class="quick-facts">Paperback $17.09 &nbsp;·&nbsp; Kindle $9.99<br><span class="star">★</span> 4.7 (13 ratings) &nbsp;·&nbsp; 163 pages</div>
     </div>
     <div class="book-details">
       <h1 class="book-title">Religious Communities Under Pressure</h1>
@@ -260,16 +266,19 @@
   </div>
 
   <nav class="anchor-nav">
-    <ul>
-      <li><a href="#press">In the Press</a></li>
-      <li><a href="#book">The Book</a></li>
-      <li><a href="#for-whom">Who It's For</a></li>
-      <li><a href="#excerpt">From the Book</a></li>
-      <li><a href="#endorsements">Endorsements</a></li>
-      <li><a href="#readers">Readers</a></li>
-      <li><a href="#events">Presentations</a></li>
-      <li><a href="#contents">Contents</a></li>
-    </ul>
+    <div class="anchor-inner">
+      <ul>
+        <li><a href="#press">In the Press</a></li>
+        <li><a href="#book">The Book</a></li>
+        <li><a href="#for-whom">Who It's For</a></li>
+        <li><a href="#excerpt">From the Book</a></li>
+        <li><a href="#endorsements">Endorsements</a></li>
+        <li><a href="#readers">Readers</a></li>
+        <li><a href="#events">Presentations</a></li>
+        <li><a href="#contents">Contents</a></li>
+      </ul>
+      <span class="anchor-buy"><a href="https://www.amazon.com/dp/B0H5G277LW" target="_blank" rel="noopener" onclick="gtag('event','buy_amazon',{location:'anchor'})">Buy the book</a></span>
+    </div>
   </nav>
 
   <section class="section" id="press">
@@ -292,7 +301,7 @@
     <div class="section-label">The Book</div>
     <div class="prose">
       <p>Since February 2022, Orthodox priests and deacons have been defrocked for praying for peace. A non-denominational preacher who walked out holding a sign that read "No to War" was later found dead in a penal colony. Across Russia, believers who refused to bless the war have been silenced, stripped of their orders, and imprisoned — not only by the state, but by their own Church.</p>
-      <p><em>Religious Communities Under Pressure</em> brings that record to English for the first time. It documents more than 120 believers — Orthodox, Catholic, Protestant, Jewish, and Buddhist — and traces the machinery behind their persecution: a system more intricate, and in some ways more insidious, than anything the Soviet state devised. The great majority are Orthodox Christians, the only ones pressed from two directions at once — by the state, and by a Church that has surrendered its freedom to it.</p>
+      <p><em>Religious Communities Under Pressure</em> brings that record to English for the first time. It documents more than 120 believers — Orthodox, Protestant, Jewish, and Buddhist — and traces the machinery behind their persecution: a system more intricate, and in some ways more insidious, than anything the Soviet state devised. The great majority are Orthodox Christians, the only ones pressed from two directions at once — by the state, and by a Church that has surrendered its freedom to it.</p>
       <p>Chapnin writes from within that Church. For fifteen years he shaped the media policy of the Moscow Patriarchate. In December 2015 he warned publicly that Russia was remaking Orthodoxy into a state ideology, and that a future war against Ukraine would be given a religious justification. Within weeks, Patriarch Kirill dismissed him. Seven years later, the warning proved exact.</p>
     </div>
   </section>
@@ -300,10 +309,10 @@
   <section class="section" id="for-whom">
     <div class="section-label">Who This Book Is For</div>
     <div class="prose">
-      <p><strong>Journalists and policy analysts</strong> covering Russia, religious freedom, or the war in Ukraine — the book provides eight appendices of primary-source lists (foreign agents, "undesirable" organizations, imprisoned believers) usable as direct reference.</p>
-      <p><strong>Clergy and lay Orthodox Christians</strong> across jurisdictions — especially in the OCA, ROCOR, and the Ecumenical Patriarchate — grappling with what it means to remain in communion with the Moscow Patriarchate.</p>
-      <p><strong>Scholars of religion, human rights, and post-Soviet politics</strong> — the first English-language study to map ecclesiastical, state, and cross-religious repression as a single system.</p>
-      <p><strong>Government and NGO practitioners</strong> working on Countries of Particular Concern designations, sanctions, or refugee support — Chapter 9 offers targeted recommendations for U.S., EU, and ecumenical bodies.</p>
+      <p><strong>Journalists and policy analysts</strong> covering Russia, religious freedom, or the war against Ukraine. The draw is the analysis itself — a thorough reading of how the persecution works, and why, built on an unusually rich body of documented cases and primary sources.</p>
+      <p><strong>Christians beyond the Orthodox alone.</strong> The book records believers of other confessions silenced for the same refusal, and sets the Orthodox cases among them. Its question is not abstract: the persecuted are waiting for support, and the churches still free to give it have to decide what that will be.</p>
+      <p><strong>Scholars of religion, human rights, and post-Soviet politics.</strong> The first English-language study to map ecclesiastical, state, and cross-religious repression as a single system.</p>
+      <p><strong>Government and NGO practitioners</strong> working on Countries of Particular Concern designations, sanctions, or refugee support. The book offers targeted recommendations for U.S., EU, and ecumenical bodies.</p>
     </div>
   </section>
 
@@ -338,7 +347,7 @@
   <section class="section" id="readers">
     <div class="section-label">Readers</div>
     <div class="reviews-head">
-      <div class="reviews-score"><span class="stars">★★★★½</span> &nbsp;4.6 out of 5 &nbsp;·&nbsp; <a href="https://www.amazon.com/dp/B0H5G277LW" target="_blank" style="color:#8B0000;font-weight:600;text-decoration:none;">11 ratings on Amazon</a></div>
+      <div class="reviews-score"><span class="stars">★★★★½</span> &nbsp;4.7 out of 5 &nbsp;·&nbsp; <a href="https://www.amazon.com/dp/B0H5G277LW" target="_blank" style="color:#8B0000;font-weight:600;text-decoration:none;">13 ratings on Amazon</a></div>
     </div>
     <div class="review">
       <div class="stars">★★★★★</div>
@@ -475,7 +484,7 @@
 
   <div class="footer-divider">
     <div class="footer-content">
-      <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: September 16, 2026</span></div>
+      <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: September 20, 2026</span></div>
       <ul class="footer-links">
         <li><a href="https://www.linkedin.com/in/vsadnik/" target="_blank">LinkedIn</a></li>
         <li><a href="https://www.facebook.com/chapnin" target="_blank">Facebook</a></li>
