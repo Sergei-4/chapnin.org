@@ -20,13 +20,13 @@
   <link rel="canonical" href="https://chapnin.org/collaborate/">
   
   <title>Collaborate | Sergei Chapnin</title>
-  <meta name="description" content="Books, exhibitions, lectures, calendar, and ways to connect with Sergei Chapnin.">
-  <meta name="keywords" content="books, exhibitions, lectures, calendar, subscribe">
+  <meta name="description" content="Invite Sergei Chapnin to speak on the Russian Orthodox Church, religious persecution, and church and state — topics, formats, and venues, plus exhibitions and publications.">
+  <meta name="keywords" content="invite to speak, lectures, keynote, panel, Russian Orthodox Church, religious persecution, exhibitions, subscribe">
   
   <meta property="og:site_name" content="Sergei Chapnin">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Collaborate | Sergei Chapnin">
-  <meta property="og:description" content="Books, exhibitions, lectures, and more.">
+  <meta property="og:description" content="Invite Sergei Chapnin to speak — topics, formats, audiences, and venues, plus exhibitions and publications.">
   <meta property="og:url" content="https://chapnin.org/collaborate/">
   <meta property="og:image" content="https://chapnin.org/images/og/og-collaborate.png">
   <meta property="og:image:alt" content="Contemporary Christian art curated by Sergei Chapnin">
@@ -34,7 +34,7 @@
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Collaborate">
-  <meta name="twitter:description" content="Books, exhibitions, lectures, and more.">
+  <meta name="twitter:description" content="Invite Sergei Chapnin to speak — topics, formats, audiences, and venues, plus exhibitions and publications.">
   <meta name="twitter:image" content="https://chapnin.org/images/og/og-collaborate.png">
   <meta name="twitter:image:alt" content="Contemporary Christian art curated by Sergei Chapnin">
   
@@ -77,9 +77,9 @@
     .item-image { text-align: center; }
     .item-image img { max-width: 100%; height: auto; border: 1px solid #D9CFC5; }
     /* ALTERNATING LAYOUT: even items get image on the left */
-    .item:nth-child(odd) { grid-template-columns: 300px 1fr; }
-    .item:nth-child(odd) .item-content { order: 2; }
-    .item:nth-child(odd) .item-image { order: 1; }
+    .item:nth-child(even) { grid-template-columns: 300px 1fr; }
+    .item:nth-child(even) .item-content { order: 2; }
+    .item:nth-child(even) .item-image { order: 1; }
 
     /* FOOTER */
     .footer-divider { border-top: 1px solid #D9CFC5; margin-top: 4rem; padding-top: 2rem; padding-bottom: 2rem; }
@@ -94,9 +94,9 @@
       .container { padding: 0 6% 0 10%; }
       .page-title { font-size: 36px; }
       .item { grid-template-columns: 1fr; gap: 2rem; }
-      .item:nth-child(odd) { grid-template-columns: 1fr; }
-      .item:nth-child(odd) .item-content { order: 0; }
-      .item:nth-child(odd) .item-image { order: 0; }
+      .item:nth-child(even) { grid-template-columns: 1fr; }
+      .item:nth-child(even) .item-content { order: 0; }
+      .item:nth-child(even) .item-image { order: 0; }
       .item-image { max-width: 280px; margin: 0 auto; }
       .nav-links { column-gap: 1.2rem; }
       .nav-links a { font-size: 12px; }
@@ -121,6 +121,32 @@
     .nav-logo { display: inline-flex; align-items: center; gap: 0.5rem; }
     .nav-mark { width: 30px; height: 30px; flex: none; border-radius: 8px; background: #8B0000; color: #F5EFE7; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 700; font-size: 20px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; }
     .nav-chr { display: block; transform: translate(0, 1px); }
+
+    /* SPEAKER LEAD (organizer-facing) */
+    .page-title.has-sub { margin-bottom: 0.5rem; }
+    .page-sub { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #808040; margin: 0 0 2.6rem; padding-left: 1.5rem; }
+    .speaker { max-width: 90ch; border-top: 2px solid #8B0000; padding-top: 1.8rem; margin-bottom: 3.5rem; padding-bottom: 3rem; border-bottom: 1px solid #D9CFC5; }
+    .speaker h2 { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: #2C2C2C; margin-bottom: 1rem; }
+    .speaker-bio { font-size: 16px; line-height: 1.85; color: #3A3A3A; max-width: 66ch; margin-bottom: 1.6rem; }
+    .spk-cta { display: flex; flex-wrap: wrap; gap: 0.8rem 1rem; align-items: center; margin-bottom: 2.4rem; }
+    .btn { display: inline-block; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; padding: 0.8rem 1.5rem; text-decoration: none; transition: all 0.2s; }
+    .btn-primary { background: #8B0000; color: #fff; }
+    .btn-primary:hover { background: #600000; }
+    .btn-outline { background: transparent; color: #2C2C2C; border: 1px solid #8B0000; padding: calc(0.8rem - 1px) calc(1.5rem - 1px); }
+    .btn-outline:hover { background: #8B0000; color: #fff; }
+    .spk-cols { display: grid; grid-template-columns: 1.5fr 1fr; gap: 2.4rem; }
+    .spk-block h3 { font-family: 'Lato', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.4px; color: #8B0000; margin-bottom: 0.9rem; padding-bottom: 0.5rem; border-bottom: 1px solid #E4DAC9; }
+    .spk-block h3 + h3, .spk-block .meta-list + h3 { margin-top: 1.8rem; }
+    .topics { list-style: none; margin: 0 0 1rem; padding: 0; }
+    .topics li { font-family: 'Playfair Display', serif; font-size: 16.5px; line-height: 1.4; color: #2C2C2C; padding: 0.55rem 0 0.55rem 1.1rem; border-bottom: 1px solid #EFE7D8; position: relative; }
+    .topics li::before { content: ""; position: absolute; left: 0; top: 1.05rem; width: 5px; height: 5px; border-radius: 50%; background: #8B0000; }
+    .formats { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.6rem; }
+    .chip { font-size: 12.5px; font-weight: 700; color: #5A4A33; background: rgba(212,165,116,0.18); border: 1px solid #E0CFB2; border-radius: 3px; padding: 0.35rem 0.7rem; }
+    .spk-lang { font-size: 14px; color: #6A6355; font-style: italic; margin-bottom: 1.8rem; }
+    .meta-list { list-style: none; margin: 0 0 1.8rem; padding: 0; }
+    .meta-list li { font-size: 14.5px; color: #3A3A3A; padding: 0.32rem 0; border-bottom: 1px dotted #DED3C0; }
+    .other-head { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #2C2C2C; margin-bottom: 1.6rem; }
+    @media (max-width: 800px) { .spk-cols { grid-template-columns: 1fr; gap: 1.4rem; } }
   </style>
   <script type="application/ld+json">
   {
@@ -209,20 +235,63 @@
 </div>
 
 <div class="container">
-  <h1 class="page-title">Collaborate</h1>
+  <h1 class="page-title has-sub">Collaborate</h1>
+  <p class="page-sub">Speaking · Exhibitions · Publications</p>
 
-  <div class="for-you-items">
+  <section class="speaker">
+    <h2>Invite Sergei to speak</h2>
+    <p class="speaker-bio">A journalist and scholar of the Russian Orthodox Church, Sergei Chapnin spent fifteen years working inside the Moscow Patriarchate in Moscow and now documents its collaboration with state power and the persecution of religious communities in Russia — as a member of the Orthodox Church, not an outside critic. He is Director of Communications at the Orthodox Christian Studies Center, Fordham University, and author of <em>Religious Communities Under Pressure</em> (foreword by Rowan Williams), cited by George Weigel in the <em>Wall Street Journal</em>. He speaks in English or Russian.</p>
 
-    <!-- Item 1: Lectures & Conversations -->
-    <div class="item">
-      <div class="item-content">
-        <div class="item-intro"><span class="if">If</span> you want a lecture or conversation</div>
-        <div class="item-text">I speak on the Russian Orthodox Church, religious persecution, church and state, theology and ethics, and contemporary Christian culture. Recent hosts include Fordham University, George Washington University, Houghton University, Valparaiso University, UC Berkeley, Georgia State University, and parishes of the GOA and OCA. Lectures and conversations can take the form of a lecture, presentation, seminar, or webinar, and can be given <strong>in English or Russian, as you prefer</strong>. <a href="#contact" class="item-link">Invite me to speak →</a></div>
+    <div class="spk-cta">
+      <a class="btn btn-primary" href="#contact">Invite Sergei to speak</a>
+      <a class="btn btn-outline" href="/talks/">See past talks &rarr;</a>
+    </div>
+
+    <div class="spk-cols">
+      <div class="spk-block">
+        <h3>Topics</h3>
+        <ul class="topics">
+          <li>The Russian Orthodox Church and the war against Ukraine: the “theology of war” and its sources</li>
+          <li>“Traditional values” as state ideology — how Russia weaponizes religion at home and abroad</li>
+          <li>Documenting religious persecution in Russia since 2022: antiwar clergy and believers</li>
+          <li>Church and state: the alliance of the Kremlin and the Moscow Patriarchate</li>
+          <li>Martyrdom, memory, and the justification of violence in contemporary Orthodoxy</li>
+          <li>Icons, iconography, and propaganda — sacred imagery turned to political ends</li>
+          <li>The “Russian World” (<em>Russkiy Mir</em>) and the crisis of global Orthodoxy</li>
+        </ul>
       </div>
-      <div class="item-image">
-        <img src="/images/collaborate/portrait-lecture.jpg" alt="Sergei Chapnin lecturing" width="280" height="420">
+      <div class="spk-block">
+        <h3>Formats</h3>
+        <div class="formats">
+          <span class="chip">Keynote</span><span class="chip">Lecture</span><span class="chip">Panel</span><span class="chip">Seminar</span><span class="chip">Public interview</span><span class="chip">Webinar</span>
+        </div>
+        <p class="spk-lang">In English or Russian · in person or remote.</p>
+
+        <h3>Audiences</h3>
+        <ul class="meta-list">
+          <li>Universities &amp; divinity schools</li>
+          <li>Policy institutions &amp; think tanks</li>
+          <li>Religious-freedom &amp; human-rights forums</li>
+          <li>Churches &amp; parishes</li>
+          <li>Media &amp; press</li>
+        </ul>
+
+        <h3>Selected venues</h3>
+        <ul class="meta-list">
+          <li>George Washington University</li>
+          <li>Duke Divinity School</li>
+          <li>Council on Foreign Relations</li>
+          <li>Atlantic Council</li>
+          <li>European Parliament</li>
+          <li>International Religious Freedom Summit</li>
+        </ul>
       </div>
     </div>
+  </section>
+
+  <h2 class="other-head">Other ways to work together</h2>
+
+  <div class="for-you-items">
 
     <!-- Item 2: Exhibitions -->
     <div class="item">
@@ -309,7 +378,7 @@
 
   <div class="footer-divider">
     <div class="footer-content">
-      <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: September 12, 2026</span></div>
+      <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: September 20, 2026</span></div>
       <ul class="footer-links">
         <li><a href="https://www.linkedin.com/in/vsadnik/" target="_blank">LinkedIn</a></li>
         <li><a href="https://www.facebook.com/chapnin" target="_blank">Facebook</a></li>
