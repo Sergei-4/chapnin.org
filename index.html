@@ -22,7 +22,7 @@
   
   <!-- SEO -->
   <title>Sergei Chapnin | Religious Scholar & Journalist</title>
-  <meta name="description" content="Religious scholar, journalist, and editor analyzing the Russian Orthodox Church and post-Soviet authoritarianism. Director of Communications at OCSC Fordham. Chief Editor of The Gifts.">
+  <meta name="description" content="Religious scholar and journalist analyzing the Russian Orthodox Church, its entanglement with state power, and religious persecution in Russia. Director of Communications at the Orthodox Christian Studies Center, Fordham University.">
   <meta name="keywords" content="Russian Orthodox Church, religious studies, theology, journalist, Fordham University, Orthodox Christianity, church and state, religious persecution, Moscow Patriarchate">
   
   <!-- OPEN GRAPH (SOCIAL MEDIA) -->
@@ -213,19 +213,6 @@
 
     .featured-text {
       flex: 1;
-    }
-
-    .new-book-badge {
-      display: inline-block;
-      background: #8B0000;
-      color: #F5EFE7;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      padding: 0.3rem 0.8rem;
-      border-radius: 3px;
-      margin-bottom: 1rem;
     }
 
     .featured-quote {
@@ -574,6 +561,22 @@
     .subscribe-text p { font-size: 14.5px; line-height: 1.6; color: #3A3A3A; margin: 0; max-width: 44ch; }
     .subscribe-form iframe { width: 100%; min-height: 150px; background: transparent; }
     @media (max-width: 700px) { .subscribe-band { grid-template-columns: 1fr; gap: 1.2rem; padding: 1.5rem 1.4rem; } }
+
+    /* HERO — accent rule, book teaser, portrait depth */
+    .hero-accent { width: 56px; height: 2px; background: #8B0000; border: 0; margin: 1.25rem 0 1.35rem; }
+    .hero-book { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #E4DAC9; }
+    .hero-eyebrow { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: #808040; margin-bottom: 0.45rem; }
+    .hero-book .hero-book-title { display: inline-block; font-family: 'Playfair Display', serif; font-style: italic; font-weight: 600; font-size: 18px; line-height: 1.35; color: #2C2C2C; text-decoration: none; margin-bottom: 1.1rem; }
+    .hero-book .hero-book-title:hover { color: #8B0000; text-decoration: none; }
+    .hero-text .btn-primary { color: #fff; text-decoration: none; }
+    .hero-text .btn-primary:hover { color: #fff; text-decoration: none; }
+    .hero-portrait { position: relative; display: inline-block; }
+    .hero-portrait::before { content: ""; position: absolute; top: 14px; right: -14px; bottom: -14px; left: 14px; background: #EDE4D6; border: 1px solid #DDD0BA; border-radius: 5px; z-index: 0; }
+    .hero-portrait img { position: relative; z-index: 1; border: 1px solid rgba(60,45,25,0.16); border-radius: 5px; box-shadow: 0 6px 22px rgba(60,45,25,0.14); }
+    @media (max-width: 800px) { .hero-portrait::before { display: none; } }
+
+    /* TALKS — bottom CTA row */
+    .talks-cta { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-top: 1.6rem; }
   </style>
 <style>
     /* mobile hamburger nav */
@@ -620,11 +623,17 @@
   <div class="hero">
     <div class="hero-text">
       <h1>Sergei Chapnin</h1>
-      <p class="hero-lead">A journalist and scholar of the Russian Orthodox Church, its entanglement with state power, and the believers persecuted for refusing the war.</p>
+      <hr class="hero-accent">
+      <p class="hero-lead">A journalist and scholar of the Russian Orthodox Church, its entanglement with state power, and the believers persecuted for refusing to endorse the war.</p>
       <p class="hero-role">Director of Communications, Orthodox Christian Studies Center, Fordham University</p>
+      <div class="hero-book">
+        <span class="hero-eyebrow">New book</span>
+        <a class="hero-book-title" href="/books/religious-communities-under-pressure/"><em>Religious Communities Under Pressure</em></a>
+        <a class="btn btn-primary" href="/books/religious-communities-under-pressure/">Buy the book</a>
+      </div>
     </div>
     <div class="hero-image">
-      <img src="/images/portrait-personal.jpg" alt="Sergei Chapnin" width="400" height="500">
+      <span class="hero-portrait"><img src="/images/portrait-personal.jpg" alt="Sergei Chapnin" width="400" height="500"></span>
     </div>
   </div>
 
@@ -635,7 +644,6 @@
         <img src="/images/book-cover.jpg" alt="Religious Communities Under Pressure — book cover" width="150">
       </a>
       <div class="featured-text">
-        <span class="new-book-badge">New Book</span>
         <h2><em>Religious Communities Under Pressure</em></h2>
         <p><strong>Documenting Religious Persecution in Russia 2022–2026</strong></p>
         <p>Published June 13, 2026. Foreword by Dr. Rowan Williams. An examination of the persecution of religious communities in Russia during and after the full-scale war against Ukraine, grounded in documentary evidence, interviews, and theological analysis.</p>
@@ -654,9 +662,9 @@
   <!-- LATEST REPORT -->
   <div class="report-section">
     <span class="report-badge">Latest Report</span>
-    <h2><em>Faith Under Pressure</em>: Religious Repression and the Myth of "Traditional Values" in Putin's Russia</h2>
+    <h2>Religious Repression and the Myth of "Traditional Values" in Putin's Russia</h2>
     <p class="report-meta">Policy Paper · Free Russia Foundation · August 2026</p>
-    <p class="report-lead">The Kremlin's rhetoric of "traditional values" is not window-dressing on a repressive state; it is the state's operating system, and the Russian Orthodox Church is its co-author. Under the pressure of the war, the doctrine has absorbed an unstated value: sacralized violence, turning a creed of family and continuity, built on a refusal of pluralism, into a "theology of dying." From this the persecution of antiwar clergy follows directly: a priest who prays for peace is not a political dissident the Church reluctantly punishes, but a heretic against this new ideological canon based on these new values. Because the doctrine makes one set of values the norm and treats any deviation as a form of ideological heresy, it amounts in practice to a renunciation of religious freedom: not a repeal on paper, but a dismantling through values discourse and the discipline that enforces it.</p>
+    <p class="report-lead">The Kremlin's rhetoric of "traditional values" is not window-dressing on a repressive state; it is the state's operating system, and the Russian Orthodox Church is its co-author. Under the pressure of war the doctrine has absorbed an unstated value — sacralized violence — from which the persecution of antiwar clergy follows directly.</p>
     <div class="report-actions">
       <a href="https://thinktank.4freerussia.org/civil-society/faith-under-pressure/" target="_blank" class="report-btn report-btn-primary">Read online →</a>
       <a href="https://thinktank.4freerussia.org/wp-content/uploads/2026/08/Digital-Faith-Under-Pressure.pdf" target="_blank" class="report-btn report-btn-outline">Download PDF</a>
@@ -667,18 +675,16 @@
   <div class="talks-announce">
     <div class="talks-announce-head">
       <h2>Upcoming Talks</h2>
-      <a href="/talks/">All talks &rarr;</a>
-    </div>
-    <div class="announce-item">
-      <div class="announce-date">September 18, 2026</div>
-      <div class="announce-title">Faith Under Pressure: Religious Communities in Russia After 2022</div>
-      <div class="announce-where"><em>Breaking the Chains: Responding to Persecution and Human Trafficking</em> &nbsp;·&nbsp; New Wineskins Missions Network &nbsp;·&nbsp; All Saints Anglican Church, Woodbridge, Virginia</div>
     </div>
     <div class="announce-item">
       <div class="announce-date">November 14, 2026 &nbsp;·&nbsp; 2:00–3:45 p.m. CST (3:00–4:45 p.m. EST)</div>
       <div class="announce-title">Russia's "Official Church" and Its Theology of War (2014–2025)</div>
       <div class="announce-where">ASEEES Annual Convention, Chicago &nbsp;·&nbsp; Panel: <em>Religious Mobilization in Russia: How Religious Leaders Justify War and Support the Russian Military</em></div>
-      <div class="announce-desc">Chapnin examines the "theology of war" in Russia's "official church" — less a doctrine than a postmodern bricolage of patristic fragments, Soviet myth, imperial nostalgia, and the theology of martyrdom repurposed to sanctify aggression. He traces it through the pronouncements of hierarchs, clergy, and affiliated theologians, with a comparative turn to selected Muslim documents, attending throughout to those, in both traditions, who have refused alignment.</div>
+      <div class="announce-desc">The "theology of war" in Russia's "official church" — a postmodern bricolage of patristic fragments, Soviet myth, and imperial nostalgia repurposed to sanctify aggression, traced through hierarchs and clergy, with attention to those who refused alignment.</div>
+    </div>
+    <div class="talks-cta">
+      <a href="/collaborate/" class="btn btn-primary">Invite Sergei to speak</a>
+      <a href="/talks/" class="btn btn-outline">All talks &rarr;</a>
     </div>
   </div>
 
@@ -714,13 +720,13 @@
       <h3>Selected Writings</h3>
       <p>Essays, interviews, and analysis on church politics, iconography, memory, and Orthodox Christianity in crisis.</p>
     </a>
-    <a href="/talks/" class="section-card">
-      <h3>Talks & Lectures</h3>
-      <p>Public addresses, conference papers, and panel discussions on Church and state, religious freedom, and Orthodox witness.</p>
-    </a>
     <a href="/exhibitions/" class="section-card">
       <h3>Exhibitions</h3>
       <p>Curatorial projects on contemporary Christian art, icons, and the visual witness of faith in wartime and beyond.</p>
+    </a>
+    <a href="/press/" class="section-card">
+      <h3>For Press</h3>
+      <p>Bio, areas of commentary, and selected coverage — for journalists, editors, and event organizers.</p>
     </a>
   </div>
 
@@ -738,7 +744,7 @@
   <!-- FOOTER -->
   <div class="footer-divider">
     <div class="footer-content">
-      <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: September 16, 2026</span></div>
+      <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: September 20, 2026</span></div>
       <ul class="footer-links">
         <li><a href="https://www.linkedin.com/in/vsadnik/" target="_blank">LinkedIn</a></li>
         <li><a href="https://www.facebook.com/chapnin" target="_blank">Facebook</a></li>
