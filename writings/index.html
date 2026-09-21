@@ -98,6 +98,20 @@
     .nav-logo { display: inline-flex; align-items: center; gap: 0.5rem; }
     .nav-mark { width: 30px; height: 30px; flex: none; border-radius: 8px; background: #8B0000; color: #F5EFE7; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 700; font-size: 20px; line-height: 1; display: inline-flex; align-items: center; justify-content: center; }
     .nav-chr { display: block; transform: translate(0, 1px); }
+
+    /* FIRST-TIME READERS — curated entry point; standalone, not part of #writings-list, so the counter and filters ignore it */
+    .first-time { border: 1px solid #E0D6C4; border-left: 4px solid #8B0000; background: rgba(212,165,116,0.08); padding: 1.8rem 2rem; margin: 0 0 1.4rem; border-radius: 0 6px 6px 0; }
+    .first-time h2 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #2C2C2C; margin: 0 0 0.7rem; }
+    .ft-intro { font-size: 15px; line-height: 1.75; color: #3A3A3A; margin: 0 0 1.4rem; max-width: 74ch; }
+    .ft-list { list-style: none; margin: 0; padding: 0; }
+    .ft-list > li { padding: 0.75rem 0; border-top: 1px solid #E4DAC9; }
+    .ft-list > li:first-child { border-top: 0; padding-top: 0; }
+    .ft-title { font-family: 'Playfair Display', serif; font-size: 16.5px; font-weight: 700; color: #8B0000; text-decoration: none; line-height: 1.35; }
+    .ft-title:hover { text-decoration: underline; }
+    .ft-gloss { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; color: #6B5A45; font-size: 15.5px; }
+    .ft-note { font-size: 13.5px; line-height: 1.6; color: #6B5A45; margin-top: 0.25rem; }
+    .ft-bridge { font-size: 14px; color: #6B5A45; margin: 0 0 1.6rem; }
+    @media (max-width: 500px) { .first-time { padding: 1.4rem 1.3rem; } }
   </style>
   <script type="application/ld+json">
 {
@@ -954,6 +968,38 @@
 <div class="container">
   <h1 class="page-title">Writings</h1>
   <p class="page-subtitle">A working database of essays, columns, interviews, policy papers, academic articles, and open letters. Where a text appeared in more than one language, the language buttons link to each version.</p>
+
+  <section class="first-time" aria-label="For first-time readers">
+    <h2>For first-time readers</h2>
+    <p class="ft-intro">If you are visiting this archive for the first time, these texts offer a place to begin. Together, they trace several connected concerns in my work: the Russian Church’s relationship to empire and state power; Christian conscience under the pressure of war; the persecution of believers; and the use of sacred images in public ideology.</p>
+    <ul class="ft-list">
+      <li>
+        <a class="ft-title" href="https://firstthings.com/a-church-of-empire/" target="_blank" rel="noopener">A Church of Empire</a> <span class="ft-gloss">— Why the Russian Church Chose to Bless Empire</span>
+        <div class="ft-note">First Things, 2015. A longer historical view of the ecclesial and political logic that preceded Russia’s full-scale war against Ukraine.</div>
+      </li>
+      <li>
+        <a class="ft-title" href="https://publicorthodoxy.org/2023/02/06/open-letter-russian-bishops/" target="_blank" rel="noopener">Why Have You Forgotten the Truth of God? An Open Letter to Russian Orthodox Bishops</a>
+        <div class="ft-note">Public Orthodoxy, 2023. An appeal to bishops in Russia on truth, responsibility, and the Christian meaning of witness in time of war.</div>
+      </li>
+      <li>
+        <a class="ft-title" href="https://thinktank.4freerussia.org/civil-society/faith-under-pressure/" target="_blank" rel="noopener">Faith Under Pressure: Religious Repression and the Myth of “Traditional Values” in Putin’s Russia</a>
+        <div class="ft-note">Free Russia Foundation, 2026. A policy paper on religious repression and the instrumental use of “traditional values” by the Russian state and its religious allies.</div>
+      </li>
+      <li>
+        <a class="ft-title" href="https://publicorthodoxy.org/2026/01/13/one-year-in-putins-dungeon/" target="_blank" rel="noopener">One Year in Putin’s Dungeon</a>
+        <div class="ft-note">Public Orthodoxy, 2026. A close account of persecution, imprisonment, and the human cost borne by believers who refuse complicity with the war.</div>
+      </li>
+      <li>
+        <a class="ft-title" href="https://publicorthodoxy.org/2026/04/20/the-right-icon-in-the-right-place/" target="_blank" rel="noopener">The Right Icon in the Right Place: How Putin and Patriarch Kirill Use an Icon to Promote Their War</a>
+        <div class="ft-note">Public Orthodoxy, 2026. On iconography, political ritual, and the transformation of sacred images into instruments of wartime propaganda.</div>
+      </li>
+      <li>
+        <a class="ft-title" href="https://www.academia.edu/164834997/Post_Soviet_Civil_Religion_as_a_Substitute_for_Orthodox_Christianity" target="_blank" rel="noopener">Post-Soviet Civil Religion as a Substitute for Orthodox Christianity</a>
+        <div class="ft-note">Studia Universitatis Babeș-Bolyai Theologia Catholica Latina, 2023. A more academic account of how civil religion has come to displace Orthodox Christianity in post-Soviet Russia.</div>
+      </li>
+    </ul>
+  </section>
+  <p class="ft-bridge">The full archive below includes essays, interviews, policy papers, academic articles, and open letters, with filters by format, language, and date.</p>
 
   <nav class="pub-submenu" id="filter-group" aria-label="Sections">
     <button class="submenu-tab active" data-filter="all">All</button>
@@ -2415,7 +2461,7 @@
 
   <div class="footer-divider">
     <div class="footer-content">
-      <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: September 16, 2026</span></div>
+      <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: September 20, 2026</span></div>
       <ul class="footer-links">
         <li><a href="https://www.linkedin.com/in/vsadnik/" target="_blank">LinkedIn</a></li>
         <li><a href="https://www.facebook.com/chapnin" target="_blank">Facebook</a></li>
