@@ -2875,8 +2875,13 @@
         (el.getAttribute('data-langs') || '').split(' ').forEach(function (c) { if (c) langset[c] = 1; });
       });
       var lc = Object.keys(langset).length;
+      var vc = 0;
+      visible.forEach(function (el) {
+        vc += (el.getAttribute('data-langs') || '').split(' ').filter(Boolean).length;
+      });
       countEl.textContent = n + (n === 1 ? ' publication' : ' publications')
-        + ' · ' + lc + (lc === 1 ? ' language' : ' languages');
+        + ' · ' + vc + (vc === 1 ? ' version' : ' versions')
+        + ' in ' + lc + (lc === 1 ? ' language' : ' languages');
     }
 
     filterGroup.addEventListener('click', function (e) {
