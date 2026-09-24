@@ -249,7 +249,7 @@
 
   <div class="footer-divider">
     <div class="footer-content">
-      <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: September 20, 2026</span></div>
+      <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: September 24, 2026</span></div>
       <ul class="footer-links">
         <li><a href="https://www.linkedin.com/in/vsadnik/" target="_blank">LinkedIn</a></li>
         <li><a href="https://www.facebook.com/chapnin" target="_blank">Facebook</a></li>
@@ -316,7 +316,7 @@
     filtered.forEach((photo, index) => {
       const item = document.createElement('div');
       item.className = 'photo-item';
-      item.innerHTML = `<img src="${photo.src}" alt="${photo.category}" loading="lazy"><div class="photo-overlay"><div class="photo-overlay-icon">🔍</div></div>`;
+      item.innerHTML = `<img src="${photo.src}" alt="${(photo.caption || (photo.category + ' photograph by Sergei Chapnin')).replace(/"/g, '&quot;')}" loading="lazy"><div class="photo-overlay"><div class="photo-overlay-icon">🔍</div></div>`;
       item.onclick = () => openLightbox(filtered, index);
       photoGrid.appendChild(item);
     });
@@ -324,6 +324,7 @@
 
   function showPhoto(photo) {
     lightboxImg.src = photo.src;
+    lightboxImg.alt = photo.caption || (photo.category + ' photograph by Sergei Chapnin');
     lightboxCaption.textContent = photo.caption || '';
   }
 
