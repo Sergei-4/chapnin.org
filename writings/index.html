@@ -59,7 +59,7 @@
     .nav-break { flex-basis: 100%; height: 0; margin: 0; padding: 0; list-style: none; }
     .nav-links a.nav-cta { color: #8B0000; font-weight: 700; }
     .page-title { font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 700; line-height: 1.2; margin-bottom: 0.4rem; color: #2C2C2C; border-left: 4px solid #8B0000; padding-left: 1.2rem; }
-    .page-subtitle { font-size: 14.5px; color: #8B7355; margin: 0 0 2rem 1.4rem; max-width: 60ch; }
+    .page-subtitle { font-size: 14.5px; color: #735E44; margin: 0 0 2rem 1.4rem; max-width: 60ch; }
 
     /* Section submenu + toolbar */
     .pub-submenu { display: flex; flex-wrap: wrap; gap: 0.15rem; border-bottom: 2px solid #E2D8C9; margin-bottom: 1.1rem; }
@@ -67,16 +67,16 @@
     .submenu-tab:hover { color: #8B0000; }
     .submenu-tab.active { color: #8B0000; border-bottom-color: #8B0000; }
     .pub-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.2rem; }
-    .pub-count { font-size: 13px; color: #8B7355; font-weight: 600; }
+    .pub-count { font-size: 13px; color: #735E44; font-weight: 600; }
     .toolbar-controls { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
     .sort-group { display: flex; align-items: center; gap: 0.5rem; }
-    .sort-group label { font-size: 13px; color: #8B7355; font-weight: 600; }
+    .sort-group label { font-size: 13px; color: #735E44; font-weight: 600; }
     .sort-group select { font-family: 'Lato', sans-serif; font-size: 13px; padding: 0.4rem 0.6rem; border: 1px solid #D9CFC5; border-radius: 6px; background: white; color: #2C2C2C; cursor: pointer; }
 
     .writings-list { max-width: 760px; }
     .writing-item { display: grid; grid-template-columns: 7rem 1fr; column-gap: 1.1rem; padding: 0.7rem 0; border-bottom: 1px solid #EFE7DB; margin: 0; }
     .writing-item:last-child { border-bottom: none; }
-    .writing-date { grid-column: 1; order: 0; font-size: 12.5px; color: #8B7355; font-weight: 600; font-variant-numeric: tabular-nums; margin: 0; padding-top: 3px; }
+    .writing-date { grid-column: 1; order: 0; font-size: 12.5px; color: #735E44; font-weight: 600; font-variant-numeric: tabular-nums; margin: 0; padding-top: 3px; }
     .writing-tag { grid-column: 2; order: 1; justify-self: start; display: inline-block; background: transparent; color: #8B0000; padding: 0; font-size: 10.5px; margin: 0 0 0.1rem 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; }
     .writing-title { grid-column: 2; order: 2; font-family: 'Playfair Display', serif; font-size: 15.5px; font-weight: 600; color: #2C2C2C; margin: 0 0 0.15rem 0; line-height: 1.35; }
     .writing-lang { display: inline-block; font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; color: #8B0000; border: 1px solid #E3C9C9; border-radius: 3px; padding: 0.02rem 0.4rem; margin-left: 0.5rem; font-weight: 700; vertical-align: 2px; white-space: nowrap; font-family: 'Lato', sans-serif; }
@@ -90,9 +90,9 @@
 
     .footer-divider { border-top: 1px solid #D9CFC5; margin-top: 4rem; padding-top: 2rem; padding-bottom: 2rem; }
     .footer-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; }
-    .footer-copyright { font-size: 14px; color: #8B7355; }
+    .footer-copyright { font-size: 14px; color: #735E44; }
     .footer-links { display: flex; gap: 2rem; list-style: none; }
-    .footer-links a { font-size: 14px; color: #8B7355; text-decoration: none; transition: color 0.2s; }
+    .footer-links a { font-size: 14px; color: #735E44; text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: #8B0000; }
     @media (max-width: 800px) { .container { padding: 0 6% 0 10%; } .page-title { font-size: 28px; }     @media (min-width: 801px) and (max-width: 1060px) {
       .nav-links { column-gap: 0.8rem; }
@@ -2832,7 +2832,8 @@
       <p><em>Sobornost</em> — my Substack. New essays and updates on the Russian Orthodox Church, religious persecution, and the politics of faith. Free, and never often.</p>
     </div>
     <div class="subscribe-form">
-      <iframe id="substack-embed" loading="lazy" src="https://sobornost.substack.com/embed" width="100%" height="150" style="border:none;" frameborder="0" scrolling="no" title="Subscribe to Sobornost"></iframe>
+      <iframe id="substack-embed" data-src="https://sobornost.substack.com/embed" width="100%" height="150" style="border:none;" frameborder="0" scrolling="no" title="Subscribe to Sobornost"></iframe>
+      <noscript><a href="https://sobornost.substack.com/">Subscribe to Sobornost on Substack</a></noscript>
     </div>
   </div>
 
@@ -2939,6 +2940,19 @@
         fired = true;
       }
     });
+  })();
+</script>
+<script>
+  // Load the Substack widget only when its block scrolls into view (it ships ~1 MB of JS).
+  (function () {
+    var f = document.getElementById('substack-embed');
+    if (!f) return;
+    var load = function () { if (!f.getAttribute('src')) f.setAttribute('src', f.getAttribute('data-src')); };
+    if (!('IntersectionObserver' in window)) { load(); return; }
+    var io = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) { load(); io.disconnect(); }
+    }, { rootMargin: '200px' });
+    io.observe(f);
   })();
 </script>
 </body>
