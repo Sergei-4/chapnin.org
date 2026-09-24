@@ -201,6 +201,7 @@
       .nav-links a { display: block; width: 100%; padding: 0.65rem 0.2rem; font-size: 14px; border-bottom: 1px solid #EFE7DB; }
     }
   </style>
+  <link rel="preload" as="image" href="/images/photos/thumbs/portraiture-01.webp" fetchpriority="high">
 </head>
 <body>
 
@@ -224,7 +225,7 @@
   </div>
 </div>
 
-<div class="container">
+<main class="container">
   <h1 class="page-title">Photography</h1>
 
   <div class="filters">
@@ -241,10 +242,10 @@
       <img class="lightbox-img" id="lightboxImg" src="" alt="">
       <div class="lightbox-caption" id="lightboxCaption"></div>
       <div class="lightbox-nav">
-        <button class="lightbox-btn" id="prevBtn">❮</button>
-        <button class="lightbox-btn" id="nextBtn">❯</button>
+        <button class="lightbox-btn" id="prevBtn" aria-label="Previous photo">❮</button>
+        <button class="lightbox-btn" id="nextBtn" aria-label="Next photo">❯</button>
       </div>
-      <button class="lightbox-close" id="closeBtn">✕</button>
+      <button class="lightbox-close" id="closeBtn" aria-label="Close">✕</button>
     </div>
   </div>
 
@@ -258,7 +259,7 @@
       </ul>
     </div>
   </div>
-</div>
+</main>
 
 <script>
   // Чтобы добавить подпись — впишите текст в кавычки поля caption у нужного фото.
@@ -311,20 +312,24 @@
   const nextBtn = document.getElementById('nextBtn');
   const filterBtns = document.querySelectorAll('.filter-btn');
 
+  const thumbOf = src => src.replace('/images/photos/', '/images/photos/thumbs/').replace(/\.jpg$/, '.webp');
+  const largeOf = src => src.replace('/images/photos/', '/images/photos/large/').replace(/\.jpg$/, '.webp');
+
   function renderPhotos() {
     photoGrid.innerHTML = '';
     const filtered = currentFilter === 'all' ? photos : photos.filter(p => p.category === currentFilter);
     filtered.forEach((photo, index) => {
       const item = document.createElement('div');
       item.className = 'photo-item';
-      item.innerHTML = `<img src="${photo.src}" alt="${(photo.caption || (photo.category + ' photograph by Sergei Chapnin')).replace(/"/g, '&quot;')}" loading="lazy"><div class="photo-overlay"><div class="photo-overlay-icon">🔍</div></div>`;
+      const eager = index < 2 ? 'fetchpriority="high"' : 'loading="lazy"';
+      item.innerHTML = `<img src="${thumbOf(photo.src)}" alt="${(photo.caption || (photo.category + ' photograph by Sergei Chapnin')).replace(/"/g, '&quot;')}" width="800" height="533" ${eager}><div class="photo-overlay"><div class="photo-overlay-icon">🔍</div></div>`;
       item.onclick = () => openLightbox(filtered, index);
       photoGrid.appendChild(item);
     });
   }
 
   function showPhoto(photo) {
-    lightboxImg.src = photo.src;
+    lightboxImg.src = largeOf(photo.src);
     lightboxImg.alt = photo.caption || (photo.category + ' photograph by Sergei Chapnin');
     lightboxCaption.textContent = photo.caption || '';
   }
