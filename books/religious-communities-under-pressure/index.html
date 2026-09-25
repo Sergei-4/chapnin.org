@@ -129,6 +129,10 @@
     .buy-btn { background: #8B0000; color: #fff; padding: 0.85rem 1.15rem; border: none; font-size: 13px; font-weight: 600; text-decoration: none; display: inline-block; text-transform: uppercase; letter-spacing: 0.3px; white-space: nowrap; transition: background 0.2s; }
     .buy-btn:hover { background: #600000; }
     .buy-options { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 0.8rem; }
+    .buy-options { align-items: center; }
+    .buy-btn.buy-primary { font-size: 15px; padding: 1.05rem 1.6rem; }
+    .buy-btn.buy-alt { background: transparent; color: #2C2C2C; border: 1.5px solid #8B0000; font-size: 12px; padding: calc(0.6rem - 1.5px) calc(0.9rem - 1.5px); }
+    .buy-btn.buy-alt:hover { background: #8B0000; color: #fff; }
     .where-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: #2C2C2C; margin-top: 1.4rem; }
     .wholesale-note { font-size: 14px; color: #735E44; margin-top: 0.9rem; line-height: 1.6; }
     .buy-secondary { font-size: 14px; margin-top: 0.6rem; }
@@ -501,9 +505,9 @@
     </div>
     <h3 class="where-title">Where to buy</h3>
     <div class="buy-options">
-      <a href="https://www.amazon.com/dp/B0H5G277LW" target="_blank" rel="noopener" class="buy-btn" onclick="gtag('event','buy_amazon',{location:'final'})">Amazon</a>
-      <a href="https://bookshop.org/p/books/religious-communities-under-pressure-documenting-religious-persecution-in-russia-2022-2026-sergei-v-chapnin/218c0891fc7536b7" target="_blank" rel="noopener" class="buy-btn" onclick="gtag('event','buy_bookshop',{location:'final'})">Bookshop.org</a>
-      <a href="https://www.barnesandnoble.com/w/religious-communities-under-pressure-rowan-williams/1150411736?ean=9798950169038" target="_blank" rel="noopener" class="buy-btn" onclick="gtag('event','buy_bn',{location:'final'})">Barnes &amp; Noble</a>
+      <a href="https://www.amazon.com/dp/B0H5G277LW" target="_blank" rel="noopener" class="buy-btn buy-primary" onclick="gtag('event','buy_amazon',{location:'final'})">Buy on Amazon · $17.09</a>
+      <a href="https://bookshop.org/p/books/religious-communities-under-pressure-documenting-religious-persecution-in-russia-2022-2026-sergei-v-chapnin/218c0891fc7536b7" target="_blank" rel="noopener" class="buy-btn buy-alt" onclick="gtag('event','buy_bookshop',{location:'final'})">Bookshop.org · $17.99</a>
+      <a href="https://www.barnesandnoble.com/w/religious-communities-under-pressure-rowan-williams/1150411736?ean=9798950169038" target="_blank" rel="noopener" class="buy-btn buy-alt" onclick="gtag('event','buy_bn',{location:'final'})">Barnes &amp; Noble · $17.99</a>
     </div>
     <p class="wholesale-note">Available to bookstores and libraries worldwide through standard wholesale channels. ISBN 979-8-9501690-3-8</p>
     <div class="buy-secondary">
