@@ -131,7 +131,8 @@
     .footer-copyright { text-align: right; }
     .footer-links { flex-wrap: wrap; column-gap: 2rem; row-gap: 0.5rem; }
     .footer-links a.footer-support { color: #8B0000; font-weight: 700; }
-    @media (max-width: 800px) { .footer-copyright { text-align: left; } }
+    .footer-lang { font-size: 10.5px; font-weight: 700; letter-spacing: 0.6px; color: #735E44; opacity: 0.75; margin-left: 0.2rem; vertical-align: 1px; }
+    @media (max-width: 800px) { .footer-copyright { text-align: left; } .footer-links { column-gap: 1.1rem; } }
   </style>
 </head>
 <body>
@@ -202,9 +203,9 @@
     <div class="footer-content">
       <ul class="footer-links">
         <li><a href="/support/" class="footer-support" onclick="if(window.gtag)gtag('event','support_page',{location:'footer'})">Support</a></li>
+        <li><a href="https://sobornost.substack.com/" target="_blank" hreflang="en">Substack <span class="footer-lang" aria-label="in English">EN</span></a></li>
+        <li><a href="https://www.facebook.com/chapnin" target="_blank" hreflang="ru">Facebook <span class="footer-lang" aria-label="in Russian">RU</span></a></li>
         <li><a href="https://www.linkedin.com/in/vsadnik/" target="_blank">LinkedIn</a></li>
-        <li><a href="https://www.facebook.com/chapnin" target="_blank">Facebook</a></li>
-        <li><a href="https://sobornost.substack.com/" target="_blank">Substack</a></li>
       </ul>
       <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: September 26, 2026</span></div>
     </div>
