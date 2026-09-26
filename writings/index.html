@@ -2944,7 +2944,7 @@
       if (fired) return;
       var el = document.activeElement;
       if (el && el.id === 'substack-embed' && typeof gtag === 'function') {
-        gtag('event', 'subscribe_intent', { location: 'writings', method: 'substack' });
+        gtag('event', 'subscribe_substack_intent', { location: 'writings', method: 'substack' });
         fired = true;
       }
     });
