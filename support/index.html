@@ -100,6 +100,7 @@
     .sp-lead img { width: 100%; height: auto; border: 1px solid #D9CFC5; box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
     .sp-cta { display: flex; flex-wrap: wrap; gap: 0.8rem 1rem; align-items: center; margin-top: 1.6rem; }
     .btn-lg { font-size: 14px; padding: 1rem 2rem; }
+    .sp-cta-end { margin-top: 2rem; }
     .sp-lead p.sp-note { font-size: 13px; line-height: 1.6; color: #735E44; margin-top: 0.9rem; }
     .sp-sec { margin-bottom: 3.2rem; padding-bottom: 2.8rem; border-bottom: 1px solid #D9CFC5; }
     .sp-sec h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: #2C2C2C; margin-bottom: 1.2rem; }
@@ -223,7 +224,7 @@
       <p>I do this on my own time, as a volunteer, without a grant or institutional funding. Your support is what keeps the record going.</p>
       <div class="sp-cta">
         <a class="btn btn-primary btn-lg" href="https://www.gofundme.com/f/documenting-religious-persecution-in-russia" target="_blank" rel="noopener" onclick="gtag('event','support_fundraiser',{location:'support_top'})">Give on GoFundMe</a>
-        <a class="btn btn-outline" href="#other-ways">Other ways to give</a>
+        <a class="btn btn-outline" href="#other-ways" onclick="gtag('event','support_click',{target:'other_ways'})">Other ways to give</a>
       </div>
       <p class="sp-note">This is a personal fundraiser, not a registered charity. Gifts are not tax-deductible.</p>
     </div>
@@ -235,14 +236,14 @@
     <h2>Two seminary graduates, a fabricated terror case</h2>
     <p>On January 13, 2025, Denis Popovich, a young seminary graduate who had once served as secretary and treasurer to Metropolitan Tikhon (Shevkunov), was detained on his way to Sretensky Monastery in Moscow. The charge was petty hooliganism. Within weeks it had become a terrorism case: the FSB accused him and his friend Nikita Ivankovich of plotting to assassinate the very hierarch Popovich had served. In court, Popovich testified that he had been tortured with electricity and threatened with sexual violence until he confessed.</p>
     <p>Both men have Ukrainian roots and had privately opposed the war. They are still held in Moscow's Lefortovo pre-trial detention center, and the charges against them now carry a possible life sentence.</p>
-    <p><a href="https://publicorthodoxy.org/2026/01/13/one-year-in-putins-dungeon/" target="_blank" rel="noopener">Read the full account on Public Orthodoxy →</a></p>
+    <p><a href="https://publicorthodoxy.org/2026/01/13/one-year-in-putins-dungeon/" target="_blank" rel="noopener" onclick="gtag('event','support_click',{target:'case_article'})">Read the full account on Public Orthodoxy →</a></p>
   </section>
 
   <section class="sp-sec">
     <h2>What your gift does</h2>
     <div class="tiers">
       <div class="tier"><div class="tier-amt">$25</div><p>Puts a copy of the book in the hands of an immigration attorney, a court, or a human rights organization.</p></div>
-      <div class="tier"><div class="tier-amt">$100</div><p>Pays for professional translation of new case materials.</p></div>
+      <div class="tier"><div class="tier-amt">$100</div><p>Pays for professional translation of new case materials and for their secure storage.</p></div>
       <div class="tier"><div class="tier-amt">$500</div><p>Helps cover travel to present the findings to policymakers and church leaders.</p></div>
     </div>
   </section>
@@ -265,19 +266,22 @@
 
   <section class="sp-sec">
     <h2>Where it goes</h2>
-    <!-- PHOTO: three copies of the book — waiting for file images/support/books-three.jpg -->
+    <figure class="sp-photo"><img src="/images/support/books-three.webp" alt="Three copies of Religious Communities Under Pressure by Sergei Chapnin" width="1200" height="700" loading="lazy"></figure>
     <ul class="goes">
       <li>A book, <a href="/books/religious-communities-under-pressure/"><em>Religious Communities Under Pressure: Documenting Religious Persecution in Russia 2022–2026</em></a> (June 2026), with a foreword by Rowan Williams, former Archbishop of Canterbury.</li>
       <li>Case materials, translated and sent to the UN, USCIRF, religious organizations, and human rights groups.</li>
       <li>Printed copies for church hierarchs and for U.S. immigration courts, where they support the asylum cases of people who fled Russia because of their faith.</li>
       <li>Presentations at the European Academy of Religion in Rome, at George Washington University, and at the Breaking the Chains conference of the Anglican Persecuted Church Network (New Wineskins Missions Network). <a href="/talks/">See all talks →</a></li>
     </ul>
+    <div class="sp-cta sp-cta-end">
+      <a class="btn btn-primary btn-lg" href="https://www.gofundme.com/f/documenting-religious-persecution-in-russia" target="_blank" rel="noopener" onclick="gtag('event','support_fundraiser',{location:'support_bottom'})">Give on GoFundMe</a>
+    </div>
   </section>
 
   <section class="sp-sec">
     <h2>Help without giving money</h2>
     <ul class="goes">
-      <li><a href="/books/religious-communities-under-pressure/">Buy the book</a> and, if it was useful to you, leave a review on Amazon.</li>
+      <li><a href="/books/religious-communities-under-pressure/" onclick="gtag('event','support_click',{target:'buy_book'})">Buy the book</a> and, if it was useful to you, leave a review on Amazon.</li>
       <li>Ask your public or university library to order it. Librarians take reader requests seriously, and every library copy reaches readers I could never reach on my own.</li>
       <li>Share this page with one person who should know what is happening to believers in Russia.</li>
     </ul>
@@ -294,7 +298,7 @@
       <div class="way">
         <h3>Zelle or check</h3>
         <p>If you would rather give by Zelle or by check, write to me through the form below and I will send you the details.</p>
-        <a class="btn btn-outline" href="#give-direct">Request details</a>
+        <a class="btn btn-outline" href="#give-direct" onclick="gtag('event','support_click',{target:'zelle_check_details'})">Request details</a>
       </div>
     </div>
   </section>
@@ -321,7 +325,7 @@
   <div class="footer-divider">
     <div class="footer-content">
       <ul class="footer-links">
-        <li><a href="/support/" class="footer-support">Support</a></li>
+        <li><a href="/support/" class="footer-support" onclick="if(window.gtag)gtag('event','support_page',{location:'footer'})">Support</a></li>
         <li><a href="https://www.linkedin.com/in/vsadnik/" target="_blank">LinkedIn</a></li>
         <li><a href="https://www.facebook.com/chapnin" target="_blank">Facebook</a></li>
         <li><a href="https://sobornost.substack.com/" target="_blank">Substack</a></li>
