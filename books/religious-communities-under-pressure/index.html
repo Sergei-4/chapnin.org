@@ -170,6 +170,10 @@
     .reviews-head { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.4rem; flex-wrap: wrap; }
     .reviews-score { font-size: 15px; color: #735E44; }
     .reviews-score .stars { color: #8B0000; letter-spacing: 2px; }
+    .review-ask { margin-top: 2rem; padding: 1.3rem 1.5rem; background: #FBF7F1; border: 1px solid #E4DAC9; border-left: 3px solid #8B0000; max-width: 80ch; }
+    .review-ask p { font-size: 15px; line-height: 1.8; color: #3A3A3A; margin: 0 0 1rem; }
+    .review-ask-btn { display: inline-block; font-family: 'Lato', sans-serif; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; padding: calc(0.75rem - 1px) calc(1.4rem - 1px); color: #2C2C2C; border: 1px solid #8B0000; text-decoration: none; transition: all 0.2s; }
+    .review-ask-btn:hover { background: #8B0000; color: #fff; }
     .review { margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid #D4A574; max-width: 80ch; }
     .review .stars { color: #8B0000; letter-spacing: 2px; font-size: 13px; }
     .review-quote { font-size: 15px; font-style: italic; color: #3A3A3A; line-height: 1.8; margin: 0.3rem 0; }
@@ -401,6 +405,10 @@
       <div class="review-quote">"Not simply a critique of the Russian Orthodox Church, nor merely another book about the war. It is a carefully documented record of what happened to religious believers whose conscience prevented them from remaining silent."</div>
       <div class="review-author">Archpriest Volodymyr Zablotskyy (OCA), USA</div>
       <div class="review-meta">Verified purchase · June 2026</div>
+    </div>
+    <div class="review-ask">
+      <p><strong>Have you read the book?</strong> If it was useful to you, please leave a review on Amazon. Reviews help more than you might think: they shape how often Amazon shows the book to readers who have never heard of it.</p>
+      <a href="https://www.amazon.com/review/create-review?asin=B0H5G277LW" target="_blank" rel="noopener" class="review-ask-btn" onclick="gtag('event','review_amazon',{location:'book'})">Write a review on Amazon</a>
     </div>
   </section>
 
