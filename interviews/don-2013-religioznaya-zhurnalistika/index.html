@@ -110,6 +110,13 @@
       .nav-links a { display: block; width: 100%; padding: 0.65rem 0.2rem; font-size: 14px; border-bottom: 1px solid #EFE7DB; }
     }
   </style>
+<style>
+    /* footer layout: links left (Support first), copyright right */
+    .footer-copyright { text-align: right; }
+    .footer-links { flex-wrap: wrap; column-gap: 2rem; row-gap: 0.5rem; }
+    .footer-links a.footer-support { color: #8B0000; font-weight: 700; }
+    @media (max-width: 800px) { .footer-copyright { text-align: left; } }
+  </style>
 </head>
 <body>
 
@@ -178,12 +185,13 @@
 
   <div class="footer-divider">
     <div class="footer-content">
-      <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: September 24, 2026</span></div>
       <ul class="footer-links">
+        <li><a href="/support/" class="footer-support">Support</a></li>
         <li><a href="https://www.linkedin.com/in/vsadnik/" target="_blank">LinkedIn</a></li>
         <li><a href="https://www.facebook.com/chapnin" target="_blank">Facebook</a></li>
         <li><a href="https://sobornost.substack.com/" target="_blank">Substack</a></li>
       </ul>
+      <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: September 26, 2026</span></div>
     </div>
   </div>
 </div>

@@ -223,6 +223,13 @@
       .nav-links a { display: block; width: 100%; padding: 0.65rem 0.2rem; font-size: 14px; border-bottom: 1px solid #EFE7DB; }
     }
   </style>
+<style>
+    /* footer layout: links left (Support first), copyright right */
+    .footer-copyright { text-align: right; }
+    .footer-links { flex-wrap: wrap; column-gap: 2rem; row-gap: 0.5rem; }
+    .footer-links a.footer-support { color: #8B0000; font-weight: 700; }
+    @media (max-width: 800px) { .footer-copyright { text-align: left; } }
+  </style>
 </head>
 <body>
 
@@ -303,8 +310,8 @@
 
   <section class="support-work">
     <h2>Support the work</h2>
-    <p>Documenting religious persecution in Russia is independent, volunteer work. Contributions fund translation, reporting, and secure outreach to persecuted believers and their families.</p>
-    <a class="btn btn-primary" href="https://www.gofundme.com/f/documenting-religious-persecution-in-russia" target="_blank" rel="noopener" onclick="gtag('event','support_fundraiser',{location:'collaborate'})">Support the documentation</a>
+    <p>Documenting religious persecution in Russia is independent, volunteer work, without a grant or institutional funding. See how your support is used and the ways to give.</p>
+    <a class="btn btn-primary" href="/support/" onclick="gtag('event','support_page',{location:'collaborate'})">Support the documentation</a>
   </section>
 
   <h2 class="other-head">Other ways to work together</h2>
@@ -396,12 +403,13 @@
 
   <div class="footer-divider">
     <div class="footer-content">
-      <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: September 24, 2026</span></div>
       <ul class="footer-links">
+        <li><a href="/support/" class="footer-support">Support</a></li>
         <li><a href="https://www.linkedin.com/in/vsadnik/" target="_blank">LinkedIn</a></li>
         <li><a href="https://www.facebook.com/chapnin" target="_blank">Facebook</a></li>
         <li><a href="https://sobornost.substack.com/" target="_blank">Substack</a></li>
       </ul>
+      <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: September 26, 2026</span></div>
     </div>
   </div>
 
