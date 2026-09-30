@@ -126,7 +126,22 @@
     .subscribe-form iframe { width: 100%; min-height: 150px; background: transparent; }
     @media (max-width: 700px) { .subscribe-band { grid-template-columns: 1fr; gap: 1.2rem; padding: 1.5rem 1.4rem; } }
     .subscribe-band { max-width: 1100px; margin-left: auto; margin-right: auto; }
-  </style>
+  
+    /* Year accordion (JS groups rows by year; 2026 open by default) */
+    .pub-count-wrap { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+    .years-toggle { background: none; border: 0; padding: 0; font: inherit; font-size: 13px; color: #8B0000; cursor: pointer; }
+    .years-toggle:hover { text-decoration: underline; }
+    .year-group { border-top: 1px solid #E2D8C9; }
+    .year-group:last-child { border-bottom: 1px solid #E2D8C9; }
+    .year-head { display: flex; align-items: center; gap: 0.8rem; width: 100%; background: none; border: 0; padding: 0.85rem 0; margin: 0; font: inherit; color: #2C2C2C; text-align: left; cursor: pointer; }
+    .year-head::before { content: "+"; display: inline-flex; align-items: center; justify-content: center; flex: 0 0 20px; width: 20px; height: 20px; border: 1px solid #8B0000; border-radius: 3px; color: #8B0000; font-weight: 700; line-height: 1; }
+    .year-group.open .year-head::before { content: "\2013"; }
+    .year-head:focus-visible { outline: 2px solid #8B0000; outline-offset: 2px; }
+    .year-num { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; }
+    .year-count { font-size: 13px; color: #735E44; font-weight: 400; }
+    .year-body { padding: 0 0 0.8rem; }
+    .year-body .writing-item:last-child { border-bottom: none; }
+</style>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1252,7 +1267,7 @@
   </nav>
 
   <div class="pub-toolbar">
-    <div class="pub-count" id="pub-count"></div>
+    <div class="pub-count-wrap"><div class="pub-count" id="pub-count"></div><button type="button" class="years-toggle" id="years-toggle" data-state="closed">Expand all</button></div>
     <div class="toolbar-controls">
       <div class="sort-group">
         <label for="lang-select">Language</label>
@@ -1277,7 +1292,6 @@
         <label for="sort-select">Sort</label>
         <select id="sort-select">
           <option value="newest">Newest first</option>
-          <option value="2026">2026 only</option>
           <option value="oldest">Oldest first</option>
         </select>
       </div>
@@ -3119,7 +3133,15 @@
     var sortSelect = document.getElementById('sort-select');
     var langSelect = document.getElementById('lang-select');
     var countEl = document.getElementById('pub-count');
+    var toggleAll = document.getElementById('years-toggle');
     var currentFilter = 'all';
+    var OPEN_DEFAULT = '2026';
+    var openBase = {};      // unfiltered view: which years are open
+    var openFiltered = {};  // filtered view: years the reader has closed stay closed
+    openBase[OPEN_DEFAULT] = true;
+    var hashYear = (location.hash.match(/^#(\d{4})$/) || [])[1];
+    if (hashYear) openBase[hashYear] = true;
+    var groups = {};
 
     function hasLang(el, code){ return (' ' + (el.getAttribute('data-langs')||'') + ' ').indexOf(' ' + code + ' ') >= 0; }
     function setTitle(el, lang){
@@ -3130,8 +3152,41 @@
                : t.getAttribute('data-title-' + (t.getAttribute('data-orig') || 'en'));
       if (pick) t.textContent = pick;
     }
-
     function yearOf(el){ return parseFloat(el.getAttribute('data-year')); }
+    function isFiltered(){ return currentFilter !== 'all' || langSelect.value !== 'all'; }
+    function isOpen(y){ return isFiltered() ? openFiltered[y] !== false : !!openBase[y]; }
+    function setOpen(y, v){ if (isFiltered()) openFiltered[y] = v; else openBase[y] = v; }
+
+    function group(y){
+      if (groups[y]) return groups[y];
+      var sec = document.createElement('section');
+      sec.className = 'year-group'; sec.id = 'y' + y;
+      var btn = document.createElement('button');
+      btn.type = 'button'; btn.className = 'year-head';
+      btn.setAttribute('aria-controls', 'yb' + y);
+      btn.innerHTML = '<span class="year-num">' + y + '</span><span class="year-count"></span>';
+      var body = document.createElement('div');
+      body.className = 'year-body'; body.id = 'yb' + y;
+      body.addEventListener('beforematch', function () { setOpen(y, true); render(y); });
+      btn.addEventListener('click', function () { setOpen(y, !isOpen(y)); render(y); syncToggle(); });
+      sec.appendChild(btn); sec.appendChild(body);
+      groups[y] = { sec: sec, btn: btn, body: body, count: btn.querySelector('.year-count') };
+      return groups[y];
+    }
+    function render(y){
+      var g = groups[y], open = isOpen(y);
+      g.btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      g.sec.classList.toggle('open', open);
+      if (open) g.body.removeAttribute('hidden'); else g.body.setAttribute('hidden', 'until-found');
+    }
+    function shownYears(){ return Object.keys(groups).filter(function (y) { return groups[y].sec.style.display !== 'none'; }); }
+    function syncToggle(){
+      if (!toggleAll) return;
+      var ys = shownYears();
+      var allOpen = ys.length && ys.every(function (y) { return isOpen(y); });
+      toggleAll.textContent = allOpen ? 'Collapse all' : 'Expand all';
+      toggleAll.setAttribute('data-state', allOpen ? 'open' : 'closed');
+    }
 
     function apply() {
       var mode = sortSelect.value;
@@ -3141,29 +3196,38 @@
         if (lang !== 'all' && !hasLang(el, lang)) return false;
         return true;
       });
-      if (mode === '2026') {
-        visible = visible.filter(function (el) { return Math.floor(yearOf(el)) === 2026; });
-      }
       visible.sort(function (a, b) {
         var ya = yearOf(a), yb = yearOf(b);
         return mode === 'oldest' ? ya - yb : yb - ya;
       });
-      items.forEach(function (el) { setTitle(el, lang); });
-      items.forEach(function (el) { el.style.display = 'none'; });
-      visible.forEach(function (el) { el.style.display = ''; list.appendChild(el); });
-      var n = visible.length;
-      var langset = {};
+      items.forEach(function (el) { setTitle(el, lang); el.style.display = 'none'; });
+      Object.keys(groups).forEach(function (y) { groups[y].sec.style.display = 'none'; });
+      var perYear = {}, order = [];
       visible.forEach(function (el) {
-        (el.getAttribute('data-langs') || '').split(' ').forEach(function (c) { if (c) langset[c] = 1; });
+        var y = String(Math.floor(yearOf(el)));
+        if (!perYear[y]) { perYear[y] = 0; order.push(y); }
+        perYear[y]++;
+        var g = group(y);
+        el.style.display = '';
+        g.body.appendChild(el);
+      });
+      order.forEach(function (y) {
+        var g = groups[y];
+        g.sec.style.display = '';
+        g.count.textContent = perYear[y] + (perYear[y] === 1 ? ' text' : ' texts');
+        list.appendChild(g.sec);
+        render(y);
+      });
+      var n = visible.length;
+      var langset = {}, vc = 0;
+      visible.forEach(function (el) {
+        (el.getAttribute('data-langs') || '').split(' ').forEach(function (c) { if (c) { langset[c] = 1; vc++; } });
       });
       var lc = Object.keys(langset).length;
-      var vc = 0;
-      visible.forEach(function (el) {
-        vc += (el.getAttribute('data-langs') || '').split(' ').filter(Boolean).length;
-      });
       countEl.textContent = n + (n === 1 ? ' publication' : ' publications')
         + ' · ' + vc + (vc === 1 ? ' version' : ' versions')
         + ' in ' + lc + (lc === 1 ? ' language' : ' languages');
+      syncToggle();
     }
 
     filterGroup.addEventListener('click', function (e) {
@@ -3172,12 +3236,24 @@
       filterGroup.querySelectorAll('.submenu-tab').forEach(function (b) { b.classList.remove('active'); });
       btn.classList.add('active');
       currentFilter = btn.getAttribute('data-filter');
+      openFiltered = {};
       apply();
     });
     sortSelect.addEventListener('change', apply);
-    langSelect.addEventListener('change', apply);
+    langSelect.addEventListener('change', function () { openFiltered = {}; apply(); });
+    if (toggleAll) toggleAll.addEventListener('click', function () {
+      var open = toggleAll.getAttribute('data-state') !== 'open';
+      shownYears().forEach(function (y) { setOpen(y, open); render(y); });
+      syncToggle();
+    });
+    window.addEventListener('hashchange', function () {
+      var y = (location.hash.match(/^#(\d{4})$/) || [])[1];
+      if (y && groups[y]) { setOpen(y, true); render(y); syncToggle(); if (groups[y].sec.scrollIntoView) groups[y].sec.scrollIntoView(); }
+    });
     apply();
+    if (hashYear && groups[hashYear] && groups[hashYear].sec.scrollIntoView) groups[hashYear].sec.scrollIntoView();
   })();
+
 </script>
 
 <script>
