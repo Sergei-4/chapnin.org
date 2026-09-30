@@ -1,0 +1,6 @@
+# GitHub Pages build settings.
+# Internal notes stay in the repository but are not published on chapnin.org.
+exclude:
+  - README.md
+  - UPDATES.txt
+  - DEPLOYMENT_INSTRUCTIONS.md
