@@ -240,6 +240,15 @@
     .subscribe-form iframe { width: 100%; min-height: 150px; background: transparent; }
     @media (max-width: 700px) { .subscribe-band { grid-template-columns: 1fr; gap: 1.2rem; padding: 1.5rem 1.4rem; } }
     .subscribe-band { max-width: 1100px; margin-left: auto; margin-right: auto; }
+
+    .endorsements-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1.4rem 2.2rem; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 1.4rem; }
+    .toc-lead { max-width: 78ch; color: #45423C; margin-bottom: 0.8rem; }
+    .toc-details summary { cursor: pointer; color: #8B0000; font-weight: 600; list-style: none; padding: 0.35rem 0; display: inline-flex; align-items: center; gap: 0.6rem; }
+    .toc-details summary::-webkit-details-marker { display: none; }
+    .toc-details summary::before { content: "+"; display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border: 1px solid #8B0000; border-radius: 3px; font-weight: 700; line-height: 1; }
+    .toc-details[open] summary::before { content: "–"; }
+    @media (max-width: 700px) { .endorsements-grid { grid-template-columns: 1fr; } }
   </style>
 <style>
     /* mobile hamburger nav */
@@ -307,20 +316,19 @@
 
   <nav class="anchor-nav">
     <div class="anchor-inner">
-      <ul>
-        <li><a href="#press">In the Press</a></li>
-        <li><a href="#book">The Book</a></li>
-        <li><a href="#for-whom">Who It's For</a></li>
-        <li><a href="#excerpt">From the Book</a></li>
-        <li><a href="#endorsements">Endorsements</a></li>
-        <li><a href="#readers">Readers</a></li>
-        <li><a href="#events">Presentations</a></li>
-        <li><a href="#contents">Contents</a></li>
-      </ul>
+      <ul><li><a href="#book">The Book</a></li><li><a href="#press">In the Press</a></li><li><a href="#endorsements">Endorsements</a></li><li><a href="#contents">Contents</a></li></ul>
       <span class="anchor-buy"><a href="https://www.amazon.com/dp/B0H5G277LW" target="_blank" rel="noopener" onclick="gtag('event','buy_amazon',{location:'anchor'})">Buy the book</a></span>
     </div>
   </nav>
 
+  <section class="section" id="book">
+    <div class="section-label">The Book</div>
+    <div class="prose">
+      <p>Since February 2022, Orthodox priests and deacons have been defrocked for praying for peace. A non-denominational preacher who walked out holding a sign that read "No to War" was later found dead in a penal colony. Across Russia, believers who refused to bless the war have been silenced, stripped of their orders, and imprisoned — not only by the state, but by their own Church.</p>
+      <p><em>Religious Communities Under Pressure</em> brings that record to English for the first time. It documents more than 120 believers — Orthodox, Protestant, Jewish, and Buddhist — and traces the machinery behind their persecution: a system more intricate, and in some ways more insidious, than anything the Soviet state devised. The great majority are Orthodox Christians, the only ones pressed from two directions at once — by the state, and by a Church that has surrendered its freedom to it.</p>
+      <p>Chapnin writes from within that Church. For fifteen years he shaped the media policy of the Moscow Patriarchate. In December 2015 he warned publicly that Russia was remaking Orthodoxy into a state ideology, and that a future war against Ukraine would be given a religious justification. Within weeks, Patriarch Kirill dismissed him. Seven years later, the warning proved exact.</p>
+    </div>
+  </section>
   <section class="section" id="press">
     <div class="section-label">In the Press</div>
     <div class="press-block">
@@ -343,14 +351,6 @@
     </div>
   </section>
 
-  <section class="section" id="book">
-    <div class="section-label">The Book</div>
-    <div class="prose">
-      <p>Since February 2022, Orthodox priests and deacons have been defrocked for praying for peace. A non-denominational preacher who walked out holding a sign that read "No to War" was later found dead in a penal colony. Across Russia, believers who refused to bless the war have been silenced, stripped of their orders, and imprisoned — not only by the state, but by their own Church.</p>
-      <p><em>Religious Communities Under Pressure</em> brings that record to English for the first time. It documents more than 120 believers — Orthodox, Protestant, Jewish, and Buddhist — and traces the machinery behind their persecution: a system more intricate, and in some ways more insidious, than anything the Soviet state devised. The great majority are Orthodox Christians, the only ones pressed from two directions at once — by the state, and by a Church that has surrendered its freedom to it.</p>
-      <p>Chapnin writes from within that Church. For fifteen years he shaped the media policy of the Moscow Patriarchate. In December 2015 he warned publicly that Russia was remaking Orthodoxy into a state ideology, and that a future war against Ukraine would be given a religious justification. Within weeks, Patriarch Kirill dismissed him. Seven years later, the warning proved exact.</p>
-    </div>
-  </section>
 
   <section class="section" id="for-whom">
     <div class="section-label">Who This Book Is For</div>
@@ -372,6 +372,7 @@
 
   <section class="section" id="endorsements">
     <div class="section-label">Endorsements</div>
+    <div class="endorsements-grid">
     <div class="endorsement">
       <div class="endorsement-quote">"Courageous, comprehensively documented, written out of indignant loyalty to a Church whose public spokespersons seem set on destroying its own credibility — a necessary and timely book that should be studied by all who want to understand the draining, disgraceful conflict that continues to overshadow Eastern Europe."</div>
       <div class="endorsement-author">Rowan Williams, former Archbishop of Canterbury — from the Foreword</div>
@@ -381,12 +382,13 @@
       <div class="endorsement-author">Vladimir Kara-Murza, former political prisoner and Pulitzer Prize–winning columnist</div>
     </div>
     <div class="endorsement">
-      <div class="endorsement-quote">"Chapnin analyzes the mechanisms of religious repression, persecution, and discrimination in Russia within the context of the war in Ukraine... He ultimately recalls the essential vocation of faith as a moral compass and not a tool in the service of political power."</div>
+      <div class="endorsement-quote">"He ultimately recalls the essential vocation of faith as a moral compass and not a tool in the service of political power."</div>
       <div class="endorsement-author">Archbishop Elpidophoros of America</div>
     </div>
     <div class="endorsement">
-      <div class="endorsement-quote">"This book obliges them — and us — to look into a mirror that reflects a painful reality before which we cannot remain silent... It deserves to be read widely."</div>
+      <div class="endorsement-quote">"This book obliges them — and us — to look into a mirror that reflects a painful reality before which we cannot remain silent."</div>
       <div class="endorsement-author">John Chryssavgis, advisor to Ecumenical Patriarch Bartholomew</div>
+    </div>
     </div>
   </section>
 
@@ -395,9 +397,10 @@
     <div class="reviews-head">
       <div class="reviews-score"><span class="stars">★★★★½</span> &nbsp;4.7 out of 5 &nbsp;·&nbsp; <a href="https://www.amazon.com/dp/B0H5G277LW" target="_blank" style="color:#8B0000;font-weight:600;text-decoration:none;">13 ratings on Amazon</a></div>
     </div>
+    <div class="reviews-grid">
     <div class="review">
       <div class="stars">★★★★★</div>
-      <div class="review-quote">"Given the lack of opportunity to travel to Russia for almost all American scholars of Russia... and the absence of Western journalists in the country, Chapnin's carefully documented case studies of the persecution of not only Russian Orthodox clergy but those of other faiths demonstrates the ongoing abuse of the unholy alliance of the Russian president and the Patriarch."</div>
+      <div class="review-quote">"Chapnin's carefully documented case studies of the persecution of not only Russian Orthodox clergy but those of other faiths demonstrate the ongoing abuse of the unholy alliance of the Russian president and the Patriarch."</div>
       <div class="review-author">Carol Ueland, Professor of Russian, Drew University</div>
       <div class="review-meta">Verified purchase · September 2026</div>
     </div>
@@ -412,6 +415,7 @@
       <div class="review-quote">"Not simply a critique of the Russian Orthodox Church, nor merely another book about the war. It is a carefully documented record of what happened to religious believers whose conscience prevented them from remaining silent."</div>
       <div class="review-author">Archpriest Volodymyr Zablotskyy (OCA), USA</div>
       <div class="review-meta">Verified purchase · June 2026</div>
+    </div>
     </div>
     <div class="review-ask">
       <p><strong>Have you read the book?</strong> If it was useful to you, please leave a review on Amazon. Reviews help more than you might think: they shape how often Amazon shows the book to readers who have never heard of it.</p>
@@ -442,6 +446,9 @@
 
   <section class="section" id="contents">
     <div class="section-label">Contents</div>
+    <p class="toc-lead">Nine chapters and eight appendices of primary-source lists — foreign agents, banned organizations, imprisoned believers.</p>
+    <details class="toc-details">
+    <summary>Show full table of contents</summary>
     <div class="toc">
       <div class="toc-row"><span class="t">Foreword by Rowan Williams</span><span class="p">7</span></div>
 
@@ -518,6 +525,7 @@
       <div class="toc-row"><span class="t">8 · Documentation Resources</span><span class="p">145</span></div>
       <div class="toc-row"><span class="t">Acknowledgments</span><span class="p">151</span></div>
     </div>
+    </details>
   </section>
 
   <section class="section" id="get-it">
@@ -560,7 +568,7 @@
         <li><a href="https://www.facebook.com/chapnin" target="_blank" hreflang="ru">Facebook <span class="footer-lang" aria-label="in Russian">RU</span></a></li>
         <li><a href="https://www.linkedin.com/in/vsadnik/" target="_blank">LinkedIn</a></li>
       </ul>
-      <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: September 29, 2026</span></div>
+      <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: September 30, 2026</span></div>
     </div>
   </div>
 
