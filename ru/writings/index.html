@@ -534,6 +534,20 @@
   .ru-title:hover{color:#8B0000}
   .ru-src{font-size:13px;color:#735E44;margin-top:.15rem}
   @media(max-width:600px){.ru-item{grid-template-columns:1fr;gap:.1rem}}
+
+    /* Year accordion (built by script from the static year headings; latest year open) */
+    .years-bar { display: flex; justify-content: flex-end; margin: 0 0 0.4rem; }
+    .years-toggle { background: none; border: 0; padding: 0; font: inherit; font-size: 13px; color: #8B0000; cursor: pointer; }
+    .years-toggle:hover { text-decoration: underline; }
+    .year-group { border-top: 1px solid #E2D8C9; }
+    .year-group:last-child { border-bottom: 1px solid #E2D8C9; }
+    .year-head { display: flex; align-items: center; gap: 0.8rem; width: 100%; background: none; border: 0; padding: 0.85rem 0; margin: 0; font: inherit; color: #2C2C2C; text-align: left; cursor: pointer; }
+    .year-head::before { content: "+"; display: inline-flex; align-items: center; justify-content: center; flex: 0 0 20px; width: 20px; height: 20px; border: 1px solid #8B0000; border-radius: 3px; color: #8B0000; font-weight: 700; line-height: 1; }
+    .year-group.open .year-head::before { content: "\2013"; }
+    .year-head:focus-visible { outline: 2px solid #8B0000; outline-offset: 2px; }
+    .year-num { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; }
+    .year-count { font-size: 13px; color: #735E44; font-weight: 400; }
+    .year-body { padding: 0 0 0.8rem; }
 </style>
 <style>
     /* mobile hamburger nav */
@@ -702,6 +716,57 @@
       var open = l.classList.toggle('open');
       t.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
+  })();
+</script>
+
+<script>
+  (function () {
+    var list = document.querySelector('.ru-list');
+    if (!list) return;
+    var L = {expand:'Развернуть всё',collapse:'Свернуть всё',count:function(n){var a=n%10,b=n%100;var w=(a===1&&b!==11)?'текст':(a>=2&&a<=4&&(b<12||b>14))?'текста':'текстов';return n+' '+w;}};
+    function plural(n){ return L.count(n); }
+    var heads = Array.prototype.slice.call(list.querySelectorAll('h2.year'));
+    if (!heads.length) return;
+    var hashYear = (location.hash.match(/^#(\d{4})$/) || [])[1];
+    var groups = [];
+    heads.forEach(function (h, i) {
+      var y = h.textContent.trim();
+      var yid = /^\d{4}$/.test(y) ? y : 'x' + i;
+      var sec = document.createElement('section'); sec.className = 'year-group'; sec.id = 'y' + yid;
+      var btn = document.createElement('button'); btn.type = 'button'; btn.className = 'year-head';
+      btn.setAttribute('aria-controls', 'yb' + yid);
+      var body = document.createElement('div'); body.className = 'year-body'; body.id = 'yb' + yid;
+      var n = 0, el = h.nextElementSibling;
+      while (el && !el.matches('h2.year')) { var nx = el.nextElementSibling; if (el.matches('.ru-item')) n++; body.appendChild(el); el = nx; }
+      btn.innerHTML = '<span class="year-num">' + y + '</span><span class="year-count">' + plural(n) + '</span>';
+      sec.appendChild(btn); sec.appendChild(body);
+      h.parentNode.replaceChild(sec, h);
+      var g = { y: y, sec: sec, btn: btn, body: body };
+      g.set = function (open) {
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        sec.classList.toggle('open', open);
+        if (open) body.removeAttribute('hidden'); else body.setAttribute('hidden', 'until-found');
+      };
+      g.isOpen = function () { return sec.classList.contains('open'); };
+      btn.addEventListener('click', function () { g.set(!g.isOpen()); sync(); });
+      body.addEventListener('beforematch', function () { g.set(true); sync(); });
+      g.n = n;
+      groups.push(g);
+    });
+    var acc = 0;
+    groups.forEach(function (g) { var open = acc < 5 || g.y === hashYear; if (acc < 5) acc += g.n; g.set(open); });
+    var bar = document.createElement('div'); bar.className = 'years-bar';
+    var tog = document.createElement('button'); tog.type = 'button'; tog.className = 'years-toggle';
+    bar.appendChild(tog); list.parentNode.insertBefore(bar, list);
+    function sync(){ var all = groups.every(function (g) { return g.isOpen(); }); tog.textContent = all ? L.collapse : L.expand; tog.setAttribute('data-state', all ? 'open' : 'closed'); }
+    tog.addEventListener('click', function () { var open = tog.getAttribute('data-state') !== 'open'; groups.forEach(function (g) { g.set(open); }); sync(); });
+    window.addEventListener('hashchange', function () {
+      var y = (location.hash.match(/^#(\d{4})$/) || [])[1];
+      groups.forEach(function (g) { if (g.y === y) { g.set(true); if (g.sec.scrollIntoView) g.sec.scrollIntoView(); } });
+      sync();
+    });
+    sync();
+    if (hashYear) groups.forEach(function (g) { if (g.y === hashYear && g.sec.scrollIntoView) g.sec.scrollIntoView(); });
   })();
 </script>
 </body>
