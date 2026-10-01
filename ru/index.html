@@ -9,7 +9,7 @@
     gtag('js', new Date());
     gtag('config', 'G-D5K3GDSNQ0');
   </script>
-  <meta name="robots" content="noindex, nofollow"><!-- DRAFT: remove noindex when approved -->
+  <meta name="robots" content="index, follow">
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png?v=2">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +19,9 @@
   <meta name="author" content="Sergei Chapnin">
   <meta name="copyright" content="© 2026 Sergei Chapnin">
   <link rel="canonical" href="https://chapnin.org/ru/">
+  <link rel="alternate" hreflang="en" href="https://chapnin.org/">
+  <link rel="alternate" hreflang="ru" href="https://chapnin.org/ru/">
+  <link rel="alternate" hreflang="x-default" href="https://chapnin.org/">
   
   <!-- SEO -->
   <title>Сергей Чапнин — Русская церковь, власть и преследования верующих</title>
@@ -662,6 +665,14 @@
       .nav-links li { width: 100%; list-style: none; }
       .nav-links a { display: block; width: 100%; padding: 0.65rem 0.2rem; font-size: 14px; border-bottom: 1px solid #EFE7DB; }
     }
+    .ru-paths { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.6rem 0 0; }
+    .ru-path { display: block; border: 1px solid #D9CFC5; border-left: 4px solid #8B0000; border-radius: 3px; padding: 0.9rem 1.1rem; text-decoration: none; color: #2C2C2C; background: #fff; transition: border-color 0.15s, background 0.15s; }
+    .ru-path:hover { border-color: #8B0000; background: #FBF7F2; }
+    .ru-path-t { display: block; font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; color: #8B0000; }
+    .ru-path-t::after { content: " →"; }
+    .ru-path-d { display: block; font-size: 14px; color: #5A5048; margin-top: 0.2rem; }
+    .ru-more-sep { color: #B5A898; margin: 0 0.4rem; }
+    @media (max-width: 600px) { .ru-paths { grid-template-columns: 1fr; } }
   </style>
 <style>
     /* footer layout: links left (Support first), copyright right */
@@ -678,18 +689,14 @@
 <div class="navbar">
   <div class="container">
     <div class="nav-content">
-      <a href="/" class="nav-logo"><span class="nav-mark"><span class="nav-chr">Ч</span></span>Sergei Chapnin</a>
-      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a href="/ru/" class="nav-logo"><span class="nav-mark"><span class="nav-chr">Ч</span></span>Сергей Чапнин</a>
+      <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
       <ul class="nav-links">
-        <li><a href="/ru/bio/">Bio</a></li>
-        <li><a href="/writings/">Writings</a></li>
-        <li><a href="/talks/">Talks</a></li>
-        <li><a href="/exhibitions/">Exhibitions</a></li>
-        <li><a href="/photos/">Photos</a></li>
-        <li><a href="/press/">For Press</a></li>
-        <li class="nav-break" aria-hidden="true"></li>
-        <li><a href="/books/religious-communities-under-pressure/" class="nav-cta">Book</a></li>
-        <li><a href="/collaborate/" class="nav-cta">Invite / Collaborate</a></li>
+        <li><a href="/ru/bio/">Биография</a></li>
+        <li><a href="/ru/writings/">Публикации</a></li>
+        <li><a href="/ru/#books">Книги</a></li>
+        <li><a href="/ru/#contact">Написать</a></li>
+        <li><a href="/" class="nav-cta nav-lang" hreflang="en" lang="en">English</a></li>
       </ul>
     </div>
   </div>
@@ -715,6 +722,10 @@
         <span class="site-note-label">О сайте</span>
         <p>Этот сайт создан в сентябре 2026 года. Основная версия английская, но и по-русски есть несколько страниц, в основном <a href="/ru/writings/">мои публикации</a>. На английской есть <a href="/talks/">анонсы моих лекций и выступлений</a>.</p>
       </div>
+  <nav class="ru-paths" aria-label="Русские страницы сайта">
+    <a class="ru-path" href="/ru/bio/"><span class="ru-path-t">Биография</span><span class="ru-path-d">Откуда я пришёл и чем занимаюсь сейчас</span></a>
+    <a class="ru-path" href="/ru/writings/"><span class="ru-path-t">Публикации по-русски</span><span class="ru-path-d">Статьи и интервью 2001–2019 годов, по годам</span></a>
+  </nav>
 
   <!-- О ЧЁМ Я ПИШУ -->
   <section class="current-work">
@@ -736,11 +747,11 @@
       <li><span class="d">20 апреля 2026</span><span><a href="https://publicorthodoxy.org/ru/2026/04/20/the-right-icon-in-the-right-place/" target="_blank" rel="noopener">Правильная икона в правильном месте. Как Путин и патриарх Кирилл пытаются превратить святыни в военный талисман</a><span class="s">Public Orthodoxy</span></span></li>
       <li><span class="d">13 января 2026</span><span><a href="https://publicorthodoxy.org/ru/2026/01/13/one-year-in-putins-dungeon/" target="_blank" rel="noopener">Год в российской тюрьме. Выпускники семинарии стали жертвами преследования из-за украинского происхождения и антивоенной позиции</a><span class="s">Public Orthodoxy</span></span></li>
     </ul>
-    <p class="ru-more"><a href="/writings/">Все публикации, на всех языках →</a></p>
+    <p class="ru-more"><a href="/ru/writings/">Все тексты по-русски →</a> <span class="ru-more-sep">·</span> <a href="/writings/" hreflang="en">Все публикации на всех языках (по-английски) →</a></p>
   </section>
 
   <!-- КНИГИ -->
-  <section class="ru-block">
+  <section class="ru-block" id="books">
     <h2>Книги</h2>
     <div class="ru-books">
       <div class="ru-book">

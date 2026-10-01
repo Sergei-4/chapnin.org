@@ -19,6 +19,9 @@
   <meta name="author" content="Sergei Chapnin">
   <meta name="copyright" content="© 2026 Sergei Chapnin">
   <link rel="canonical" href="https://chapnin.org/">
+  <link rel="alternate" hreflang="en" href="https://chapnin.org/">
+  <link rel="alternate" hreflang="ru" href="https://chapnin.org/ru/">
+  <link rel="alternate" hreflang="x-default" href="https://chapnin.org/">
   
   <!-- SEO -->
   <title>Sergei Chapnin — Russian Orthodox Church &amp; Religious Persecution</title>
@@ -605,6 +608,10 @@
     .cw-more { font-size: 13px; color: #735E44; margin: 0.8rem 0 0; }
     .cw-more a { color: #8B0000; text-decoration: none; font-weight: 600; }
     .cw-more a:hover { text-decoration: underline; }
+    .lang-switch { display: flex; gap: 0.5rem; margin-bottom: 1.2rem; }
+    .lang-switch .lang-pill { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; color: #8B0000; border: 1px solid #E3C9C9; border-radius: 3px; padding: 0.12rem 0.6rem; text-decoration: none; }
+    .lang-switch .lang-pill:hover { background: #8B0000; color: #fff; border-color: #8B0000; }
+    .lang-switch .lang-pill.active { background: #8B0000; color: #fff; border-color: #8B0000; cursor: default; }
   </style>
 <style>
     /* mobile hamburger nav */
@@ -659,6 +666,7 @@
   <!-- HERO -->
   <div class="hero">
     <div class="hero-text">
+      <div class="lang-switch"><a class="lang-pill active" href="/">English</a><a class="lang-pill" href="/ru/" hreflang="ru" lang="ru">Русский</a></div>
       <h1>Sergei Chapnin</h1>
       <hr class="hero-accent">
       <p class="hero-lead">A journalist and scholar of the Russian Orthodox Church, its entanglement with state power, and the believers persecuted for refusing to endorse the war.</p>
