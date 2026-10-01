@@ -641,6 +641,11 @@
     /* RU hero: portrait on the left on wide screens, name on one line */
     @media (min-width: 801px) { .hero-image { order: -1; text-align: left; } }
     @media (min-width: 900px) { .hero-text h1 { white-space: nowrap; } }
+
+    .hero-statement { font-family: 'Playfair Display', serif; font-style: italic; font-size: 19px; line-height: 1.55; color: #2C2C2C; margin: 0; }
+    .site-note-wide { max-width: none; margin: 0 0 3rem; }
+    .h2-note { font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 400; color: #735E44; }
+    @media (max-width: 500px) { .hero-statement { font-size: 17px; } }
 </style>
 <style>
     /* mobile hamburger nav */
@@ -698,22 +703,25 @@
       <div class="lang-switch"><a class="lang-pill" href="/" hreflang="en">English</a><a class="lang-pill active" href="/ru/">Русский</a></div>
       <h1>Сергей Чапнин</h1>
       <hr class="hero-accent">
-      <div class="site-note">
-        <span class="site-note-label">О сайте</span>
-        <p>Этот сайт создан в сентябре 2026 года. Основная версия английская, но и по-русски есть несколько страниц, в основном <a href="/ru/writings/">мои публикации</a>. На английской есть <a href="/talks/">анонсы моих лекций и выступлений</a>.</p>
-      </div>
+      <p class="hero-statement">Вот что я сразу скажу: «официальная церковь» в России не просто в кризисе, она с упорством проповедует то, что глубоко противно Благой вести. Однако это не значит, что Церковь в России мертва. Это значит, что произошёл глубокий раскол: с одной стороны те, кто верует во Христа и стремится жить по Его заповедям, а с другой те, кому достаточно проповедовать патриотизм и послушание властям. Первые лишены голоса, и порой кажется, что их нет. Но это не так. Они есть, и они среди нас.</p>
     </div>
     <div class="hero-image">
       <span class="hero-portrait"><img src="/images/portrait-personal-800.webp" alt="Сергей Чапнин" width="400" height="400" fetchpriority="high"></span>
     </div>
   </div>
 
+  <!-- О САЙТЕ -->
+      <div class="site-note site-note-wide">
+        <span class="site-note-label">О сайте</span>
+        <p>Этот сайт создан в сентябре 2026 года. Основная версия английская, но и по-русски есть несколько страниц, в основном <a href="/ru/writings/">мои публикации</a>. На английской есть <a href="/talks/">анонсы моих лекций и выступлений</a>.</p>
+      </div>
+
   <!-- О ЧЁМ Я ПИШУ -->
   <section class="current-work">
     <h2 class="cw-label">О чём я пишу</h2>
     <div class="cw-text">
-      <p>О Русской православной церкви: о её союзе с государством, о языке, которым она сегодня говорит о войне, и о людях, которые этого языка не приняли, — священниках, запрещённых в служении, мирянах, осуждённых порой за одно только слово.</p>
-      <p>Много лет я сам был частью церковной системы: руководил редакциями «Церковного вестника» и «Журнала Московской Патриархии». Поэтому пишу не как посторонний наблюдатель, а как член Церкви, которому не всё равно, что с ней происходит.</p>
+      <p>О Православной церкви в России: о её союзе с государством, о том кривом языке, на котором она сегодня говорит о войне; о людях, которые этот язык отказались принимать, — священниках, запрещённых в служении, мирянах, осуждённых порой за одно только слово.</p>
+      <p>Когда-то я и сам был глубоко внутри <em>церковной системы</em>, поэтому о многом пишу не как сторонний наблюдатель, а как член Церкви, который путём проб и ошибок научился различать коррумпированные институты и живые церковные общины.</p>
     </div>
     <p class="cw-more">Подробнее — в <a href="/ru/bio/">биографии</a></p>
   </section>
@@ -729,18 +737,6 @@
       <li><span class="d">13 января 2026</span><span><a href="https://publicorthodoxy.org/ru/2026/01/13/one-year-in-putins-dungeon/" target="_blank" rel="noopener">Год в российской тюрьме. Выпускники семинарии стали жертвами преследования из-за украинского происхождения и антивоенной позиции</a><span class="s">Public Orthodoxy</span></span></li>
     </ul>
     <p class="ru-more"><a href="/writings/">Все публикации, на всех языках →</a></p>
-  </section>
-
-  <!-- С ЧЕГО НАЧАТЬ -->
-  <section class="ru-block">
-    <h2>С чего начать</h2>
-    <ul class="ru-list">
-      <li><span class="d">2015</span><span><a href="/ru/writings/tserkov-imperii/">Церковь империи</a><span class="s">Colta.ru</span></span></li>
-      <li><span class="d">2015</span><span><a href="/ru/writings/pravoslavie-v-publichnom-prostranstve/">Православие в публичном пространстве: война и насилие, герои и святые</a><span class="s">Московский центр Карнеги</span></span></li>
-      <li><span class="d">2017</span><span><a href="/ru/writings/mezhdu-pravoslavnoi-imperiei-i-secularnym-mirom/">Между православной империей и секулярным миром. Почему церковное возрождение обернулось кризисом Церкви</a><span class="s">Le Monde</span></span></li>
-      <li><span class="d">2019</span><span><a href="/interviews/znak-2019-reforms/">Возможны ли в РПЦ серьезные реформы?</a><span class="s">Znak.com · интервью</span></span></li>
-    </ul>
-    <p class="ru-more"><a href="/ru/writings/">Архив: тексты на русском, 2001–2019 →</a></p>
   </section>
 
   <!-- КНИГИ -->
@@ -782,13 +778,13 @@
 
   <!-- ГДЕ ЧИТАТЬ -->
   <section class="ru-block">
-    <h2>Где меня читать</h2>
+    <h2>Где меня читать <span class="h2-note">(везде пишу нерегулярно)</span></h2>
     <ul class="ru-channels">
       <li><a href="https://www.facebook.com/chapnin" target="_blank" rel="noopener">Facebook</a> — заметки и комментарии, в основном по-русски</li>
       <li><a href="https://sobornost.substack.com/" target="_blank" rel="noopener">Substack «Sobornost»</a> — эссе, чаще по-английски, иногда по-русски</li>
-      <li><a href="https://t.me/vremya4" target="_blank" rel="noopener">Telegram @vremya4</a></li>
-      <li><a href="https://publicorthodoxy.org/ru/author/sergei-chapnin-ru/" target="_blank" rel="noopener">Public Orthodoxy</a> — статьи в русской версии журнала</li>
-      <li><a href="https://ru.themoscowtimes.com/author/sergei-chapnin" target="_blank" rel="noopener">The Moscow Times</a> — статьи</li>
+      <li><a href="https://t.me/vremya4" target="_blank" rel="noopener">Telegram «Время Ч»</a> (<a href="https://t.me/vremya4" target="_blank" rel="noopener">@vremya4</a>) — частично копирую Фейсбук</li>
+      <li><a href="https://publicorthodoxy.org/ru/author/sergei-chapnin-ru/" target="_blank" rel="noopener">Public Orthodoxy</a> — статьи, чаще всего на четырёх языках: русском, украинском, английском и греческом</li>
+      <li><a href="https://ru.themoscowtimes.com/author/sergei-chapnin" target="_blank" rel="noopener">The Moscow Times</a> — колонки и статьи</li>
     </ul>
   </section>
 
