@@ -637,6 +637,10 @@
     .site-note p { margin: 0; font-size: 15px; line-height: 1.6; color: #3A3A3A; }
     .site-note a { color: #8B0000; text-decoration: none; border-bottom: 1px solid #D9B9B9; }
     .site-note a:hover { border-bottom-color: #8B0000; }
+
+    /* RU hero: portrait on the left on wide screens, name on one line */
+    @media (min-width: 801px) { .hero-image { order: -1; text-align: left; } }
+    @media (min-width: 900px) { .hero-text h1 { white-space: nowrap; } }
 </style>
 <style>
     /* mobile hamburger nav */
@@ -698,7 +702,6 @@
         <span class="site-note-label">О сайте</span>
         <p>Этот сайт создан в сентябре 2026 года. Основная версия английская, но и по-русски есть несколько страниц, в основном <a href="/ru/writings/">мои публикации</a>. На английской есть <a href="/talks/">анонсы моих лекций и выступлений</a>.</p>
       </div>
-      <p class="hero-role">Директор по коммуникациям Центра православных исследований Фордемского университета, Нью-Йорк</p>
     </div>
     <div class="hero-image">
       <span class="hero-portrait"><img src="/images/portrait-personal-800.webp" alt="Сергей Чапнин" width="400" height="400" fetchpriority="high"></span>
