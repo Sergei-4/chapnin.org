@@ -1,0 +1,8 @@
+@font-face{font-family:PF;src:url(fonts/pf.ttf);font-weight:400 900}
+@font-face{font-family:PF;src:url(fonts/pfi.ttf);font-style:italic;font-weight:400 900}
+@font-face{font-family:Lato;src:url(fonts/Lato-Regular.ttf);font-weight:400}
+@font-face{font-family:Lato;src:url(fonts/Lato-Bold.ttf);font-weight:700}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1200px;height:630px;overflow:hidden;font-family:Lato;color:#2C2C2C}
+.mark{width:40px;height:40px;border-radius:10px;background:#8B0000;color:#F5EFE7;font-family:PF;font-style:italic;font-weight:700;font-size:27px;display:inline-flex;align-items:center;justify-content:center;line-height:1}
+.mark span{transform:translate(0,2px)}
