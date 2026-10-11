@@ -650,6 +650,7 @@
     .h2-note { font-family: 'Lato', sans-serif; font-size: 14px; font-weight: 400; color: #735E44; }
     @media (max-width: 500px) { .hero-statement { font-size: 17px; } }
 </style>
+<!-- shared:navcss -->
 <style>
     /* mobile hamburger nav */
     .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 0.4rem; margin-left: auto; flex: none; width: 40px; height: 36px; flex-direction: column; justify-content: center; gap: 5px; }
@@ -665,6 +666,9 @@
       .nav-links li { width: 100%; list-style: none; }
       .nav-links a { display: block; width: 100%; padding: 0.65rem 0.2rem; font-size: 14px; border-bottom: 1px solid #EFE7DB; }
     }
+  </style>
+<!-- /shared:navcss -->
+<style>
     .ru-paths { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.6rem 0 0; }
     .ru-path { display: block; border: 1px solid #D9CFC5; border-left: 4px solid #8B0000; border-radius: 3px; padding: 0.9rem 1.1rem; text-decoration: none; color: #2C2C2C; background: #fff; transition: border-color 0.15s, background 0.15s; }
     .ru-path:hover { border-color: #8B0000; background: #FBF7F2; }
@@ -686,6 +690,7 @@
 <body>
 
 <!-- NAVIGATION -->
+<!-- shared:nav lang=ru active=- alt=/ -->
 <div class="navbar">
   <div class="container">
     <div class="nav-content">
@@ -701,6 +706,7 @@
     </div>
   </div>
 </div>
+<!-- /shared:nav -->
 
 <main class="container">
 
@@ -812,7 +818,8 @@
   </div>
 
   <!-- FOOTER -->
-  <div class="footer-divider">
+  <!-- shared:footer lang=ru updated=2026-09-30 -->
+<div class="footer-divider">
     <div class="footer-content">
       <ul class="footer-links">
         <li><a href="/support/" class="footer-support" onclick="if(window.gtag)gtag('event','support_page',{location:'footer'})">Поддержать</a></li>
@@ -823,6 +830,7 @@
       <div class="footer-copyright">© 2026 Сергей Чапнин<br><span style="font-size:12px;opacity:0.7;">Обновлено: 30 сентября 2026</span></div>
     </div>
   </div>
+  <!-- /shared:footer -->
 
 </main>
 
@@ -843,6 +851,7 @@
     });
   })();
 </script>
+<!-- shared:navjs -->
 <script>
   (function () {
     var t = document.querySelector('.nav-toggle');
@@ -854,6 +863,7 @@
     });
   })();
 </script>
+<!-- /shared:navjs -->
 <script>
   // Load the Substack widget only when its block scrolls into view (it ships ~1 MB of JS).
   (function () {

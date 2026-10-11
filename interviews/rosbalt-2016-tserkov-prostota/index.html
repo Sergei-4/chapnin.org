@@ -115,13 +115,33 @@
     .footer-lang { font-size: 10.5px; font-weight: 700; letter-spacing: 0.6px; color: #735E44; opacity: 0.75; margin-left: 0.2rem; vertical-align: 1px; }
     @media (max-width: 800px) { .footer-copyright { text-align: left; } .footer-links { column-gap: 1.1rem; } }
   </style>
+<!-- shared:navcss -->
+<style>
+    /* mobile hamburger nav */
+    .nav-toggle { display: none; background: none; border: 0; cursor: pointer; padding: 0.4rem; margin-left: auto; flex: none; width: 40px; height: 36px; flex-direction: column; justify-content: center; gap: 5px; }
+    .nav-toggle span { display: block; width: 22px; height: 2px; background: #2C2C2C; border-radius: 2px; transition: transform 0.2s, opacity 0.2s; }
+    .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 800px) {
+      .nav-content { flex-wrap: wrap; }
+      .nav-toggle { display: flex; }
+      .nav-links { display: none; flex-basis: 100%; width: 100%; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 0.15rem; margin-top: 0.9rem; }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; list-style: none; }
+      .nav-links a { display: block; width: 100%; padding: 0.65rem 0.2rem; font-size: 14px; border-bottom: 1px solid #EFE7DB; }
+    }
+  </style>
+<!-- /shared:navcss -->
 </head>
 <body>
 
+<!-- shared:nav lang=ru active=/ru/writings/ alt=/writings/ -->
 <div class="navbar">
   <div class="container">
     <div class="nav-content">
       <a href="/ru/" class="nav-logo"><span class="nav-mark"><span class="nav-chr">Ч</span></span>Сергей Чапнин</a>
+      <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
       <ul class="nav-links">
         <li><a href="/ru/bio/">Биография</a></li>
         <li><a href="/ru/writings/" class="active">Публикации</a></li>
@@ -132,6 +152,7 @@
     </div>
   </div>
 </div>
+<!-- /shared:nav -->
 
 <div class="container">
   <div class="article-wrap">
@@ -235,18 +256,33 @@
     <div class="backlink"><a href="/writings/">← Back to Writings</a></div>
   </div>
 
-  <div class="footer-divider">
+  <!-- shared:footer lang=ru updated=2026-09-26 -->
+<div class="footer-divider">
     <div class="footer-content">
       <ul class="footer-links">
-        <li><a href="/support/" class="footer-support" onclick="if(window.gtag)gtag('event','support_page',{location:'footer'})">Support</a></li>
-        <li><a href="https://sobornost.substack.com/" target="_blank" hreflang="en">Substack <span class="footer-lang" aria-label="in English">EN</span></a></li>
+        <li><a href="/support/" class="footer-support" onclick="if(window.gtag)gtag('event','support_page',{location:'footer'})">Поддержать</a></li>
         <li><a href="https://www.facebook.com/chapnin" target="_blank" hreflang="ru">Facebook <span class="footer-lang" aria-label="in Russian">RU</span></a></li>
+        <li><a href="https://sobornost.substack.com/" target="_blank" hreflang="en">Substack <span class="footer-lang" aria-label="in English">EN</span></a></li>
         <li><a href="https://www.linkedin.com/in/vsadnik/" target="_blank">LinkedIn</a></li>
       </ul>
-      <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: September 26, 2026</span></div>
+      <div class="footer-copyright">© 2026 Сергей Чапнин<br><span style="font-size:12px;opacity:0.7;">Обновлено: 26 сентября 2026</span></div>
     </div>
   </div>
+  <!-- /shared:footer -->
 </div>
 
+<!-- shared:navjs -->
+<script>
+  (function () {
+    var t = document.querySelector('.nav-toggle');
+    var l = document.querySelector('.nav-links');
+    if (!t || !l) return;
+    t.addEventListener('click', function () {
+      var open = l.classList.toggle('open');
+      t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  })();
+</script>
+<!-- /shared:navjs -->
 </body>
 </html>
