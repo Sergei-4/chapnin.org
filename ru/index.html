@@ -669,11 +669,11 @@
   </style>
 <!-- /shared:navcss -->
 <style>
-    .ru-paths { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.6rem 0 0; }
+    .ru-paths { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.6rem 0 2.6rem; }
     .ru-path { display: block; border: 1px solid #D9CFC5; border-left: 4px solid #8B0000; border-radius: 3px; padding: 0.9rem 1.1rem; text-decoration: none; color: #2C2C2C; background: #fff; transition: border-color 0.15s, background 0.15s; }
     .ru-path:hover { border-color: #8B0000; background: #FBF7F2; }
     .ru-path-t { display: block; font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; color: #8B0000; }
-    .ru-path-t::after { content: " →"; }
+    .ru-path-t::after { content: "\00a0→"; }
     .ru-path-d { display: block; font-size: 14px; color: #5A5048; margin-top: 0.2rem; }
     .ru-more-sep { color: #B5A898; margin: 0 0.4rem; }
     @media (max-width: 600px) { .ru-paths { grid-template-columns: 1fr; } }
@@ -731,6 +731,7 @@
   <nav class="ru-paths" aria-label="Русские страницы сайта">
     <a class="ru-path" href="/ru/bio/"><span class="ru-path-t">Биография</span><span class="ru-path-d">Откуда я и чем занимаюсь сейчас</span></a>
     <a class="ru-path" href="/ru/writings/"><span class="ru-path-t">Публикации по-русски</span><span class="ru-path-d">Все тексты по-русски с 2001 года, по годам</span></a>
+    <a class="ru-path" href="/ru/media/"><span class="ru-path-t">Эфиры и видео</span><span class="ru-path-d">Интервью, эфиры и записи выступлений</span></a>
   </nav>
 
   <!-- О ЧЁМ Я ПИШУ -->
@@ -818,7 +819,7 @@
   </div>
 
   <!-- FOOTER -->
-  <!-- shared:footer lang=ru updated=2026-09-30 -->
+  <!-- shared:footer lang=ru updated=2026-10-12 -->
 <div class="footer-divider">
     <div class="footer-content">
       <ul class="footer-links">
@@ -827,7 +828,7 @@
         <li><a href="https://sobornost.substack.com/" target="_blank" hreflang="en">Substack <span class="footer-lang" aria-label="in English">EN</span></a></li>
         <li><a href="https://www.linkedin.com/in/vsadnik/" target="_blank">LinkedIn</a></li>
       </ul>
-      <div class="footer-copyright">© 2026 Сергей Чапнин<br><span style="font-size:12px;opacity:0.7;">Обновлено: 30 сентября 2026</span></div>
+      <div class="footer-copyright">© 2026 Сергей Чапнин<br><span style="font-size:12px;opacity:0.7;">Обновлено: 12 октября 2026</span></div>
     </div>
   </div>
   <!-- /shared:footer -->
