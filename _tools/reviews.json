@@ -1,6 +1,6 @@
 {
   "_comment": "Press reviews of Religious Communities Under Pressure. Edit here, then run: python3 _tools/build_reviews.py",
-  "trust_bar": "Featured in <em>The Wall Street Journal</em> &nbsp;·&nbsp; <em>First Things</em> Summer Reading List &nbsp;·&nbsp; Reviewed in <em>Providence</em>",
+  "trust_bar": "Featured in <em>The Wall Street Journal</em> &nbsp;·&nbsp; <em>First Things</em> Summer Reading List &nbsp;·&nbsp; Reviewed in <em>Providence</em> and <em>RGOW</em>",
   "cards": [
     {
       "featured": true,
@@ -47,6 +47,29 @@
       "featured": true,
       "cites": [
         {
+          "quote": "Chapnin presents information … that, in the form of this reference work, will serve all who are interested in the religious dimension of Russia’s war of aggression against Ukraine. The useful appendix contains names, forms of repression, and sources of information.",
+          "who": "Regula M. Zwahlen",
+          "role": "Editor",
+          "outlet": "Religion &amp; Gesellschaft in Ost und West",
+          "url": "https://rgow.eu/zeitschrift/2026/9/buchbesprechungen",
+          "date": "October 2026",
+          "note": "in German; our translation",
+          "orig": "Chapnin präsentiert Informationen, […] die allen, die sich für die religiöse Dimension des russischen Angriffskriegs auf die Ukraine interessieren, in Form dieses Nachschlagewerks dienen werden. Der nützliche Anhang enthält Namen, Repressionsformen und Informationsquellen.",
+          "orig_lang": "de",
+          "orig_label": "German original",
+          "press": {
+            "outlet": "Religion &amp; Gesellschaft in Ost und West",
+            "title": "Review in <em>RGOW</em> 9–10/2026",
+            "note": "October 2026, in German",
+            "gloss": "Review of the book in the German-language journal on religion and society in Eastern Europe."
+          }
+        }
+      ]
+    },
+    {
+      "featured": true,
+      "cites": [
+        {
           "quote": "Chapnin's book does more than describe what is happening in Russia today — it answers the question 'why?' The study lays bare the God-defying nature of Putin's regime behind its outward tolerance of religious life.",
           "who": "Archpriest Andrey Kordochkin",
           "role": "",
@@ -58,7 +81,7 @@
       ]
     },
     {
-      "featured": true,
+      "featured": false,
       "cites": [
         {
           "quote": "Through his book, Chapnin continues the work of Keston, Amnesty International, the UN, and other organizations in documenting Russia’s malign treatment of clergy and laity who speak the truth and do not blindly follow the official stance of the government and the state-controlled Church. … An essential volume for a current view of the repressive actions of the Moscow Patriarchate led by Patriarch Kirill and the Russian state. Readers will find the research solid and convincing, and they will be disturbed by the limited reactions from Churches around the world.",
@@ -67,7 +90,8 @@
           "outlet": "Substack",
           "url": "https://jacquelinexenianenchinbooknook.substack.com/p/review-for-june-of-religious-communities",
           "date": "July 2026",
-          "note": ""
+          "note": "",
+          "short": "An essential volume for a current view of the repressive actions of the Moscow Patriarchate led by Patriarch Kirill and the Russian state."
         }
       ]
     }

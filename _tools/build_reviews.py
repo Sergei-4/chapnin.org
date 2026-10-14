@@ -14,7 +14,7 @@ reviews.json → "cards": one card per reviewer, in display order.
   cites[]: one per source. quote (HTML, no outer quotes), who, role, outlet, url, date (as printed),
            note (e.g. "in Russian"; printed in brackets), short (compact-list quote),
            orig + orig_lang + orig_label: original-language text shown in a collapsible line under the cite,
-           press: {title, gloss} → row on /press/.
+           press: {title, gloss, optional outlet, optional note = replaces date+note in the row} → row on /press/.
 Typography rule: cites are never bold (font-weight 400).
 """
 import json, html, re, sys
@@ -64,10 +64,12 @@ def coverage():
             if not p:
                 continue
             rev = f' ({c["who"]})' if c.get('who') else ''
-            note = f' ({c["note"]})' if c.get('note') else ''
+            n = p.get('note')
+            note = f' ({c["note"]})' if (c.get('note') and n is None) else ''
+            date = n if n else c['date']
             rows.append(f'  <div class="cov-item"><span class="cov-outlet">{p.get("outlet", c["outlet"])}</span> '
                         f'<a href="{c["url"]}" target="_blank" rel="noopener">{p["title"]}{rev}</a> '
-                        f'<span class="cov-meta">{c["date"]}{note}</span><span class="cov-gloss">{p["gloss"]}</span></div>')
+                        f'<span class="cov-meta">{date}{note}</span><span class="cov-gloss">{p["gloss"]}</span></div>')
     return '\n'.join(rows)
 
 
