@@ -1,0 +1,75 @@
+{
+  "_comment": "Press reviews of Religious Communities Under Pressure. Edit here, then run: python3 _tools/build_reviews.py",
+  "trust_bar": "Featured in <em>The Wall Street Journal</em> &nbsp;·&nbsp; <em>First Things</em> Summer Reading List &nbsp;·&nbsp; Reviewed in <em>Providence</em>",
+  "cards": [
+    {
+      "featured": true,
+      "cites": [
+        {
+          "quote": "As former patriarchate official Sergei Chapnin documents in his book <em>Religious Communities Under Pressure</em>, the Russian Orthodox Church persecutes and disowns any of its clergy and laity who oppose the war on Ukraine.",
+          "who": "George Weigel",
+          "role": "",
+          "outlet": "The Wall Street Journal",
+          "url": "https://www.wsj.com/opinion/putins-war-and-kirills-blasphemy-00e28a25",
+          "date": "August 2026",
+          "note": ""
+        },
+        {
+          "quote": "Through dozens of case studies, an expert on Russian Orthodoxy describes the corruption of the Church he loves by its willful self-subordination to the power of the Kremlin.",
+          "who": "George Weigel",
+          "role": "",
+          "outlet": "First Things",
+          "url": "https://firstthings.com/the-summer-reading-list-2026/",
+          "date": "Summer Reading List, 2026",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "featured": true,
+      "cites": [
+        {
+          "quote": "Chapnin’s masterful ability to dispel three common misconceptions about the Russian religious landscape makes the book truly essential reading. … Through his meticulous research and insightful analysis, Chapnin paints a picture of a political regime and a national church united by a heretical ideology that portrays Ukraine and the West as demonic enemies of Russian religion, and the war on Ukraine as a sacred duty.",
+          "who": "Siobhan Heekin-Canedy",
+          "role": "Contributing Editor",
+          "outlet": "Providence",
+          "url": "https://providencemag.com/2026/09/review-of-religious-communities-under-pressure-documenting-religious-persecution-in-russia-2022-2026/",
+          "date": "September 2026",
+          "note": "",
+          "press": {
+            "title": "“Review of <em>Religious Communities Under Pressure</em>”",
+            "gloss": "Review of the book in the journal of Christian realism in American foreign policy."
+          }
+        }
+      ]
+    },
+    {
+      "featured": true,
+      "cites": [
+        {
+          "quote": "Chapnin's book does more than describe what is happening in Russia today — it answers the question 'why?' The study lays bare the God-defying nature of Putin's regime behind its outward tolerance of religious life.",
+          "who": "Archpriest Andrey Kordochkin",
+          "role": "",
+          "outlet": "Postimees",
+          "url": "https://rus.postimees.ee/8546113/religioznye-obshchiny-pod-davleniem-kak-putinskiy-rezhim-ispolzuet-cerkovnye-struktury-dlya-politicheskih-repressiy",
+          "date": "September 2026",
+          "note": "in Russian"
+        }
+      ]
+    },
+    {
+      "featured": true,
+      "cites": [
+        {
+          "quote": "Through his book, Chapnin continues the work of Keston, Amnesty International, the UN, and other organizations in documenting Russia’s malign treatment of clergy and laity who speak the truth and do not blindly follow the official stance of the government and the state-controlled Church. … An essential volume for a current view of the repressive actions of the Moscow Patriarchate led by Patriarch Kirill and the Russian state. Readers will find the research solid and convincing, and they will be disturbed by the limited reactions from Churches around the world.",
+          "who": "Jacqueline Xenia Nenchin",
+          "role": "former translator and archivist at Keston College",
+          "outlet": "Substack",
+          "url": "https://jacquelinexenianenchinbooknook.substack.com/p/review-for-june-of-religious-communities",
+          "date": "July 2026",
+          "note": ""
+        }
+      ]
+    }
+  ]
+}
