@@ -25,6 +25,8 @@ EN_MON = ['', 'January', 'February', 'March', 'April', 'May', 'June', 'July',
           'August', 'September', 'October', 'November', 'December']
 RU_MON = ['', 'января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля',
           'августа', 'сентября', 'октября', 'ноября', 'декабря']
+UK_MON = ['', 'січня', 'лютого', 'березня', 'квітня', 'травня', 'червня', 'липня',
+          'серпня', 'вересня', 'жовтня', 'листопада', 'грудня']
 
 NAV_RE = r'<div class="navbar">.*?\n</div>\n'
 FOOT_RE = r'<div class="footer-divider">.*?\n  </div>\n'
@@ -47,7 +49,9 @@ def attrs(txt):
 
 def fmt_date(iso, lang):
     y, m, d = map(int, iso.split('-'))
-    return f'{EN_MON[m]} {d}, {y}' if lang == 'en' else f'{d} {RU_MON[m]} {y}'
+    if lang == 'en':
+        return f'{EN_MON[m]} {d}, {y}'
+    return f'{d} {(UK_MON if lang == "uk" else RU_MON)[m]} {y}'
 
 
 def render_nav(a):
