@@ -123,7 +123,9 @@ def sync(s):
 
 
 def pages():
-    return sorted(f for f in glob.glob('**/index.html', recursive=True) if not f.startswith('_tools'))
+    # redirect stubs (meta refresh to a moved page) carry no menu or footer
+    return sorted(f for f in glob.glob('**/index.html', recursive=True)
+                  if not f.startswith('_tools') and 'http-equiv="refresh"' not in open(f, encoding='utf-8').read())
 
 
 def touch(path, iso=None):
