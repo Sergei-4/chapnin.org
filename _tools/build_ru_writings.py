@@ -275,3 +275,5 @@ def build_recent():
 if __name__ == '__main__':
     build()
     build_recent()
+    import subprocess, sys
+    subprocess.run([sys.executable, '_tools/build_feed.py'], check=True)  # /feed.xml

@@ -260,3 +260,5 @@ if __name__ == '__main__':
         for s in re.findall(r'<script type="application/ld\+json">\n(.*?)\n  </script>', new, re.S):
             json.loads(s)
     print(f'{len(D)} recordings -> media/, ru/media/')
+    import subprocess, sys
+    subprocess.run([sys.executable, '_tools/build_feed.py'], check=True)  # /feed.xml
