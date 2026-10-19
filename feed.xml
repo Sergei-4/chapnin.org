@@ -5,12 +5,22 @@
   <link>https://chapnin.org/</link>
   <atom:link href="https://chapnin.org/feed.xml" rel="self" type="application/rss+xml"/>
   <description>New publications, talks, recordings and data updates by Sergei Chapnin on the Russian Orthodox Church, church and state, and religious persecution in Russia. Items appear in the language of the original.</description>
-  <lastBuildDate>Fri, 09 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Mon, 19 Oct 2026 12:00:00 +0000</lastBuildDate>
   <image>
     <url>https://chapnin.org/images/icon-512.png</url>
     <title>Sergei Chapnin — new writings, talks and recordings</title>
     <link>https://chapnin.org/</link>
   </image>
+  <item>
+    <title>Ночь в Кремле, когда родилась Московская патриархия. Ответ протоиерею Игорю Прекупу</title>
+    <link>https://sobornost.substack.com/p/1a5</link>
+    <guid isPermaLink="false">https://sobornost.substack.com/p/1a5</guid>
+    <pubDate>Mon, 19 Oct 2026 12:00:00 +0000</pubDate>
+    <category>Essay</category>
+    <dc:creator>Sergei Chapnin</dc:creator>
+    <dc:language>ru</dc:language>
+    <description><![CDATA[Essay · Sobornost (Substack)]]></description>
+  </item>
   <item>
     <title>Юбилей патриарха Кирилла: кто приедет в Москву</title>
     <link>https://ru.themoscowtimes.com/2026/10/09/yubilei-patriarha-kirilla-kto-priedet-v-moskvu-a208235</link>
@@ -288,16 +298,6 @@
     <dc:creator>Sergei Chapnin</dc:creator>
     <dc:language>ru</dc:language>
     <description><![CDATA[Interview · Швейцария для всех (forall.swiss) · X форум «СловоНово», Тиват]]></description>
-  </item>
-  <item>
-    <title>Punishment After Compassion</title>
-    <link>https://publicorthodoxy.org/2025/10/31/punishment-after-compassion/</link>
-    <guid isPermaLink="false">https://publicorthodoxy.org/2025/10/31/punishment-after-compassion/</guid>
-    <pubDate>Fri, 31 Oct 2025 12:00:00 +0000</pubDate>
-    <category>Essay</category>
-    <dc:creator>Sergei Chapnin</dc:creator>
-    <dc:language>en</dc:language>
-    <description><![CDATA[Essay · Public Orthodoxy<br>Also in: <a href="https://publicorthodoxy.org/ru/2025/10/31/punishment-after-compassion/">Русский</a> · <a href="https://publicorthodoxy.org/ukr/2025/10/31/punishment-after-compassion/">Українська</a>]]></description>
   </item>
 </channel>
 </rss>
