@@ -630,4 +630,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://chapnin.org/ru/writings/tserkov-v-postsovetskoy-rossii/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
