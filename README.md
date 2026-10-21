@@ -1,38 +1,15 @@
-# Sergei Chapnin — Personal Website
+# chapnin.org — source code
 
-Religious scholar, journalist, and editor analyzing the Russian Orthodox Church and Orthodox Christianity in the post-Soviet world.
+**The website is [https://chapnin.org](https://chapnin.org).** This repository only holds its source files.
 
-## About This Site
+Sergei Chapnin — journalist, religious scholar, and editor writing on the Russian Orthodox Church, church–state relations, and religious persecution in Russia. Director of Communications, Orthodox Christian Studies Center, Fordham University.
 
-- **Built with:** HTML5, CSS3, JavaScript (vanilla)
-- **Hosted on:** GitHub Pages
-- **Design:** Typography-first, warm parchment aesthetic
-- **License:** See `llms.txt` for usage guidelines
+- Biography: https://chapnin.org/bio/
+- Book, *Religious Communities Under Pressure*: https://chapnin.org/books/religious-communities-under-pressure/
+- Religious persecution in Russia, key figures: https://chapnin.org/religious-persecution-russia/
+- Writings: https://chapnin.org/writings/ · Talks: https://chapnin.org/talks/
+- На русском: https://chapnin.org/ru/
 
-## Content Sections
+Please cite and link the website, not this repository.
 
-- **About** — Full biography and professional background
-- **Exhibitions** — Contemporary Christian art curatorial projects (2015–2025)
-- **Talks** — Lectures, conferences, and public discussions
-- **Writings** — Essays and analysis on church politics and religious freedom
-- **Photos** — Personal visual archive: landscape, portraiture, and reportage
-- **Books** — *Religious Communities Under Pressure* (2026)
-
-## Navigation
-
-All pages include unified navigation and footer. Primary navigation:
-- Home | About | Exhibitions | Talks | Writings | Photos
-
-## Contact
-
-Use the contact form on the homepage or reach out through social links.
-
-## Colophon
-
-**Fonts:** Playfair Display (headers), Lato (body)
-**Color Palette:** Parchment (#F5EFE7), Crimson (#8B0000), Ochre (#D4A574), Muted Browns
-
----
-
-© 2026 Sergei Chapnin. All rights reserved.
-Built with care. Last updated: August 28, 2026
+© 2026 Sergei Chapnin. Texts and images: see https://chapnin.org/llms.txt and https://chapnin.org/robots.txt for reuse terms.
