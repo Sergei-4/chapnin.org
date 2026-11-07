@@ -269,7 +269,17 @@ def build_recent():
                    lambda m: m.group(1) + lis + m.group(2), h, flags=re.S)
     assert k == 1, '/ru/ Новое block not found'
     open('ru/index.html', 'w', encoding='utf-8').write(h)
-    print(f'"Новое/New" block on {n} archival pages; /ru/ Новое refreshed')
+    # English home: "Latest writing" (3 latest English texts not already linked elsewhere on the page)
+    h = open('index.html', encoding='utf-8').read()
+    rest = re.sub(r'<!-- HOME-RECENT:START.*?<!-- HOME-RECENT:END -->', '', h, flags=re.S)
+    pick = [r for r in E if html.escape(r['href'], quote=True) not in rest and r['href'] not in rest][:3]
+    lis = '\n'.join(f'      <li><span class="rd">{html.escape(r["date"], quote=False)}</span><span>{link(r["href"], r["title"])}'
+                    f'<span class="rs">{html.escape(r["src"], quote=False)}</span></span></li>' for r in pick)
+    h, k = re.subn(r'(<!-- HOME-RECENT:START[^>]*-->\n).*?(\n    <!-- HOME-RECENT:END -->)',
+                   lambda m: m.group(1) + '    <ul class="home-recent-list">\n' + lis + '\n    </ul>' + m.group(2), h, flags=re.S)
+    assert k == 1, 'home Latest writing block not found'
+    open('index.html', 'w', encoding='utf-8').write(h)
+    print(f'"Новое/New" block on {n} archival pages; /ru/ Новое and home Latest writing refreshed')
 
 
 if __name__ == '__main__':
