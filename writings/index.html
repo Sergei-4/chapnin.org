@@ -147,6 +147,25 @@
     .lang-switch .lang-pill { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; color: #8B0000; border: 1px solid #E3C9C9; border-radius: 3px; padding: 0.12rem 0.6rem; text-decoration: none; white-space: nowrap; transition: background 0.15s, color 0.15s, border-color 0.15s; }
     .lang-switch .lang-pill:hover { background: #8B0000; color: #fff; border-color: #8B0000; }
     .lang-switch .lang-pill.active { background: #8B0000; color: #fff; border-color: #8B0000; cursor: default; }
+
+/* Writings redesign, 7 Nov 2026: list first */
+.first-time { padding: 0; margin: 0 0 1.6rem; }
+.first-time > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.85rem 1.3rem; }
+.first-time > summary::-webkit-details-marker { display: none; }
+.ft-sum { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: #2C2C2C; }
+.ft-pm::before { content: '+'; font-size: 20px; color: #8B0000; line-height: 1; }
+.first-time[open] .ft-pm::before { content: '\2013'; }
+.first-time[open] > summary { border-bottom: 1px solid #E4DAC9; }
+.first-time .ft-intro, .first-time .ft-list { margin-left: 1.3rem; margin-right: 1.3rem; }
+.first-time .ft-intro { margin-top: 1rem; }
+.first-time .ft-list { padding-bottom: 1rem; }
+.writing-title a { color: inherit; text-decoration: none; }
+.writing-title a:hover, .writing-title a:focus { color: #8B0000; text-decoration: underline; text-underline-offset: 2px; }
+.search-group input { font-family: 'Lato', sans-serif; font-size: 13px; padding: 0.42rem 0.7rem; border: 1px solid #D9CFC5; border-radius: 6px; background: white; color: #2C2C2C; width: 16rem; max-width: 100%; }
+.search-group input:focus { outline: 2px solid #8B0000; outline-offset: 1px; }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.pub-empty { font-size: 14px; color: #735E44; padding: 1rem 0; }
+@media (max-width: 700px) { .search-group, .search-group input { width: 100%; } .toolbar-controls { width: 100%; display: flex; flex-direction: row; flex-wrap: wrap; gap: 0.7rem 1.2rem; } .pub-toolbar { margin-bottom: 1.4rem; } }
 </style>
   <script type="application/ld+json">
 {
@@ -1435,10 +1454,10 @@
   <div class="lang-switch"><a class="lang-pill active" href="/writings/">English</a><a class="lang-pill" href="/ru/writings/" hreflang="ru" lang="ru">Русский</a></div>
 
   <h1 class="page-title">Writings</h1>
-  <p class="page-subtitle">A working database of essays, columns, interviews, policy papers, academic articles, and open letters. Where a text appeared in more than one language, the language buttons link to each version. All texts in Russian are also listed <a href="/ru/writings/" hreflang="ru">on the Russian page</a>.</p>
+  <p class="page-subtitle">Essays, columns, interviews, policy papers, academic articles, and open letters, 2001–2026. Click a title to read it; language buttons lead to translations. Russian texts are also listed <a href="/ru/writings/" hreflang="ru">on the Russian page</a>.</p>
 
-  <section class="first-time" aria-label="For first-time readers">
-    <h2>For first-time readers</h2>
+  <details class="first-time" id="start-here">
+    <summary><span class="ft-sum">New here? Six texts to start with</span><span class="ft-pm" aria-hidden="true"></span></summary>
     <p class="ft-intro">If you are visiting this archive for the first time, these texts offer a place to begin. Together, they trace several connected concerns in my work: the Russian Church’s relationship to empire and state power; Christian conscience under the pressure of war; the persecution of believers; and the use of sacred images in public ideology.</p>
     <ul class="ft-list">
       <li>
@@ -1466,8 +1485,7 @@
         <div class="ft-note">Studia Universitatis Babeș-Bolyai Theologia Catholica Latina, 2023. A more academic account of how civil religion has come to displace Orthodox Christianity in post-Soviet Russia.</div>
       </li>
     </ul>
-  </section>
-  <p class="ft-bridge">The full archive below includes essays, interviews, policy papers, academic articles, and open letters, with filters by format, language, and date.</p>
+  </details>
 
   <nav class="pub-submenu" id="filter-group" aria-label="Sections">
     <button class="submenu-tab active" data-filter="all">All</button>
@@ -1483,6 +1501,10 @@
   <div class="pub-toolbar">
     <div class="pub-count-wrap"><div class="pub-count" id="pub-count"></div><button type="button" class="years-toggle" id="years-toggle" data-state="closed">Expand all</button></div>
     <div class="toolbar-controls">
+      <div class="search-group">
+        <label for="pub-search" class="visually-hidden">Search titles</label>
+        <input type="search" id="pub-search" placeholder="Search titles, outlets, topics" autocomplete="off">
+      </div>
       <div class="sort-group">
         <label for="lang-select">Language</label>
         <select id="lang-select">
@@ -3678,7 +3700,7 @@
     </div>
   </div>
 
-  <!-- shared:footer lang=en updated=2026-10-19 -->
+  <!-- shared:footer lang=en updated=2026-11-07 -->
 <div class="footer-divider">
     <div class="footer-content">
       <ul class="footer-links">
@@ -3688,7 +3710,7 @@
         <li><a href="https://www.linkedin.com/in/vsadnik/" target="_blank">LinkedIn</a></li>
         <li><a href="/feed.xml" type="application/rss+xml" title="RSS"><svg width="11" height="11" viewBox="0 0 16 16" aria-hidden="true" style="vertical-align:-1px;margin-right:4px"><circle cx="3" cy="13" r="2" fill="currentColor"/><path d="M1 7a8 8 0 0 1 8 8M1 2a13 13 0 0 1 13 13" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>RSS</a></li>
       </ul>
-      <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: October 19, 2026</span></div>
+      <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: November 7, 2026</span></div>
     </div>
   </div>
   <!-- /shared:footer -->
@@ -3703,6 +3725,15 @@
     var langSelect = document.getElementById('lang-select');
     var countEl = document.getElementById('pub-count');
     var toggleAll = document.getElementById('years-toggle');
+    var searchInput = document.getElementById('pub-search');
+    var emptyEl = document.createElement('p'); emptyEl.className = 'pub-empty'; emptyEl.textContent = 'No texts match this search.'; emptyEl.hidden = true;
+    list.parentNode.insertBefore(emptyEl, list.nextSibling);
+    function norm(x){ return (x || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ё/g, 'е'); }
+    items.forEach(function (el) {
+      var t = el.querySelector('.writing-title'), hay = el.textContent;
+      if (t) Array.prototype.forEach.call(t.attributes, function (a) { if (a.name.indexOf('data-title-') === 0) hay += ' ' + a.value; });
+      el._hay = norm(hay);
+    });
     var currentFilter = 'all';
     var OPEN_DEFAULT = '2026';
     var openBase = {};      // unfiltered view: which years are open
@@ -3719,10 +3750,24 @@
       var pick = (lang && lang !== 'all' && t.getAttribute('data-title-' + lang))
                ? t.getAttribute('data-title-' + lang)
                : t.getAttribute('data-title-' + (t.getAttribute('data-orig') || 'en'));
-      if (pick) t.textContent = pick;
+      if (!pick) return;
+      var pill = (lang && lang !== 'all' && el.querySelector('.writing-langs .pill[data-lang="' + lang + '"]'))
+              || el.querySelector('.writing-langs .pill.orig') || el.querySelector('.writing-langs .pill');
+      t.textContent = '';
+      if (pill && pill.getAttribute('href')) {
+        var a = document.createElement('a');
+        a.href = pill.getAttribute('href');
+        a.setAttribute('data-lang', pill.getAttribute('data-lang') || '');
+        if (pill.getAttribute('target')) { a.target = pill.getAttribute('target'); a.rel = 'noopener'; }
+        if (pill.getAttribute('title')) a.title = pill.getAttribute('title');
+        a.textContent = pick;
+        t.appendChild(a);
+      } else {
+        t.textContent = pick;
+      }
     }
     function yearOf(el){ return parseFloat(el.getAttribute('data-year')); }
-    function isFiltered(){ return currentFilter !== 'all' || langSelect.value !== 'all'; }
+    function isFiltered(){ return currentFilter !== 'all' || langSelect.value !== 'all' || !!(searchInput && searchInput.value.trim()); }
     function isOpen(y){ return isFiltered() ? openFiltered[y] !== false : !!openBase[y]; }
     function setOpen(y, v){ if (isFiltered()) openFiltered[y] = v; else openBase[y] = v; }
 
@@ -3760,9 +3805,11 @@
     function apply() {
       var mode = sortSelect.value;
       var lang = langSelect.value;
+      var q = searchInput ? norm(searchInput.value.trim()) : '';
       var visible = items.filter(function (el) {
         if (!(currentFilter === 'all' || el.getAttribute('data-type') === currentFilter)) return false;
         if (lang !== 'all' && !hasLang(el, lang)) return false;
+        if (q && el._hay.indexOf(q) < 0) return false;
         return true;
       });
       visible.sort(function (a, b) {
@@ -3796,6 +3843,7 @@
       countEl.textContent = n + (n === 1 ? ' publication' : ' publications')
         + ' · ' + vc + (vc === 1 ? ' version' : ' versions')
         + ' in ' + lc + (lc === 1 ? ' language' : ' languages');
+      emptyEl.hidden = n > 0;
       syncToggle();
     }
 
@@ -3809,6 +3857,36 @@
       apply();
     });
     sortSelect.addEventListener('change', apply);
+    if (searchInput) {
+      var st, lastQ = '';
+      searchInput.addEventListener('input', function () {
+        clearTimeout(st);
+        st = setTimeout(function () {
+          openFiltered = {}; apply();
+          var v = searchInput.value.trim();
+          if (v.length >= 3 && v !== lastQ && typeof gtag === 'function') { lastQ = v; gtag('event', 'writings_search', { search_term: v.slice(0, 100) }); }
+        }, 250);
+      });
+    }
+    list.addEventListener('click', function (e) {
+      var a = e.target.closest('.writing-title a, .writing-langs a');
+      if (!a || typeof gtag !== 'function') return;
+      var it = a.closest('.writing-item');
+      gtag('event', 'writing_open', {
+        via: a.closest('.writing-title') ? 'title' : 'language_button',
+        text_lang: a.getAttribute('data-lang') || '',
+        text_type: it ? it.getAttribute('data-type') : '',
+        text_year: it ? String(Math.floor(parseFloat(it.getAttribute('data-year')))) : '',
+        link_url: a.href
+      });
+    });
+    var ftBox = document.getElementById('start-here');
+    if (ftBox) {
+      if (location.hash === '#start-here') ftBox.open = true;
+      ftBox.querySelectorAll('.ft-title').forEach(function (a) {
+        a.addEventListener('click', function () { if (typeof gtag === 'function') gtag('event', 'writing_open', { via: 'start_here', link_url: a.href }); });
+      });
+    }
     langSelect.addEventListener('change', function () { openFiltered = {}; apply(); });
     if (toggleAll) toggleAll.addEventListener('click', function () {
       var open = toggleAll.getAttribute('data-state') !== 'open';
