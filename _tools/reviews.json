@@ -94,6 +94,28 @@
           "short": "An essential volume for a current view of the repressive actions of the Moscow Patriarchate led by Patriarch Kirill and the Russian state."
         }
       ]
+    },
+    {
+      "featured": false,
+      "cites": [
+        {
+          "quote": "Reveals close cooperation in the persecution of Christians in Russia.",
+          "who": "Espen Ottosen",
+          "role": "",
+          "outlet": "Dagen",
+          "url": "https://www.dagen.no/nyheter/avslorer-tett-samarbeid-om-forfolgelse-av-kristne-i-russland/1674956",
+          "date": "November 2026",
+          "note": "in Norwegian; our translation",
+          "orig": "Avslører tett samarbeid om forfølgelse av kristne i Russland",
+          "orig_lang": "no",
+          "orig_label": "Norwegian original",
+          "press": {
+            "title": "«Avslører tett samarbeid om forfølgelse av kristne i Russland»",
+            "note": "November 2026, in Norwegian",
+            "gloss": "Feature on the book in the Norwegian Christian daily."
+          }
+        }
+      ]
     }
   ]
 }
