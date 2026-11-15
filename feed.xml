@@ -5,12 +5,31 @@
   <link>https://chapnin.org/</link>
   <atom:link href="https://chapnin.org/feed.xml" rel="self" type="application/rss+xml"/>
   <description>New publications, talks, recordings and data updates by Sergei Chapnin on the Russian Orthodox Church, church and state, and religious persecution in Russia. Items appear in the language of the original.</description>
-  <lastBuildDate>Mon, 19 Oct 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 13 Nov 2026 12:00:00 +0000</lastBuildDate>
   <image>
     <url>https://chapnin.org/images/icon-512.png</url>
     <title>Sergei Chapnin — new writings, talks and recordings</title>
     <link>https://chapnin.org/</link>
   </image>
+  <item>
+    <title>A Sad Tribute: Notes from a Panel on Orthodoxy and the War in Ukraine</title>
+    <link>https://sobornost.substack.com/p/a-sad-tribute-notes-from-a-panel</link>
+    <guid isPermaLink="false">https://sobornost.substack.com/p/a-sad-tribute-notes-from-a-panel</guid>
+    <pubDate>Fri, 13 Nov 2026 12:00:00 +0000</pubDate>
+    <category>Essay</category>
+    <dc:creator>Sergei Chapnin</dc:creator>
+    <dc:language>en</dc:language>
+    <description><![CDATA[Essay · Sobornost (Substack) · discussant remarks at the ASEEES Annual Convention, Chicago]]></description>
+  </item>
+  <item>
+    <title>Discussant remarks: From Cold War to Holy War: States, Empires, and Orthodoxy in Ukraine</title>
+    <link>https://sobornost.substack.com/p/a-sad-tribute-notes-from-a-panel</link>
+    <guid isPermaLink="false">https://chapnin.org/talks/#2026-11-12-from-cold-war-to-holy-war-states-empires</guid>
+    <pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
+    <category>Discussant remarks</category>
+    <dc:creator>Sergei Chapnin</dc:creator>
+    <description><![CDATA[Discussant remarks by Sergei Chapnin — ASEEES Annual Convention. Palmer House Hilton, Chicago.]]></description>
+  </item>
   <item>
     <title>Ночь в Кремле, когда родилась Московская патриархия. Ответ протоиерею Игорю Прекупу</title>
     <link>https://sobornost.substack.com/p/1a5</link>
@@ -279,25 +298,6 @@
     <category>Panel</category>
     <dc:creator>Sergei Chapnin</dc:creator>
     <description><![CDATA[Panel by Sergei Chapnin — SettimanaNews &amp; Appia Institute. Palazzo Grazioli, Rome, Foreign Press Association.]]></description>
-  </item>
-  <item>
-    <title>Возвращение в Никею: католики и православные объединились — пока ненадолго</title>
-    <link>https://ru.themoscowtimes.com/2025/12/02/vozvraschenie-v-nikeyu-katoliki-i-pravoslavnie-a181537</link>
-    <guid isPermaLink="false">https://ru.themoscowtimes.com/2025/12/02/vozvraschenie-v-nikeyu-katoliki-i-pravoslavnie-a181537</guid>
-    <pubDate>Tue, 02 Dec 2025 12:00:00 +0000</pubDate>
-    <category>Essay</category>
-    <dc:creator>Sergei Chapnin</dc:creator>
-    <dc:language>ru</dc:language>
-    <description><![CDATA[Essay · The Moscow Times]]></description>
-  </item>
-  <item>
-    <title>Lecture: Reinterpreting Martyrdom: The Russian Orthodox Church, Memory, and the Justification of Violence</title>
-    <link>https://chapnin.org/talks/</link>
-    <guid isPermaLink="false">https://chapnin.org/talks/#2025-11-20-reinterpreting-martyrdom-the-russian-ort</guid>
-    <pubDate>Thu, 20 Nov 2025 12:00:00 +0000</pubDate>
-    <category>Lecture</category>
-    <dc:creator>Sergei Chapnin</dc:creator>
-    <description><![CDATA[Lecture by Sergei Chapnin — ASEEES Annual Convention.]]></description>
   </item>
 </channel>
 </rss>
