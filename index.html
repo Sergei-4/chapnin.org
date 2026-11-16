@@ -628,6 +628,17 @@
 .home-recent-list a { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: #2C2C2C; text-decoration: none; line-height: 1.35; }
 .home-recent-list a:hover { color: #8B0000; text-decoration: underline; text-underline-offset: 2px; }
 .home-recent-list .rs { display: block; font-size: 13px; color: #735E44; margin-top: 0.2rem; }
+.op-feature { margin: 4rem 0; padding: 2.6rem 3rem; background: #fff; border-left: 4px solid #8B0000; box-shadow: 0 1px 0 #E4DAC9; }
+.op-badge { display: inline-block; background: #8B0000; color: #fff; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; padding: 0.3rem 0.8rem; border-radius: 3px; margin-bottom: 1rem; }
+.op-feature h2 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 700; line-height: 1.25; margin: 0 0 0.6rem; }
+.op-feature h2 a { color: #2C2C2C; text-decoration: none; }
+.op-feature h2 a:hover { color: #8B0000; text-decoration: underline; text-underline-offset: 3px; }
+.op-meta { font-size: 14px; color: #735E44; margin: 0 0 1.4rem; }
+.op-meta em { font-style: italic; }
+.op-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.op-actions .btn-primary { color: #fff; }
+.op-actions .btn-outline { color: #2C2C2C; }
+@media (max-width: 600px) { .op-feature { padding: 1.8rem 1.4rem; } .op-feature h2 { font-size: 24px; } }
 .now-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; margin: 4rem 0; }
 .now-row > .report-section, .now-row > .talks-announce { margin: 0; }
 @media (max-width: 900px) { .now-row { grid-template-columns: 1fr; } }
@@ -713,6 +724,17 @@
     <p class="cw-more">More in <a href="/writings/">Writings</a> and <a href="/talks/">Talks</a></p>
   </section>
 
+  <!-- FEATURED OP-ED -->
+  <section class="op-feature" aria-labelledby="op-feature-h">
+    <span class="op-badge">New in The Washington Post</span>
+    <h2 id="op-feature-h"><a href="https://www.washingtonpost.com/opinions/2026/11/16/how-russias-church-vindicates-war-ukraine/" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','writing_open',{via:'home_feature',text_lang:'en',text_type:'column',text_year:'2026',link_url:this.href})">How Russia’s church vindicates the war on Ukraine</a></h2>
+    <p class="op-meta">Opinion &nbsp;·&nbsp; <em>The Washington Post</em> &nbsp;·&nbsp; November 16, 2026</p>
+    <div class="op-actions">
+      <a href="https://www.washingtonpost.com/opinions/2026/11/16/how-russias-church-vindicates-war-ukraine/" target="_blank" rel="noopener" class="btn btn-primary" onclick="if(window.gtag)gtag('event','writing_open',{via:'home_feature',text_lang:'en',text_type:'column',text_year:'2026',link_url:this.href})">Read in The Washington Post &rarr;</a>
+      <a href="/writings/" class="btn btn-outline">All writings</a>
+    </div>
+  </section>
+
   <!-- FEATURED BOOK -->
   <div class="featured-section">
     <div class="featured-book">
@@ -777,6 +799,11 @@
       <div class="announce-where">ASEEES Annual Convention, Chicago &nbsp;·&nbsp; Panel: <em>Religious Mobilization in Russia: How Religious Leaders Justify War and Support the Russian Military</em></div>
       <div class="announce-desc">The "theology of war" in Russia's "official church" — a postmodern bricolage of patristic fragments, Soviet myth, and imperial nostalgia repurposed to sanctify aggression, traced through hierarchs and clergy, with attention to those who refused alignment.</div>
     </div>
+    <div class="announce-item" data-date="2027-01-15">
+      <div class="announce-date">January 15, 2027 &nbsp;·&nbsp; Keynote</div>
+      <div class="announce-title">After the Symphony: Searching for the Future City</div>
+      <div class="announce-where">Conference <em>A Church Without a Future, or a Future Without the Church? Searching for a Way Out of the Crisis in Russian Orthodoxy</em> (January 15–16, 2027) &nbsp;·&nbsp; Dietrich-Bonhoeffer-Haus, Berlin</div>
+    </div>
     <div class="talks-cta">
       <a href="/collaborate/" class="btn btn-primary">Invite Sergei to speak</a>
       <a href="/talks/" class="btn btn-outline">All talks &rarr;</a>
@@ -822,7 +849,7 @@
   </div>
 
   <!-- FOOTER -->
-  <!-- shared:footer lang=en updated=2026-11-07 -->
+  <!-- shared:footer lang=en updated=2026-11-16 -->
 <div class="footer-divider">
     <div class="footer-content">
       <ul class="footer-links">
@@ -832,7 +859,7 @@
         <li><a href="https://www.linkedin.com/in/vsadnik/" target="_blank">LinkedIn</a></li>
         <li><a href="/feed.xml" type="application/rss+xml" title="RSS"><svg width="11" height="11" viewBox="0 0 16 16" aria-hidden="true" style="vertical-align:-1px;margin-right:4px"><circle cx="3" cy="13" r="2" fill="currentColor"/><path d="M1 7a8 8 0 0 1 8 8M1 2a13 13 0 0 1 13 13" fill="none" stroke="currentColor" stroke-width="2.2"/></svg>RSS</a></li>
       </ul>
-      <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: November 7, 2026</span></div>
+      <div class="footer-copyright">© 2026 Sergei Chapnin<br><span style="font-size:12px;opacity:0.7;">Last updated: November 16, 2026</span></div>
     </div>
   </div>
   <!-- /shared:footer -->
