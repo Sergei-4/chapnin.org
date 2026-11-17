@@ -45,7 +45,7 @@ CSS = '''<style>
 .bk-teaser .bk-b .bk-buy{background:#F5EFE7;color:#2C2C2C}
 .bk-teaser .bk-b .bk-about{color:#fff}
 .bk-teaser .bk-b a:hover{text-decoration:underline}
-@media(max-width:600px){.bk-teaser{grid-template-columns:84px 1fr;column-gap:1.1rem;row-gap:.9rem;padding:1.1rem 1.1rem 1.2rem;margin-top:2.8rem;align-items:start}.bk-teaser .bk-cover{grid-column:1;grid-row:1}.bk-teaser .bk-cover img{width:84px;margin:-1.4rem 0 0}.bk-teaser .bk-txt{display:contents}.bk-teaser .bk-h{grid-column:2;grid-row:1;align-self:center}.bk-teaser .bk-m{grid-column:1/-1;margin-top:0}.bk-teaser .bk-b{grid-column:1/-1;flex-direction:row;flex-wrap:nowrap;gap:.5rem}.bk-teaser .bk-b a{flex:1 1 0;min-width:0;padding:.55rem .4rem;font-size:11px;letter-spacing:.4px}}
+@media(max-width:600px){.bk-teaser{grid-template-columns:84px 1fr;column-gap:1.1rem;row-gap:.9rem;padding:1.1rem 1.1rem 1.2rem;margin-top:2.8rem;align-items:start}.bk-teaser .bk-cover{grid-column:1;grid-row:1}.bk-teaser .bk-cover img{width:84px;margin:-1.82rem 0 0}.bk-teaser .bk-txt{display:contents}.bk-teaser .bk-h{grid-column:2;grid-row:1;align-self:center}.bk-teaser .bk-m{grid-column:1/-1;margin-top:0}.bk-teaser .bk-b{grid-column:1/-1;flex-direction:row;flex-wrap:nowrap;gap:.5rem}.bk-teaser .bk-b a{flex:1 1 0;min-width:0;padding:.55rem .4rem;font-size:11px;letter-spacing:.4px}}
 </style>'''
 
 def block(lang, loc):
