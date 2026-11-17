@@ -610,10 +610,11 @@
     .cw-more a:hover { text-decoration: underline; }
   
     /* RU home (draft) */
-    .lang-switch { display: flex; gap: 0.5rem; margin-bottom: 1.2rem; }
-    .lang-switch .lang-pill { font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 700; color: #8B0000; border: 1px solid #E3C9C9; border-radius: 3px; padding: 0.12rem 0.6rem; text-decoration: none; }
-    .lang-switch .lang-pill:hover { background: #8B0000; color: #fff; border-color: #8B0000; }
-    .lang-switch .lang-pill.active { background: #8B0000; color: #fff; border-color: #8B0000; cursor: default; }
+    .lang-switch { display: flex; flex-wrap: wrap; align-items: baseline; margin-bottom: 1.2rem; font-size: 13px; }
+    .lang-switch .lang-pill { color: #735E44; text-decoration: none; font-weight: 400; }
+    .lang-switch .lang-pill + .lang-pill::before { content: "·"; display: inline-block; margin: 0 0.55rem; color: #B9A88F; text-decoration: none; }
+    .lang-switch .lang-pill:hover { color: #8B0000; }
+    .lang-switch .lang-pill.active { color: #2C2C2C; text-decoration: underline; text-decoration-color: #8B0000; text-underline-offset: 4px; cursor: default; }
     .ru-block { margin: 3.5rem 0; }
     .ru-block > h2 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #2C2C2C; border-left: 4px solid #8B0000; padding-left: 1rem; margin-bottom: 1.2rem; }
     .ru-list { list-style: none; margin: 0; padding: 0; }
