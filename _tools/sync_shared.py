@@ -115,7 +115,10 @@ def sync(s):
         a = attrs(m.group(1))
         new = f'<!-- shared:{name}{m.group(1)} -->\n' + render(a) + ('  ' if name == 'footer' else '') + f'<!-- /shared:{name} -->'
         s = s[:m.start()] + new + s[m.end():]
-    sub('nav', render_nav)
+    # Language item in the menu only where the page has no English|Русский|Українська pills
+    # (Sergei's decision, 17 Nov 2026: no duplicate language switch on one page)
+    has_pills = 'class="lang-switch"' in s
+    sub('nav', lambda a: re.sub(r'\n[ \t]*<li><a [^>]*class="nav-cta nav-lang"[^>]*>[^<]*</a></li>', '', render_nav(a)) if has_pills else render_nav(a))
     sub('footer', render_footer)
     sub('navcss', lambda a: part('nav-mobile-css.html'))
     sub('navjs', lambda a: part('nav-toggle-js.html'))
