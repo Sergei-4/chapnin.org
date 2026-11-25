@@ -240,7 +240,7 @@ def build_recent():
     n = 0
     for f in pages:
         d = open(f, encoding='utf-8').read()
-        if '<div class="book-note">' not in d:
+        if '<div class="book-note">' not in d and '<!-- RECENT:START' not in d:
             continue
         url = '/' + f[:-len('index.html')]
         ru = re.search(r'<html lang="([a-z]+)"', d).group(1) == 'ru'
@@ -265,7 +265,7 @@ def build_recent():
     h = open('ru/index.html', encoding='utf-8').read()
     lis = '\n'.join(f'      <li><span class="d">{ru_full_date(r)}</span><span>{link(r["href"], r["title"])}'
                     f'<span class="s">{html.escape(r["src"], quote=False)}</span></span></li>' for r in R[:5])
-    h, k = re.subn(r'(<!-- НОВОЕ -->\n  <section class="ru-block">\n    <h2>Новое</h2>\n    <ul class="ru-list">\n).*?(\n    </ul>)',
+    h, k = re.subn(r'((?:<!-- НОВОЕ -->\n)?  <section class="ru-block">\n    <h2>Новое</h2>\n    <ul class="ru-list">\n).*?(\n    </ul>)',
                    lambda m: m.group(1) + lis + m.group(2), h, flags=re.S)
     assert k == 1, '/ru/ Новое block not found'
     open('ru/index.html', 'w', encoding='utf-8').write(h)
